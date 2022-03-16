@@ -1,0 +1,80 @@
+{
+  "files.associations": {
+    ".code-workspace": "jsonc",
+    ".babelrc": "json",
+    ".eslintrc": "jsonc",
+    ".eslintrc*.json": "jsonc",
+    ".stylelintrc": "jsonc",
+    "stylelintrc": "jsonc",
+    ".htmlhintrc": "jsonc",
+    "htmlhintrc": "jsonc",
+    "Procfile*": "shellscript",
+    "README": "markdown"
+  },
+  "files.exclude": {
+    "**/*/adapters/index.ts": true,
+    "**/*/adapters/index.js": true
+  },
+  "search.useIgnoreFiles": true,
+  "search.exclude": {
+    "**/build": true,
+    "**/output": true,
+    "**/dist": true,
+    "**/yarn.lock": true,
+    "**/package-lock.json": true,
+    "**/*.log": true,
+    "**/*.pid": true,
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/bower_components": true
+  },
+  //
+  "editor.rulers": [80, 120],
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": true,
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json5]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  //
+  "json.format.enable": true,
+  "[json]": {
+    "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.tabSize": 2,
+  "svg.preview.background": "black",
+  // css modules 默认支持 camelCase
+  "cssModules.camelCase": true
+}
