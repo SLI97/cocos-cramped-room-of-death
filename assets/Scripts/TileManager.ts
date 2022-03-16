@@ -15,8 +15,7 @@ export class TileManager extends Component {
         return;
       }
       sprite.spriteFrame = spriteFrame;
-      transform.width = TILE_WIDTH;
-      transform.height = TILE_HEIGHT;
+      transform.setContentSize(TILE_WIDTH, TILE_HEIGHT);
       this.node.setPosition(i * TILE_WIDTH, -j * TILE_HEIGHT);
     });
   }
