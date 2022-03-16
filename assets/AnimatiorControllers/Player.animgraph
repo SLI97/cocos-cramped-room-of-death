@@ -11,28 +11,28 @@
     ],
     "_variables": {
       "direction": {
-        "__id__": 376
+        "__id__": 480
       },
       "idle": {
-        "__id__": 377
+        "__id__": 481
       },
       "turnleft": {
-        "__id__": 378
+        "__id__": 482
       },
       "turnright": {
-        "__id__": 379
+        "__id__": 483
       },
       "blockfront": {
-        "__id__": 380
+        "__id__": 484
       },
       "blockback": {
-        "__id__": 381
+        "__id__": 485
       },
       "blockleft": {
-        "__id__": 382
+        "__id__": 486
       },
       "blockright": {
-        "__id__": 383
+        "__id__": 487
       }
     }
   },
@@ -50,9 +50,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.8562001953124998,
-        "top": 202.06972946479547,
-        "left": -77.85552518150934
+        "scale": 0.47609191894531183,
+        "top": -55.9973316147516,
+        "left": -51.388461512316375
       }
     },
     "_states": [
@@ -69,54 +69,81 @@
         "__id__": 6
       },
       {
-        "__id__": 93
+        "__id__": 95
       },
       {
-        "__id__": 179
+        "__id__": 181
       },
       {
-        "__id__": 265
+        "__id__": 267
+      },
+      {
+        "__id__": 353
       }
     ],
     "_transitions": [
       {
-        "__id__": 351
+        "__id__": 439
       },
       {
-        "__id__": 352
+        "__id__": 440
       },
       {
-        "__id__": 354
+        "__id__": 442
       },
       {
-        "__id__": 356
+        "__id__": 444
       },
       {
-        "__id__": 358
+        "__id__": 446
       },
       {
-        "__id__": 360
+        "__id__": 448
       },
       {
-        "__id__": 362
+        "__id__": 450
       },
       {
-        "__id__": 364
+        "__id__": 452
       },
       {
-        "__id__": 366
+        "__id__": 454
       },
       {
-        "__id__": 368
+        "__id__": 456
       },
       {
-        "__id__": 370
+        "__id__": 458
       },
       {
-        "__id__": 372
+        "__id__": 460
       },
       {
-        "__id__": 374
+        "__id__": 462
+      },
+      {
+        "__id__": 464
+      },
+      {
+        "__id__": 466
+      },
+      {
+        "__id__": 468
+      },
+      {
+        "__id__": 470
+      },
+      {
+        "__id__": 472
+      },
+      {
+        "__id__": 474
+      },
+      {
+        "__id__": 476
+      },
+      {
+        "__id__": 478
       }
     ],
     "_entryState": {
@@ -132,8 +159,8 @@
   {
     "__type__": "cc.animation.State",
     "__editorExtras__": {
-      "centerX": -257.87805185047046,
-      "centerY": -230.83781695681006,
+      "centerX": -389.90549694704487,
+      "centerY": -336.4597730340696,
       "id": "16474347722940.9094328227523807"
     },
     "name": "Entry"
@@ -145,8 +172,8 @@
   {
     "__type__": "cc.animation.State",
     "__editorExtras__": {
-      "centerX": 776.0534283780632,
-      "centerY": -43.58281745296111,
+      "centerX": -560.2070435330193,
+      "centerY": -322.607209183595,
       "id": "16474102508450.546618535302636"
     },
     "name": "Any"
@@ -154,8 +181,8 @@
   {
     "__type__": "cc.animation.SubStateMachine",
     "__editorExtras__": {
-      "centerX": -66.31200300592843,
-      "centerY": -337.86504830274646,
+      "centerX": 33.472985607427574,
+      "centerY": -331.42046248116606,
       "id": "16474102656100.4780145647600531"
     },
     "name": "State Machine",
@@ -168,9 +195,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 1.1359941406249991,
-        "top": -9.734247687070969,
-        "left": -92.75021286164746
+        "scale": 0.9967374267578117,
+        "top": -3.035250892680178,
+        "left": -136.21590689173823
       }
     },
     "_states": [
@@ -253,6 +280,9 @@
       },
       {
         "__id__": 91
+      },
+      {
+        "__id__": 93
       }
     ],
     "_entryState": {
@@ -1083,16 +1113,38 @@
     "trigger": "blockfront"
   },
   {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 10
+    },
+    "to": {
+      "__id__": 9
+    },
+    "conditions": [
+      {
+        "__id__": 94
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockback"
+  },
+  {
     "__type__": "cc.animation.SubStateMachine",
     "__editorExtras__": {
-      "centerX": -97.82721504435176,
-      "centerY": 138.5603638272375,
+      "centerX": -530.7502960667683,
+      "centerY": -235.58150441204037,
       "id": "16474338429460.9624006991901866"
     },
     "name": "State Machine",
     "_components": [],
     "_stateMachine": {
-      "__id__": 94
+      "__id__": 96
     }
   },
   {
@@ -1106,88 +1158,88 @@
     },
     "_states": [
       {
-        "__id__": 95
-      },
-      {
-        "__id__": 96
-      },
-      {
         "__id__": 97
       },
       {
         "__id__": 98
       },
       {
-        "__id__": 102
+        "__id__": 99
       },
       {
-        "__id__": 106
+        "__id__": 100
       },
       {
-        "__id__": 110
+        "__id__": 104
+      },
+      {
+        "__id__": 108
+      },
+      {
+        "__id__": 112
       }
     ],
     "_transitions": [
       {
-        "__id__": 114
+        "__id__": 116
       },
       {
-        "__id__": 118
+        "__id__": 120
       },
       {
-        "__id__": 122
+        "__id__": 124
       },
       {
-        "__id__": 126
+        "__id__": 128
       },
       {
-        "__id__": 130
+        "__id__": 132
       },
       {
-        "__id__": 134
+        "__id__": 136
       },
       {
-        "__id__": 138
+        "__id__": 140
       },
       {
-        "__id__": 142
+        "__id__": 144
       },
       {
-        "__id__": 146
+        "__id__": 148
       },
       {
-        "__id__": 150
+        "__id__": 152
       },
       {
-        "__id__": 154
+        "__id__": 156
       },
       {
-        "__id__": 158
+        "__id__": 160
       },
       {
-        "__id__": 162
+        "__id__": 164
       },
       {
-        "__id__": 166
+        "__id__": 168
       },
       {
-        "__id__": 167
+        "__id__": 169
       },
       {
-        "__id__": 171
+        "__id__": 173
       },
       {
-        "__id__": 175
+        "__id__": 177
       }
     ],
     "_entryState": {
-      "__id__": 95
+      "__id__": 97
     },
     "_exitState": {
-      "__id__": 96
+      "__id__": 98
     },
     "_anyState": {
-      "__id__": 97
+      "__id__": 99
     }
   },
   {
@@ -1227,14 +1279,14 @@
     "name": "turnLeftTop",
     "_components": [
       {
-        "__id__": 99
+        "__id__": 101
       }
     ],
     "motion": {
-      "__id__": 100
+      "__id__": 102
     },
     "speed": {
-      "__id__": 101
+      "__id__": 103
     }
   },
   {
@@ -1267,14 +1319,14 @@
     "name": "turnLeftBottom",
     "_components": [
       {
-        "__id__": 103
+        "__id__": 105
       }
     ],
     "motion": {
-      "__id__": 104
+      "__id__": 106
     },
     "speed": {
-      "__id__": 105
+      "__id__": 107
     }
   },
   {
@@ -1307,14 +1359,14 @@
     "name": "turnLeftLeft",
     "_components": [
       {
-        "__id__": 107
+        "__id__": 109
       }
     ],
     "motion": {
-      "__id__": 108
+      "__id__": 110
     },
     "speed": {
-      "__id__": 109
+      "__id__": 111
     }
   },
   {
@@ -1347,14 +1399,14 @@
     "name": "turnLeftRight",
     "_components": [
       {
-        "__id__": 111
+        "__id__": 113
       }
     ],
     "motion": {
-      "__id__": 112
+      "__id__": 114
     },
     "speed": {
-      "__id__": 113
+      "__id__": 115
     }
   },
   {
@@ -1380,14 +1432,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 98
+      "__id__": 100
     },
     "to": {
-      "__id__": 102
+      "__id__": 104
     },
     "conditions": [
       {
-        "__id__": 115
+        "__id__": 117
       }
     ],
     "duration": 0,
@@ -1399,10 +1451,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 116
+      "__id__": 118
     },
     "rhs": {
-      "__id__": 117
+      "__id__": 119
     }
   },
   {
@@ -1418,14 +1470,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 102
+      "__id__": 104
     },
     "to": {
-      "__id__": 98
+      "__id__": 100
     },
     "conditions": [
       {
-        "__id__": 119
+        "__id__": 121
       }
     ],
     "duration": 0,
@@ -1437,10 +1489,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 120
+      "__id__": 122
     },
     "rhs": {
-      "__id__": 121
+      "__id__": 123
     }
   },
   {
@@ -1456,14 +1508,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 110
+      "__id__": 112
     },
     "to": {
-      "__id__": 98
+      "__id__": 100
     },
     "conditions": [
       {
-        "__id__": 123
+        "__id__": 125
       }
     ],
     "duration": 0,
@@ -1475,10 +1527,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 124
+      "__id__": 126
     },
     "rhs": {
-      "__id__": 125
+      "__id__": 127
     }
   },
   {
@@ -1494,14 +1546,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 98
+      "__id__": 100
     },
     "to": {
-      "__id__": 110
+      "__id__": 112
     },
     "conditions": [
       {
-        "__id__": 127
+        "__id__": 129
       }
     ],
     "duration": 0,
@@ -1513,10 +1565,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 128
+      "__id__": 130
     },
     "rhs": {
-      "__id__": 129
+      "__id__": 131
     }
   },
   {
@@ -1532,14 +1584,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 110
+      "__id__": 112
     },
     "to": {
-      "__id__": 102
+      "__id__": 104
     },
     "conditions": [
       {
-        "__id__": 131
+        "__id__": 133
       }
     ],
     "duration": 0,
@@ -1551,10 +1603,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 132
+      "__id__": 134
     },
     "rhs": {
-      "__id__": 133
+      "__id__": 135
     }
   },
   {
@@ -1570,14 +1622,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 102
+      "__id__": 104
     },
     "to": {
-      "__id__": 110
+      "__id__": 112
     },
     "conditions": [
       {
-        "__id__": 135
+        "__id__": 137
       }
     ],
     "duration": 0,
@@ -1589,10 +1641,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 136
+      "__id__": 138
     },
     "rhs": {
-      "__id__": 137
+      "__id__": 139
     }
   },
   {
@@ -1608,14 +1660,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 98
+      "__id__": 100
     },
     "to": {
-      "__id__": 106
+      "__id__": 108
     },
     "conditions": [
       {
-        "__id__": 139
+        "__id__": 141
       }
     ],
     "duration": 0,
@@ -1627,10 +1679,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 140
+      "__id__": 142
     },
     "rhs": {
-      "__id__": 141
+      "__id__": 143
     }
   },
   {
@@ -1646,14 +1698,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 106
+      "__id__": 108
     },
     "to": {
-      "__id__": 110
+      "__id__": 112
     },
     "conditions": [
       {
-        "__id__": 143
+        "__id__": 145
       }
     ],
     "duration": 0,
@@ -1665,10 +1717,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 144
+      "__id__": 146
     },
     "rhs": {
-      "__id__": 145
+      "__id__": 147
     }
   },
   {
@@ -1684,14 +1736,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 110
+      "__id__": 112
     },
     "to": {
-      "__id__": 106
+      "__id__": 108
     },
     "conditions": [
       {
-        "__id__": 147
+        "__id__": 149
       }
     ],
     "duration": 0,
@@ -1703,10 +1755,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 148
+      "__id__": 150
     },
     "rhs": {
-      "__id__": 149
+      "__id__": 151
     }
   },
   {
@@ -1722,14 +1774,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 106
+      "__id__": 108
     },
     "to": {
-      "__id__": 102
+      "__id__": 104
     },
     "conditions": [
       {
-        "__id__": 151
+        "__id__": 153
       }
     ],
     "duration": 0,
@@ -1741,10 +1793,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 152
+      "__id__": 154
     },
     "rhs": {
-      "__id__": 153
+      "__id__": 155
     }
   },
   {
@@ -1760,14 +1812,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 102
+      "__id__": 104
     },
     "to": {
-      "__id__": 106
+      "__id__": 108
     },
     "conditions": [
       {
-        "__id__": 155
+        "__id__": 157
       }
     ],
     "duration": 0,
@@ -1779,10 +1831,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 156
+      "__id__": 158
     },
     "rhs": {
-      "__id__": 157
+      "__id__": 159
     }
   },
   {
@@ -1798,14 +1850,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 95
+      "__id__": 97
     },
     "to": {
-      "__id__": 98
+      "__id__": 100
     },
     "conditions": [
       {
-        "__id__": 159
+        "__id__": 161
       }
     ]
   },
@@ -1813,10 +1865,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 160
+      "__id__": 162
     },
     "rhs": {
-      "__id__": 161
+      "__id__": 163
     }
   },
   {
@@ -1832,14 +1884,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 106
+      "__id__": 108
     },
     "to": {
-      "__id__": 98
+      "__id__": 100
     },
     "conditions": [
       {
-        "__id__": 163
+        "__id__": 165
       }
     ],
     "duration": 0,
@@ -1851,10 +1903,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 164
+      "__id__": 166
     },
     "rhs": {
-      "__id__": 165
+      "__id__": 167
     }
   },
   {
@@ -1870,10 +1922,10 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 97
+      "__id__": 99
     },
     "to": {
-      "__id__": 96
+      "__id__": 98
     },
     "conditions": [],
     "duration": 0,
@@ -1884,14 +1936,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 95
+      "__id__": 97
     },
     "to": {
-      "__id__": 106
+      "__id__": 108
     },
     "conditions": [
       {
-        "__id__": 168
+        "__id__": 170
       }
     ]
   },
@@ -1899,10 +1951,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 169
+      "__id__": 171
     },
     "rhs": {
-      "__id__": 170
+      "__id__": 172
     }
   },
   {
@@ -1918,14 +1970,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 95
+      "__id__": 97
     },
     "to": {
-      "__id__": 110
+      "__id__": 112
     },
     "conditions": [
       {
-        "__id__": 172
+        "__id__": 174
       }
     ]
   },
@@ -1933,10 +1985,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 173
+      "__id__": 175
     },
     "rhs": {
-      "__id__": 174
+      "__id__": 176
     }
   },
   {
@@ -1952,14 +2004,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 95
+      "__id__": 97
     },
     "to": {
-      "__id__": 102
+      "__id__": 104
     },
     "conditions": [
       {
-        "__id__": 176
+        "__id__": 178
       }
     ]
   },
@@ -1967,10 +2019,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 177
+      "__id__": 179
     },
     "rhs": {
-      "__id__": 178
+      "__id__": 180
     }
   },
   {
@@ -1986,14 +2038,14 @@
   {
     "__type__": "cc.animation.SubStateMachine",
     "__editorExtras__": {
-      "centerX": 340.92187536136703,
-      "centerY": 134.09186209701312,
+      "centerX": -642.0189187444846,
+      "centerY": -55.315341158281484,
       "id": "16474393567420.022565644552661857"
     },
     "name": "State Machine",
     "_components": [],
     "_stateMachine": {
-      "__id__": 180
+      "__id__": 182
     }
   },
   {
@@ -2007,88 +2059,88 @@
     },
     "_states": [
       {
-        "__id__": 181
-      },
-      {
-        "__id__": 182
-      },
-      {
         "__id__": 183
       },
       {
         "__id__": 184
       },
       {
-        "__id__": 188
+        "__id__": 185
       },
       {
-        "__id__": 192
+        "__id__": 186
       },
       {
-        "__id__": 196
+        "__id__": 190
+      },
+      {
+        "__id__": 194
+      },
+      {
+        "__id__": 198
       }
     ],
     "_transitions": [
       {
-        "__id__": 200
+        "__id__": 202
       },
       {
-        "__id__": 204
+        "__id__": 206
       },
       {
-        "__id__": 208
+        "__id__": 210
       },
       {
-        "__id__": 212
+        "__id__": 214
       },
       {
-        "__id__": 216
+        "__id__": 218
       },
       {
-        "__id__": 220
+        "__id__": 222
       },
       {
-        "__id__": 224
+        "__id__": 226
       },
       {
-        "__id__": 228
+        "__id__": 230
       },
       {
-        "__id__": 232
+        "__id__": 234
       },
       {
-        "__id__": 236
+        "__id__": 238
       },
       {
-        "__id__": 240
+        "__id__": 242
       },
       {
-        "__id__": 244
+        "__id__": 246
       },
       {
-        "__id__": 248
+        "__id__": 250
       },
       {
-        "__id__": 252
+        "__id__": 254
       },
       {
-        "__id__": 256
+        "__id__": 258
       },
       {
-        "__id__": 257
+        "__id__": 259
       },
       {
-        "__id__": 261
+        "__id__": 263
       }
     ],
     "_entryState": {
-      "__id__": 181
+      "__id__": 183
     },
     "_exitState": {
-      "__id__": 182
+      "__id__": 184
     },
     "_anyState": {
-      "__id__": 183
+      "__id__": 185
     }
   },
   {
@@ -2128,14 +2180,14 @@
     "name": "turnRightBottom",
     "_components": [
       {
-        "__id__": 185
+        "__id__": 187
       }
     ],
     "motion": {
-      "__id__": 186
+      "__id__": 188
     },
     "speed": {
-      "__id__": 187
+      "__id__": 189
     }
   },
   {
@@ -2168,14 +2220,14 @@
     "name": "turnRightLeft",
     "_components": [
       {
-        "__id__": 189
+        "__id__": 191
       }
     ],
     "motion": {
-      "__id__": 190
+      "__id__": 192
     },
     "speed": {
-      "__id__": 191
+      "__id__": 193
     }
   },
   {
@@ -2208,14 +2260,14 @@
     "name": "turnRightRight",
     "_components": [
       {
-        "__id__": 193
+        "__id__": 195
       }
     ],
     "motion": {
-      "__id__": 194
+      "__id__": 196
     },
     "speed": {
-      "__id__": 195
+      "__id__": 197
     }
   },
   {
@@ -2248,14 +2300,14 @@
     "name": "turnRIghtTop",
     "_components": [
       {
-        "__id__": 197
+        "__id__": 199
       }
     ],
     "motion": {
-      "__id__": 198
+      "__id__": 200
     },
     "speed": {
-      "__id__": 199
+      "__id__": 201
     }
   },
   {
@@ -2281,14 +2333,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 188
+      "__id__": 190
     },
     "to": {
-      "__id__": 196
+      "__id__": 198
     },
     "conditions": [
       {
-        "__id__": 201
+        "__id__": 203
       }
     ],
     "duration": 0,
@@ -2300,10 +2352,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 202
+      "__id__": 204
     },
     "rhs": {
-      "__id__": 203
+      "__id__": 205
     }
   },
   {
@@ -2319,14 +2371,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 196
+      "__id__": 198
     },
     "to": {
-      "__id__": 188
+      "__id__": 190
     },
     "conditions": [
       {
-        "__id__": 205
+        "__id__": 207
       }
     ],
     "duration": 0,
@@ -2338,10 +2390,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 206
+      "__id__": 208
     },
     "rhs": {
-      "__id__": 207
+      "__id__": 209
     }
   },
   {
@@ -2357,14 +2409,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 188
+      "__id__": 190
     },
     "to": {
-      "__id__": 184
+      "__id__": 186
     },
     "conditions": [
       {
-        "__id__": 209
+        "__id__": 211
       }
     ],
     "duration": 0,
@@ -2376,10 +2428,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 210
+      "__id__": 212
     },
     "rhs": {
-      "__id__": 211
+      "__id__": 213
     }
   },
   {
@@ -2395,14 +2447,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 184
+      "__id__": 186
     },
     "to": {
-      "__id__": 188
+      "__id__": 190
     },
     "conditions": [
       {
-        "__id__": 213
+        "__id__": 215
       }
     ],
     "duration": 0,
@@ -2414,10 +2466,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 214
+      "__id__": 216
     },
     "rhs": {
-      "__id__": 215
+      "__id__": 217
     }
   },
   {
@@ -2433,14 +2485,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 188
+      "__id__": 190
     },
     "to": {
-      "__id__": 192
+      "__id__": 194
     },
     "conditions": [
       {
-        "__id__": 217
+        "__id__": 219
       }
     ],
     "duration": 0,
@@ -2452,10 +2504,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 218
+      "__id__": 220
     },
     "rhs": {
-      "__id__": 219
+      "__id__": 221
     }
   },
   {
@@ -2471,14 +2523,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 192
+      "__id__": 194
     },
     "to": {
-      "__id__": 188
+      "__id__": 190
     },
     "conditions": [
       {
-        "__id__": 221
+        "__id__": 223
       }
     ],
     "duration": 0,
@@ -2490,10 +2542,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 222
+      "__id__": 224
     },
     "rhs": {
-      "__id__": 223
+      "__id__": 225
     }
   },
   {
@@ -2508,307 +2560,307 @@
   },
   {
     "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 181
-    },
-    "to": {
-      "__id__": 196
-    },
-    "conditions": [
-      {
-        "__id__": 225
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 226
-    },
-    "rhs": {
-      "__id__": 227
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 181
-    },
-    "to": {
-      "__id__": 188
-    },
-    "conditions": [
-      {
-        "__id__": 229
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 230
-    },
-    "rhs": {
-      "__id__": 231
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 2
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 192
-    },
-    "to": {
-      "__id__": 184
-    },
-    "conditions": [
-      {
-        "__id__": 233
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 234
-    },
-    "rhs": {
-      "__id__": 235
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 1
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 184
-    },
-    "to": {
-      "__id__": 192
-    },
-    "conditions": [
-      {
-        "__id__": 237
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 238
-    },
-    "rhs": {
-      "__id__": 239
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 3
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 192
-    },
-    "to": {
-      "__id__": 196
-    },
-    "conditions": [
-      {
-        "__id__": 241
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 242
-    },
-    "rhs": {
-      "__id__": 243
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 196
-    },
-    "to": {
-      "__id__": 192
-    },
-    "conditions": [
-      {
-        "__id__": 245
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 246
-    },
-    "rhs": {
-      "__id__": 247
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 3
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 196
-    },
-    "to": {
-      "__id__": 184
-    },
-    "conditions": [
-      {
-        "__id__": 249
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 250
-    },
-    "rhs": {
-      "__id__": 251
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 1
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 184
-    },
-    "to": {
-      "__id__": 196
-    },
-    "conditions": [
-      {
-        "__id__": 253
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 254
-    },
-    "rhs": {
-      "__id__": 255
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
     "from": {
       "__id__": 183
     },
     "to": {
-      "__id__": 182
+      "__id__": 198
+    },
+    "conditions": [
+      {
+        "__id__": 227
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 228
+    },
+    "rhs": {
+      "__id__": 229
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 183
+    },
+    "to": {
+      "__id__": 190
+    },
+    "conditions": [
+      {
+        "__id__": 231
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 232
+    },
+    "rhs": {
+      "__id__": 233
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 2
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 194
+    },
+    "to": {
+      "__id__": 186
+    },
+    "conditions": [
+      {
+        "__id__": 235
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 236
+    },
+    "rhs": {
+      "__id__": 237
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 186
+    },
+    "to": {
+      "__id__": 194
+    },
+    "conditions": [
+      {
+        "__id__": 239
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 240
+    },
+    "rhs": {
+      "__id__": 241
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 3
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 194
+    },
+    "to": {
+      "__id__": 198
+    },
+    "conditions": [
+      {
+        "__id__": 243
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 244
+    },
+    "rhs": {
+      "__id__": 245
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 198
+    },
+    "to": {
+      "__id__": 194
+    },
+    "conditions": [
+      {
+        "__id__": 247
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 248
+    },
+    "rhs": {
+      "__id__": 249
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 3
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 198
+    },
+    "to": {
+      "__id__": 186
+    },
+    "conditions": [
+      {
+        "__id__": 251
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 252
+    },
+    "rhs": {
+      "__id__": 253
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 186
+    },
+    "to": {
+      "__id__": 198
+    },
+    "conditions": [
+      {
+        "__id__": 255
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 256
+    },
+    "rhs": {
+      "__id__": 257
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 185
+    },
+    "to": {
+      "__id__": 184
     },
     "conditions": [],
     "duration": 0,
@@ -2819,14 +2871,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 181
+      "__id__": 183
     },
     "to": {
-      "__id__": 192
+      "__id__": 194
     },
     "conditions": [
       {
-        "__id__": 258
+        "__id__": 260
       }
     ]
   },
@@ -2834,10 +2886,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 259
+      "__id__": 261
     },
     "rhs": {
-      "__id__": 260
+      "__id__": 262
     }
   },
   {
@@ -2853,14 +2905,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 181
+      "__id__": 183
     },
     "to": {
-      "__id__": 184
+      "__id__": 186
     },
     "conditions": [
       {
-        "__id__": 262
+        "__id__": 264
       }
     ]
   },
@@ -2868,10 +2920,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 263
+      "__id__": 265
     },
     "rhs": {
-      "__id__": 264
+      "__id__": 266
     }
   },
   {
@@ -2887,14 +2939,14 @@
   {
     "__type__": "cc.animation.SubStateMachine",
     "__editorExtras__": {
-      "centerX": 382.962659745132,
-      "centerY": -264.9821349876421,
+      "centerX": -482.00373232706846,
+      "centerY": 526.7184989811303,
       "id": "16474423874660.7410953905718964"
     },
     "name": "State Machine",
     "_components": [],
     "_stateMachine": {
-      "__id__": 266
+      "__id__": 268
     }
   },
   {
@@ -2908,88 +2960,88 @@
     },
     "_states": [
       {
-        "__id__": 267
-      },
-      {
-        "__id__": 268
-      },
-      {
         "__id__": 269
       },
       {
         "__id__": 270
       },
       {
-        "__id__": 274
+        "__id__": 271
       },
       {
-        "__id__": 278
+        "__id__": 272
       },
       {
-        "__id__": 282
+        "__id__": 276
+      },
+      {
+        "__id__": 280
+      },
+      {
+        "__id__": 284
       }
     ],
     "_transitions": [
       {
-        "__id__": 286
+        "__id__": 288
       },
       {
-        "__id__": 290
+        "__id__": 292
       },
       {
-        "__id__": 294
+        "__id__": 296
       },
       {
-        "__id__": 298
+        "__id__": 300
       },
       {
-        "__id__": 302
+        "__id__": 304
       },
       {
-        "__id__": 306
+        "__id__": 308
       },
       {
-        "__id__": 310
+        "__id__": 312
       },
       {
-        "__id__": 314
+        "__id__": 316
       },
       {
-        "__id__": 318
+        "__id__": 320
       },
       {
-        "__id__": 322
+        "__id__": 324
       },
       {
-        "__id__": 326
+        "__id__": 328
       },
       {
-        "__id__": 330
+        "__id__": 332
       },
       {
-        "__id__": 334
+        "__id__": 336
       },
       {
-        "__id__": 338
+        "__id__": 340
       },
       {
-        "__id__": 342
+        "__id__": 344
       },
       {
-        "__id__": 346
+        "__id__": 348
       },
       {
-        "__id__": 350
+        "__id__": 352
       }
     ],
     "_entryState": {
-      "__id__": 267
+      "__id__": 269
     },
     "_exitState": {
-      "__id__": 268
+      "__id__": 270
     },
     "_anyState": {
-      "__id__": 269
+      "__id__": 271
     }
   },
   {
@@ -3029,14 +3081,14 @@
     "name": "blockFrontTop",
     "_components": [
       {
-        "__id__": 271
+        "__id__": 273
       }
     ],
     "motion": {
-      "__id__": 272
+      "__id__": 274
     },
     "speed": {
-      "__id__": 273
+      "__id__": 275
     }
   },
   {
@@ -3069,14 +3121,14 @@
     "name": "blockFrontBottom",
     "_components": [
       {
-        "__id__": 275
+        "__id__": 277
       }
     ],
     "motion": {
-      "__id__": 276
+      "__id__": 278
     },
     "speed": {
-      "__id__": 277
+      "__id__": 279
     }
   },
   {
@@ -3109,14 +3161,14 @@
     "name": "blockFrontLeft",
     "_components": [
       {
-        "__id__": 279
+        "__id__": 281
       }
     ],
     "motion": {
-      "__id__": 280
+      "__id__": 282
     },
     "speed": {
-      "__id__": 281
+      "__id__": 283
     }
   },
   {
@@ -3149,14 +3201,14 @@
     "name": "blockFrontRight",
     "_components": [
       {
-        "__id__": 283
+        "__id__": 285
       }
     ],
     "motion": {
-      "__id__": 284
+      "__id__": 286
     },
     "speed": {
-      "__id__": 285
+      "__id__": 287
     }
   },
   {
@@ -3182,14 +3234,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 270
+      "__id__": 272
     },
     "to": {
-      "__id__": 274
+      "__id__": 276
     },
     "conditions": [
       {
-        "__id__": 287
+        "__id__": 289
       }
     ],
     "duration": 0,
@@ -3201,10 +3253,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 288
+      "__id__": 290
     },
     "rhs": {
-      "__id__": 289
+      "__id__": 291
     }
   },
   {
@@ -3220,14 +3272,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 274
+      "__id__": 276
     },
     "to": {
-      "__id__": 270
+      "__id__": 272
     },
     "conditions": [
       {
-        "__id__": 291
+        "__id__": 293
       }
     ],
     "duration": 0,
@@ -3239,10 +3291,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 292
+      "__id__": 294
     },
     "rhs": {
-      "__id__": 293
+      "__id__": 295
     }
   },
   {
@@ -3258,14 +3310,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 282
+      "__id__": 284
     },
     "to": {
-      "__id__": 270
+      "__id__": 272
     },
     "conditions": [
       {
-        "__id__": 295
+        "__id__": 297
       }
     ],
     "duration": 0,
@@ -3277,10 +3329,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 296
+      "__id__": 298
     },
     "rhs": {
-      "__id__": 297
+      "__id__": 299
     }
   },
   {
@@ -3296,14 +3348,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 270
+      "__id__": 272
     },
     "to": {
-      "__id__": 278
+      "__id__": 280
     },
     "conditions": [
       {
-        "__id__": 299
+        "__id__": 301
       }
     ],
     "duration": 0,
@@ -3315,10 +3367,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 300
+      "__id__": 302
     },
     "rhs": {
-      "__id__": 301
+      "__id__": 303
     }
   },
   {
@@ -3334,14 +3386,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 282
+      "__id__": 284
     },
     "to": {
-      "__id__": 274
+      "__id__": 276
     },
     "conditions": [
       {
-        "__id__": 303
+        "__id__": 305
       }
     ],
     "duration": 0,
@@ -3353,10 +3405,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 304
+      "__id__": 306
     },
     "rhs": {
-      "__id__": 305
+      "__id__": 307
     }
   },
   {
@@ -3372,14 +3424,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 270
+      "__id__": 272
     },
     "to": {
-      "__id__": 282
+      "__id__": 284
     },
     "conditions": [
       {
-        "__id__": 307
+        "__id__": 309
       }
     ],
     "duration": 0,
@@ -3391,10 +3443,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 308
+      "__id__": 310
     },
     "rhs": {
-      "__id__": 309
+      "__id__": 311
     }
   },
   {
@@ -3410,14 +3462,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 274
+      "__id__": 276
     },
     "to": {
-      "__id__": 278
+      "__id__": 280
     },
     "conditions": [
       {
-        "__id__": 311
+        "__id__": 313
       }
     ],
     "duration": 0,
@@ -3429,10 +3481,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 312
+      "__id__": 314
     },
     "rhs": {
-      "__id__": 313
+      "__id__": 315
     }
   },
   {
@@ -3448,14 +3500,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 278
+      "__id__": 280
     },
     "to": {
-      "__id__": 270
+      "__id__": 272
     },
     "conditions": [
       {
-        "__id__": 315
+        "__id__": 317
       }
     ],
     "duration": 0,
@@ -3467,10 +3519,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 316
+      "__id__": 318
     },
     "rhs": {
-      "__id__": 317
+      "__id__": 319
     }
   },
   {
@@ -3486,14 +3538,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 278
+      "__id__": 280
     },
     "to": {
-      "__id__": 274
+      "__id__": 276
     },
     "conditions": [
       {
-        "__id__": 319
+        "__id__": 321
       }
     ],
     "duration": 0,
@@ -3505,10 +3557,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 320
+      "__id__": 322
     },
     "rhs": {
-      "__id__": 321
+      "__id__": 323
     }
   },
   {
@@ -3524,14 +3576,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 274
+      "__id__": 276
     },
     "to": {
-      "__id__": 282
+      "__id__": 284
     },
     "conditions": [
       {
-        "__id__": 323
+        "__id__": 325
       }
     ],
     "duration": 0,
@@ -3543,10 +3595,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 324
+      "__id__": 326
     },
     "rhs": {
-      "__id__": 325
+      "__id__": 327
     }
   },
   {
@@ -3562,14 +3614,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 282
+      "__id__": 284
     },
     "to": {
-      "__id__": 278
+      "__id__": 280
     },
     "conditions": [
       {
-        "__id__": 327
+        "__id__": 329
       }
     ],
     "duration": 0,
@@ -3581,10 +3633,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 328
+      "__id__": 330
     },
     "rhs": {
-      "__id__": 329
+      "__id__": 331
     }
   },
   {
@@ -3600,14 +3652,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 278
+      "__id__": 280
     },
     "to": {
-      "__id__": 282
+      "__id__": 284
     },
     "conditions": [
       {
-        "__id__": 331
+        "__id__": 333
       }
     ],
     "duration": 0,
@@ -3619,10 +3671,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 332
+      "__id__": 334
     },
     "rhs": {
-      "__id__": 333
+      "__id__": 335
     }
   },
   {
@@ -3637,147 +3689,1048 @@
   },
   {
     "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 267
-    },
-    "to": {
-      "__id__": 278
-    },
-    "conditions": [
-      {
-        "__id__": 335
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 336
-    },
-    "rhs": {
-      "__id__": 337
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 2
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 267
-    },
-    "to": {
-      "__id__": 270
-    },
-    "conditions": [
-      {
-        "__id__": 339
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 340
-    },
-    "rhs": {
-      "__id__": 341
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 267
-    },
-    "to": {
-      "__id__": 282
-    },
-    "conditions": [
-      {
-        "__id__": 343
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 344
-    },
-    "rhs": {
-      "__id__": 345
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 3
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 267
-    },
-    "to": {
-      "__id__": 274
-    },
-    "conditions": [
-      {
-        "__id__": 347
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 348
-    },
-    "rhs": {
-      "__id__": 349
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 1
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
     "from": {
       "__id__": 269
     },
     "to": {
-      "__id__": 268
+      "__id__": 280
+    },
+    "conditions": [
+      {
+        "__id__": 337
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 338
+    },
+    "rhs": {
+      "__id__": 339
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 2
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 269
+    },
+    "to": {
+      "__id__": 272
+    },
+    "conditions": [
+      {
+        "__id__": 341
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 342
+    },
+    "rhs": {
+      "__id__": 343
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 269
+    },
+    "to": {
+      "__id__": 284
+    },
+    "conditions": [
+      {
+        "__id__": 345
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 346
+    },
+    "rhs": {
+      "__id__": 347
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 3
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 269
+    },
+    "to": {
+      "__id__": 276
+    },
+    "conditions": [
+      {
+        "__id__": 349
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 350
+    },
+    "rhs": {
+      "__id__": 351
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 271
+    },
+    "to": {
+      "__id__": 270
+    },
+    "conditions": [],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": true,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.SubStateMachine",
+    "__editorExtras__": {
+      "centerX": -213.40328843436578,
+      "centerY": 632.8429321786821,
+      "id": "16474437183580.26500592126495337"
+    },
+    "name": "State Machine",
+    "_components": [],
+    "_stateMachine": {
+      "__id__": 354
+    }
+  },
+  {
+    "__type__": "cc.animation.StateMachine",
+    "__editorExtras__": {
+      "viewport": {
+        "scale": 1.0860048828125002,
+        "top": 2.7420001763553263,
+        "left": 0.7331680381084668
+      }
+    },
+    "_states": [
+      {
+        "__id__": 355
+      },
+      {
+        "__id__": 356
+      },
+      {
+        "__id__": 357
+      },
+      {
+        "__id__": 358
+      },
+      {
+        "__id__": 362
+      },
+      {
+        "__id__": 366
+      },
+      {
+        "__id__": 370
+      }
+    ],
+    "_transitions": [
+      {
+        "__id__": 374
+      },
+      {
+        "__id__": 378
+      },
+      {
+        "__id__": 382
+      },
+      {
+        "__id__": 386
+      },
+      {
+        "__id__": 390
+      },
+      {
+        "__id__": 394
+      },
+      {
+        "__id__": 398
+      },
+      {
+        "__id__": 402
+      },
+      {
+        "__id__": 406
+      },
+      {
+        "__id__": 410
+      },
+      {
+        "__id__": 414
+      },
+      {
+        "__id__": 418
+      },
+      {
+        "__id__": 422
+      },
+      {
+        "__id__": 426
+      },
+      {
+        "__id__": 430
+      },
+      {
+        "__id__": 434
+      },
+      {
+        "__id__": 438
+      }
+    ],
+    "_entryState": {
+      "__id__": 355
+    },
+    "_exitState": {
+      "__id__": 356
+    },
+    "_anyState": {
+      "__id__": 357
+    }
+  },
+  {
+    "__type__": "cc.animation.State",
+    "__editorExtras__": {
+      "centerX": -230.89270989479968,
+      "centerY": -117.86319014377705,
+      "id": "16474439303220.6292385289284927"
+    },
+    "name": "Entry"
+  },
+  {
+    "__type__": "cc.animation.State",
+    "__editorExtras__": {
+      "centerX": 322.9733271946254,
+      "centerY": 46.0403086499129,
+      "id": "16474439293010.9474605805589924"
+    },
+    "name": "Exit"
+  },
+  {
+    "__type__": "cc.animation.State",
+    "__editorExtras__": {
+      "centerX": 197.97332719462543,
+      "centerY": 138.5356259368798,
+      "id": "16474439284480.6148255778467349"
+    },
+    "name": "Any"
+  },
+  {
+    "__type__": "cc.animation.Motion",
+    "__editorExtras__": {
+      "centerX": 17.874067124544524,
+      "centerY": 123.04511178881438,
+      "id": "16474439334360.35539745883978324"
+    },
+    "name": "blockBackBottom",
+    "_components": [
+      {
+        "__id__": 359
+      }
+    ],
+    "motion": {
+      "__id__": 360
+    },
+    "speed": {
+      "__id__": 361
+    }
+  },
+  {
+    "__type__": "BackIdle"
+  },
+  {
+    "__type__": "cc.animation.ClipMotion",
+    "__editorExtras__": {
+      "id": "16474439334300.048964663906837735",
+      "centerX": 0,
+      "centerY": 0
+    },
+    "clip": {
+      "__uuid__": "9e5eef45-5b76-4620-a9f0-cae323365900",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.Motion",
+    "__editorExtras__": {
+      "centerX": -234.42682427697818,
+      "centerY": -1.2637215659504477,
+      "id": "16474439347390.9685518802107231"
+    },
+    "name": "blockBackLeft",
+    "_components": [
+      {
+        "__id__": 363
+      }
+    ],
+    "motion": {
+      "__id__": 364
+    },
+    "speed": {
+      "__id__": 365
+    }
+  },
+  {
+    "__type__": "BackIdle"
+  },
+  {
+    "__type__": "cc.animation.ClipMotion",
+    "__editorExtras__": {
+      "id": "16474439347340.6326574047677664",
+      "centerX": 0,
+      "centerY": 0
+    },
+    "clip": {
+      "__uuid__": "822519c6-307b-4d96-93fc-c7975642ab85",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.Motion",
+    "__editorExtras__": {
+      "centerX": 32.606965892516655,
+      "centerY": -155.03835245665957,
+      "id": "16474439358220.3266770592842596"
+    },
+    "name": "blockBackTop",
+    "_components": [
+      {
+        "__id__": 367
+      }
+    ],
+    "motion": {
+      "__id__": 368
+    },
+    "speed": {
+      "__id__": 369
+    }
+  },
+  {
+    "__type__": "BackIdle"
+  },
+  {
+    "__type__": "cc.animation.ClipMotion",
+    "__editorExtras__": {
+      "id": "16474439358150.4323582913092616",
+      "centerX": 0,
+      "centerY": 0
+    },
+    "clip": {
+      "__uuid__": "5ed3c56f-aab4-4883-988c-09cfbf3e4a0c",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.Motion",
+    "__editorExtras__": {
+      "centerX": 185.4607906102275,
+      "centerY": -14.15500798792604,
+      "id": "16474439368440.9311850751884854"
+    },
+    "name": "blockBackRight",
+    "_components": [
+      {
+        "__id__": 371
+      }
+    ],
+    "motion": {
+      "__id__": 372
+    },
+    "speed": {
+      "__id__": 373
+    }
+  },
+  {
+    "__type__": "BackIdle"
+  },
+  {
+    "__type__": "cc.animation.ClipMotion",
+    "__editorExtras__": {
+      "id": "16474439368370.1874023764241266",
+      "centerX": 0,
+      "centerY": 0
+    },
+    "clip": {
+      "__uuid__": "0c250449-5b2c-45e9-9833-b4ad36283bbc",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 366
+    },
+    "to": {
+      "__id__": 370
+    },
+    "conditions": [
+      {
+        "__id__": 375
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 376
+    },
+    "rhs": {
+      "__id__": 377
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 3
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 370
+    },
+    "to": {
+      "__id__": 358
+    },
+    "conditions": [
+      {
+        "__id__": 379
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 380
+    },
+    "rhs": {
+      "__id__": 381
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 358
+    },
+    "to": {
+      "__id__": 370
+    },
+    "conditions": [
+      {
+        "__id__": 383
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 384
+    },
+    "rhs": {
+      "__id__": 385
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 3
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 362
+    },
+    "to": {
+      "__id__": 358
+    },
+    "conditions": [
+      {
+        "__id__": 387
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 388
+    },
+    "rhs": {
+      "__id__": 389
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 358
+    },
+    "to": {
+      "__id__": 362
+    },
+    "conditions": [
+      {
+        "__id__": 391
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 392
+    },
+    "rhs": {
+      "__id__": 393
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 2
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 358
+    },
+    "to": {
+      "__id__": 366
+    },
+    "conditions": [
+      {
+        "__id__": 395
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 396
+    },
+    "rhs": {
+      "__id__": 397
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 366
+    },
+    "to": {
+      "__id__": 358
+    },
+    "conditions": [
+      {
+        "__id__": 399
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 400
+    },
+    "rhs": {
+      "__id__": 401
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 362
+    },
+    "to": {
+      "__id__": 366
+    },
+    "conditions": [
+      {
+        "__id__": 403
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 404
+    },
+    "rhs": {
+      "__id__": 405
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 366
+    },
+    "to": {
+      "__id__": 362
+    },
+    "conditions": [
+      {
+        "__id__": 407
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 408
+    },
+    "rhs": {
+      "__id__": 409
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 2
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 362
+    },
+    "to": {
+      "__id__": 370
+    },
+    "conditions": [
+      {
+        "__id__": 411
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 412
+    },
+    "rhs": {
+      "__id__": 413
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 3
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 370
+    },
+    "to": {
+      "__id__": 362
+    },
+    "conditions": [
+      {
+        "__id__": 415
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 416
+    },
+    "rhs": {
+      "__id__": 417
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 2
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 355
+    },
+    "to": {
+      "__id__": 366
+    },
+    "conditions": [
+      {
+        "__id__": 419
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 420
+    },
+    "rhs": {
+      "__id__": 421
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 355
+    },
+    "to": {
+      "__id__": 362
+    },
+    "conditions": [
+      {
+        "__id__": 423
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 424
+    },
+    "rhs": {
+      "__id__": 425
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 2
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 355
+    },
+    "to": {
+      "__id__": 358
+    },
+    "conditions": [
+      {
+        "__id__": 427
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 428
+    },
+    "rhs": {
+      "__id__": 429
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 355
+    },
+    "to": {
+      "__id__": 370
+    },
+    "conditions": [
+      {
+        "__id__": 431
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 432
+    },
+    "rhs": {
+      "__id__": 433
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 3
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 370
+    },
+    "to": {
+      "__id__": 366
+    },
+    "conditions": [
+      {
+        "__id__": 435
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 436
+    },
+    "rhs": {
+      "__id__": 437
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 357
+    },
+    "to": {
+      "__id__": 356
     },
     "conditions": [],
     "duration": 0,
@@ -3798,50 +4751,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 6
+      "__id__": 95
     },
     "to": {
-      "__id__": 93
+      "__id__": 181
     },
     "conditions": [
       {
-        "__id__": 353
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "turnleft"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 93
-    },
-    "to": {
-      "__id__": 6
-    },
-    "conditions": [
-      {
-        "__id__": 355
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "idle"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 93
-    },
-    "to": {
-      "__id__": 179
-    },
-    "conditions": [
-      {
-        "__id__": 357
+        "__id__": 441
       }
     ]
   },
@@ -3852,14 +4769,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 179
+      "__id__": 181
     },
     "to": {
-      "__id__": 93
+      "__id__": 95
     },
     "conditions": [
       {
-        "__id__": 359
+        "__id__": 443
       }
     ]
   },
@@ -3870,14 +4787,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 179
+      "__id__": 181
     },
     "to": {
       "__id__": 6
     },
     "conditions": [
       {
-        "__id__": 361
+        "__id__": 445
       }
     ]
   },
@@ -3891,11 +4808,11 @@
       "__id__": 6
     },
     "to": {
-      "__id__": 179
+      "__id__": 181
     },
     "conditions": [
       {
-        "__id__": 363
+        "__id__": 447
       }
     ]
   },
@@ -3906,14 +4823,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 265
+      "__id__": 267
     },
     "to": {
-      "__id__": 179
+      "__id__": 181
     },
     "conditions": [
       {
-        "__id__": 365
+        "__id__": 449
       }
     ]
   },
@@ -3924,14 +4841,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 179
+      "__id__": 181
     },
     "to": {
-      "__id__": 265
+      "__id__": 267
     },
     "conditions": [
       {
-        "__id__": 367
+        "__id__": 451
       }
     ]
   },
@@ -3942,14 +4859,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 265
+      "__id__": 267
     },
     "to": {
-      "__id__": 93
+      "__id__": 95
     },
     "conditions": [
       {
-        "__id__": 369
+        "__id__": 453
       }
     ]
   },
@@ -3960,14 +4877,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 93
+      "__id__": 95
     },
     "to": {
-      "__id__": 265
+      "__id__": 267
     },
     "conditions": [
       {
-        "__id__": 371
+        "__id__": 455
       }
     ]
   },
@@ -3978,14 +4895,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 265
+      "__id__": 267
     },
     "to": {
       "__id__": 6
     },
     "conditions": [
       {
-        "__id__": 373
+        "__id__": 457
       }
     ]
   },
@@ -3999,11 +4916,191 @@
       "__id__": 6
     },
     "to": {
-      "__id__": 265
+      "__id__": 267
     },
     "conditions": [
       {
-        "__id__": 375
+        "__id__": 459
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockfront"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 6
+    },
+    "to": {
+      "__id__": 95
+    },
+    "conditions": [
+      {
+        "__id__": 461
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "turnleft"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 95
+    },
+    "to": {
+      "__id__": 6
+    },
+    "conditions": [
+      {
+        "__id__": 463
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "idle"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 181
+    },
+    "to": {
+      "__id__": 353
+    },
+    "conditions": [
+      {
+        "__id__": 465
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockback"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 353
+    },
+    "to": {
+      "__id__": 181
+    },
+    "conditions": [
+      {
+        "__id__": 467
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "turnright"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 353
+    },
+    "to": {
+      "__id__": 6
+    },
+    "conditions": [
+      {
+        "__id__": 469
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "idle"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 6
+    },
+    "to": {
+      "__id__": 353
+    },
+    "conditions": [
+      {
+        "__id__": 471
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockback"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 353
+    },
+    "to": {
+      "__id__": 95
+    },
+    "conditions": [
+      {
+        "__id__": 473
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "turnleft"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 95
+    },
+    "to": {
+      "__id__": 353
+    },
+    "conditions": [
+      {
+        "__id__": 475
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockback"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 267
+    },
+    "to": {
+      "__id__": 353
+    },
+    "conditions": [
+      {
+        "__id__": 477
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockback"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 353
+    },
+    "to": {
+      "__id__": 267
+    },
+    "conditions": [
+      {
+        "__id__": 479
       }
     ]
   },
