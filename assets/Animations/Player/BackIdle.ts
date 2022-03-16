@@ -16,8 +16,8 @@ const { ccclass, property } = _decorator;
  *
  */
 
-@ccclass('PlayerBackIdle')
-export class PlayerBackIdle extends animation.StateMachineComponent {
+@ccclass('BackIdle')
+export class BackIdle extends animation.StateMachineComponent {
   // /**
   //  * Called when a motion state right after it entered.
   //  * @param controller The animation controller it within.

@@ -197,10 +197,22 @@
       {
         "__uuid__": "8de15492-4b93-4a79-9316-be7cd613083f",
         "__expectedType__": "cc.AnimationClip"
+      },
+      {
+        "__uuid__": "94cee2c8-6f73-4204-a376-41a08af9dc31",
+        "__expectedType__": "cc.AnimationClip"
+      },
+      {
+        "__uuid__": "c34b501c-d6b3-4e96-a92f-463f8187fde9",
+        "__expectedType__": "cc.AnimationClip"
+      },
+      {
+        "__uuid__": "441c0517-a731-4171-a35c-ff59115fa78b",
+        "__expectedType__": "cc.AnimationClip"
       }
     ],
     "_defaultClip": {
-      "__uuid__": "8de15492-4b93-4a79-9316-be7cd613083f",
+      "__uuid__": "441c0517-a731-4171-a35c-ff59115fa78b",
       "__expectedType__": "cc.AnimationClip"
     },
     "_id": ""
