@@ -40,7 +40,7 @@ export class PlayerManager extends Component {
 
   set state(newState) {
     this._state = newState;
-    this.animator.setValue(newState, true);
+    this.animator.setValue(newState.toLowerCase(), true);
   }
 
   init() {
@@ -116,6 +116,7 @@ export class PlayerManager extends Component {
       } else if (this.direction === DIRECTION_ENUM.RIGHT) {
         this.direction = DIRECTION_ENUM.TOP;
       }
+      this.state = ENTITY_STATE_ENUM.TURNLEFT;
     } else if (inputDirection === CONTROLLER_ENUM.TURNRIGHT) {
       if (this.direction === DIRECTION_ENUM.TOP) {
         this.direction = DIRECTION_ENUM.RIGHT;
@@ -126,6 +127,7 @@ export class PlayerManager extends Component {
       } else if (this.direction === DIRECTION_ENUM.RIGHT) {
         this.direction = DIRECTION_ENUM.BOTTOM;
       }
+      this.state = ENTITY_STATE_ENUM.TURNRIGHT;
     }
   }
 }
