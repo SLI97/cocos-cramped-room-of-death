@@ -171,24 +171,24 @@
     "playOnLoad": false,
     "_clips": [
       {
-        "__uuid__": "7813186a-0ac0-4191-9487-072770ae3fa3",
+        "__uuid__": "a1ecfb7f-1ac5-42c0-a259-f86cdac66021",
         "__expectedType__": "cc.AnimationClip"
       },
       {
-        "__uuid__": "5e992662-8d86-4c0a-80ea-21179b7e9094",
+        "__uuid__": "e7e4182a-e2b7-4040-8f59-0e5e3cc1966b",
         "__expectedType__": "cc.AnimationClip"
       },
       {
-        "__uuid__": "8e0f4222-a224-4a9f-9c29-a81475ef0424",
+        "__uuid__": "156525c2-1b75-4b3c-b3f7-4b00b581b340",
         "__expectedType__": "cc.AnimationClip"
       },
       {
-        "__uuid__": "50e11af3-7b5f-4b45-86a5-20b687221440",
+        "__uuid__": "559ce177-4f16-488f-adcd-de31364aa879",
         "__expectedType__": "cc.AnimationClip"
       }
     ],
     "_defaultClip": {
-      "__uuid__": "50e11af3-7b5f-4b45-86a5-20b687221440",
+      "__uuid__": "559ce177-4f16-488f-adcd-de31364aa879",
       "__expectedType__": "cc.AnimationClip"
     },
     "_id": ""
