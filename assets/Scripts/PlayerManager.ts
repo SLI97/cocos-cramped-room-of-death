@@ -1,50 +1,20 @@
-import { _decorator, animation, Component, UITransform } from 'cc';
+import { _decorator } from 'cc';
 import EventManager from '../Runtime/EventManager';
-import {
-  CONTROLLER_ENUM,
-  DIRECTION_ENUM,
-  DIRECTION_ORDER_ENUM,
-  ENTITY_STATE_ENUM,
-  EVENT_ENUM,
-  PARAMS_NAME_ENUM,
-} from '../Enum';
-import { TILE_HEIGHT, TILE_WIDTH } from './TileManager';
+import { CONTROLLER_ENUM, DIRECTION_ENUM, ENTITY_STATE_ENUM, EVENT_ENUM } from '../Enum';
 import DataManager from '../Runtime/DataManager';
+import { EntityManager } from '../Base/EntityManager';
 
-const { ccclass, property } = _decorator;
+const { ccclass } = _decorator;
 
 @ccclass('PlayerManager')
-export class PlayerManager extends Component {
-  private animator: animation.AnimationController;
-  private transform: UITransform;
-  private _state: ENTITY_STATE_ENUM;
-  private _direction: DIRECTION_ENUM;
-
+export class PlayerManager extends EntityManager {
   private readonly speed = 1 / 10;
-  x: number;
-  y: number;
   targetX: number;
   targetY: number;
 
-  get direction() {
-    return this._direction;
-  }
-
-  set direction(newDirection) {
-    this._direction = newDirection;
-    this.animator.setValue(PARAMS_NAME_ENUM.DIRECTION.toLowerCase(), DIRECTION_ORDER_ENUM[this._direction]);
-  }
-
-  get state() {
-    return this._state;
-  }
-
-  set state(newState) {
-    this._state = newState;
-    this.animator.setValue(newState.toLowerCase(), true);
-  }
-
   init() {
+    super.init();
+
     this.x = 2;
     this.y = 8;
     this.targetX = this.x;
@@ -54,24 +24,18 @@ export class PlayerManager extends Component {
   }
 
   onLoad() {
-    this.animator = this.getComponent(animation.AnimationController);
-    this.transform = this.getComponent(UITransform);
-    this.transform.setContentSize(TILE_WIDTH * 4, TILE_HEIGHT * 4);
-
+    super.onLoad();
     EventManager.Instance.on(EVENT_ENUM.PLAYER_CTRL, this.inputProcess, this);
   }
 
-  start() {
-    this.init();
-  }
-
   onDestroy() {
+    super.onDestroy();
     EventManager.Instance.off(EVENT_ENUM.PLAYER_CTRL, this.inputProcess);
   }
 
   update() {
     this.updateXY();
-    this.node.setPosition(this.x * TILE_WIDTH - TILE_WIDTH * 1.5, -this.y * TILE_HEIGHT + TILE_HEIGHT * 1.5);
+    super.update();
   }
 
   updateXY() {
