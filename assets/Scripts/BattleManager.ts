@@ -82,7 +82,7 @@ export class BattleManager extends Component {
     playerManager.init({
       x: 2,
       y: 2,
-      direction: DIRECTION_ENUM.TOP,
+      direction: DIRECTION_ENUM.BOTTOM,
       state: ENTITY_STATE_ENUM.IDLE,
       type: ENTITY_TYPE_ENUM.PLAYER,
     });

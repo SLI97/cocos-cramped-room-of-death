@@ -12,12 +12,16 @@ export class PlayerManager extends EntityManager {
   private readonly speed = 1 / 10;
   targetX: number;
   targetY: number;
-  isMoveing = false;
+  isMoving = false;
 
   init(params: IEntity) {
     super.init(params);
     this.targetX = this.x;
     this.targetY = this.y;
+  }
+
+  onLoad() {
+    super.onLoad();
     EventManager.Instance.on(EVENT_ENUM.PLAYER_CTRL, this.inputProcess, this);
   }
 
@@ -25,7 +29,6 @@ export class PlayerManager extends EntityManager {
     super.onDestroy();
     EventManager.Instance.off(EVENT_ENUM.PLAYER_CTRL, this.inputProcess);
   }
-
   update() {
     this.updateXY();
     super.update();
@@ -50,12 +53,16 @@ export class PlayerManager extends EntityManager {
     if (Math.abs(this.targetX - this.x) < 0.01 && Math.abs(this.targetY - this.y) < 0.01) {
       this.x = this.targetX;
       this.y = this.targetY;
-      this.isMoveing = false;
+      this.isMoving = false;
       EventManager.Instance.emit(EVENT_ENUM.PLAYER_MOVE_END);
     }
   }
 
   inputProcess(inputDirection: CONTROLLER_ENUM) {
+    if (this.isMoving) {
+      return;
+    }
+
     if (this.willBlock(inputDirection)) {
       return;
     }
@@ -65,12 +72,16 @@ export class PlayerManager extends EntityManager {
   move(inputDirection: CONTROLLER_ENUM) {
     if (inputDirection === CONTROLLER_ENUM.TOP) {
       this.targetY -= 1;
+      this.isMoving = true;
     } else if (inputDirection === CONTROLLER_ENUM.BOTTOM) {
       this.targetY += 1;
+      this.isMoving = true;
     } else if (inputDirection === CONTROLLER_ENUM.LEFT) {
       this.targetX -= 1;
+      this.isMoving = true;
     } else if (inputDirection === CONTROLLER_ENUM.RIGHT) {
       this.targetX += 1;
+      this.isMoving = true;
     } else if (inputDirection === CONTROLLER_ENUM.TURNLEFT) {
       if (this.direction === DIRECTION_ENUM.TOP) {
         this.direction = DIRECTION_ENUM.LEFT;

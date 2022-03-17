@@ -10,6 +10,10 @@ const { ccclass } = _decorator;
 export class WoodenSkeletonManager extends EntityManager {
   init(params: IEntity) {
     super.init(params);
+  }
+
+  onLoad() {
+    super.onLoad();
     EventManager.Instance.on(EVENT_ENUM.PLAYER_MOVE_END, this.onChangeDirection, this);
   }
 

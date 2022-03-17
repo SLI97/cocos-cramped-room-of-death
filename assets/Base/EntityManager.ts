@@ -11,6 +11,8 @@ export class EntityManager extends Component {
   private _state: ENTITY_STATE_ENUM;
   private _direction: DIRECTION_ENUM;
 
+  protected initParams: IEntity;
+
   x: number;
   y: number;
 
@@ -38,9 +40,16 @@ export class EntityManager extends Component {
     this.transform.setContentSize(TILE_WIDTH * 4, TILE_HEIGHT * 4);
     this.x = params.x;
     this.y = params.y;
-    this.direction = params.direction;
-    this.state = params.state;
+
+    Promise.resolve().then(() => {
+      this.direction = params.direction;
+      this.state = params.state;
+    });
   }
+
+  onLoad() {}
+
+  start() {}
 
   onDestroy() {}
 
