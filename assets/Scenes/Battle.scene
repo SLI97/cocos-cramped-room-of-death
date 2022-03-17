@@ -1906,6 +1906,10 @@
       "__uuid__": "23dbf0c5-12bd-49b2-ac39-b2ac6be5685d",
       "__expectedType__": "cc.Prefab"
     },
+    "woodenSkeleton": {
+      "__uuid__": "73bbbd79-7360-4667-9520-adc80656cdfc",
+      "__expectedType__": "cc.Prefab"
+    },
     "_id": "3e+G1AZydKPZn/rdeqv37y"
   },
   {

@@ -25,6 +25,9 @@ export class BattleManager extends Component {
   @property(Prefab)
   player: Prefab = null;
 
+  @property(Prefab)
+  woodenSkeleton: Prefab = null;
+
   private level: ILevel;
 
   start() {
@@ -47,6 +50,7 @@ export class BattleManager extends Component {
 
       this.generateTileMap();
       this.generatePlayer();
+      this.generateEnemies();
     }
   }
 
@@ -70,6 +74,11 @@ export class BattleManager extends Component {
   generatePlayer() {
     const player = instantiate(this.player);
     player.setParent(this.stage);
+  }
+
+  generateEnemies() {
+    const woodenSkeleton = instantiate(this.woodenSkeleton);
+    woodenSkeleton.setParent(this.stage);
   }
 
   nextLevel() {

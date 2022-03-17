@@ -56,9 +56,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.5292285156249997,
-        "top": 46.655973698463875,
-        "left": -119.83894899235932
+        "scale": 0.39297375488281217,
+        "top": 86.42480897836373,
+        "left": -55.15511839912237
       }
     },
     "_states": [
@@ -1411,8 +1411,8 @@
   {
     "__type__": "cc.animation.SubStateMachine",
     "__editorExtras__": {
-      "centerX": -481.35581515312424,
-      "centerY": -129.8431403700676,
+      "centerX": -399.7090704782022,
+      "centerY": -178.83118717502083,
       "id": "16474338429460.9624006991901866"
     },
     "name": "State Machine",
@@ -7718,8 +7718,8 @@
   {
     "__type__": "cc.animation.SubStateMachine",
     "__editorExtras__": {
-      "centerX": 853.0612982511075,
-      "centerY": 64.05844877578329,
+      "centerX": 907.7330001347375,
+      "centerY": 118.73015065941343,
       "id": "16474925999920.955003471468806"
     },
     "name": "State Machine",
