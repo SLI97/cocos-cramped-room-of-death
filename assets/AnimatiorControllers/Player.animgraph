@@ -11,34 +11,34 @@
     ],
     "_variables": {
       "direction": {
-        "__id__": 936
-      },
-      "idle": {
-        "__id__": 937
-      },
-      "turnleft": {
-        "__id__": 938
-      },
-      "turnright": {
-        "__id__": 939
-      },
-      "blockfront": {
         "__id__": 940
       },
-      "blockback": {
+      "idle": {
         "__id__": 941
       },
-      "blockleft": {
+      "turnleft": {
         "__id__": 942
       },
-      "blockright": {
+      "turnright": {
         "__id__": 943
       },
-      "blockturnleft": {
+      "blockfront": {
         "__id__": 944
       },
-      "blockturnright": {
+      "blockback": {
         "__id__": 945
+      },
+      "blockleft": {
+        "__id__": 946
+      },
+      "blockright": {
+        "__id__": 947
+      },
+      "blockturnleft": {
+        "__id__": 948
+      },
+      "blockturnright": {
+        "__id__": 949
       }
     }
   },
@@ -56,9 +56,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.39297375488281217,
-        "top": 86.42480897836373,
-        "left": -55.15511839912237
+        "scale": 0.8683015136718749,
+        "top": 13.714793056212986,
+        "left": 364.451991214185
       }
     },
     "_states": [
@@ -78,36 +78,30 @@
         "__id__": 103
       },
       {
-        "__id__": 189
+        "__id__": 191
       },
       {
-        "__id__": 275
+        "__id__": 279
       },
       {
-        "__id__": 361
+        "__id__": 365
       },
       {
-        "__id__": 447
+        "__id__": 451
       },
       {
-        "__id__": 533
+        "__id__": 537
       },
       {
-        "__id__": 619
+        "__id__": 623
       },
       {
-        "__id__": 705
+        "__id__": 709
       }
     ],
     "_transitions": [
       {
-        "__id__": 791
-      },
-      {
-        "__id__": 792
-      },
-      {
-        "__id__": 794
+        "__id__": 795
       },
       {
         "__id__": 796
@@ -318,6 +312,12 @@
       },
       {
         "__id__": 934
+      },
+      {
+        "__id__": 936
+      },
+      {
+        "__id__": 938
       }
     ],
     "_entryState": {
@@ -1425,9 +1425,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 1.2462366943359375,
-        "top": 55.551160110079266,
-        "left": -43.66936085342641
+        "scale": 1.3870438232421876,
+        "top": 30.102736215872106,
+        "left": -134.15344165738244
       }
     },
     "_states": [
@@ -1497,13 +1497,16 @@
         "__id__": 176
       },
       {
-        "__id__": 177
+        "__id__": 180
       },
       {
-        "__id__": 181
+        "__id__": 184
       },
       {
-        "__id__": 185
+        "__id__": 188
+      },
+      {
+        "__id__": 190
       }
     ],
     "_entryState": {
@@ -2194,20 +2197,6 @@
     "value": 0
   },
   {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 107
-    },
-    "to": {
-      "__id__": 106
-    },
-    "conditions": [],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": true,
-    "_exitCondition": 1
-  },
-  {
     "__type__": "cc.animation.Transition",
     "from": {
       "__id__": 105
@@ -2217,7 +2206,7 @@
     },
     "conditions": [
       {
-        "__id__": 178
+        "__id__": 177
       }
     ]
   },
@@ -2225,10 +2214,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 179
+      "__id__": 178
     },
     "rhs": {
-      "__id__": 180
+      "__id__": 179
     }
   },
   {
@@ -2251,7 +2240,7 @@
     },
     "conditions": [
       {
-        "__id__": 182
+        "__id__": 181
       }
     ]
   },
@@ -2259,10 +2248,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 183
+      "__id__": 182
     },
     "rhs": {
-      "__id__": 184
+      "__id__": 183
     }
   },
   {
@@ -2285,7 +2274,7 @@
     },
     "conditions": [
       {
-        "__id__": 186
+        "__id__": 185
       }
     ]
   },
@@ -2293,10 +2282,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 187
+      "__id__": 186
     },
     "rhs": {
-      "__id__": 188
+      "__id__": 187
     }
   },
   {
@@ -2310,6 +2299,42 @@
     "value": 1
   },
   {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 107
+    },
+    "to": {
+      "__id__": 106
+    },
+    "conditions": [
+      {
+        "__id__": 189
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "turnright"
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 107
+    },
+    "to": {
+      "__id__": 106
+    },
+    "conditions": [],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": true,
+    "_exitCondition": 1
+  },
+  {
     "__type__": "cc.animation.SubStateMachine",
     "__editorExtras__": {
       "centerX": -657.2199783652227,
@@ -2319,7 +2344,7 @@
     "name": "State Machine",
     "_components": [],
     "_stateMachine": {
-      "__id__": 190
+      "__id__": 192
     }
   },
   {
@@ -2327,17 +2352,11 @@
     "__editorExtras__": {
       "viewport": {
         "scale": 1.1629310302734377,
-        "top": -100.38312843891335,
-        "left": -86.05265187488389
+        "top": -101.38312843891335,
+        "left": -41.05265187488389
       }
     },
     "_states": [
-      {
-        "__id__": 191
-      },
-      {
-        "__id__": 192
-      },
       {
         "__id__": 193
       },
@@ -2345,76 +2364,85 @@
         "__id__": 194
       },
       {
-        "__id__": 198
+        "__id__": 195
       },
       {
-        "__id__": 202
+        "__id__": 196
       },
       {
-        "__id__": 206
+        "__id__": 200
+      },
+      {
+        "__id__": 204
+      },
+      {
+        "__id__": 208
       }
     ],
     "_transitions": [
       {
-        "__id__": 210
+        "__id__": 212
       },
       {
-        "__id__": 214
+        "__id__": 216
       },
       {
-        "__id__": 218
+        "__id__": 220
       },
       {
-        "__id__": 222
+        "__id__": 224
       },
       {
-        "__id__": 226
+        "__id__": 228
       },
       {
-        "__id__": 230
+        "__id__": 232
       },
       {
-        "__id__": 234
+        "__id__": 236
       },
       {
-        "__id__": 238
+        "__id__": 240
       },
       {
-        "__id__": 242
+        "__id__": 244
       },
       {
-        "__id__": 246
+        "__id__": 248
       },
       {
-        "__id__": 250
+        "__id__": 252
       },
       {
-        "__id__": 254
+        "__id__": 256
       },
       {
-        "__id__": 258
+        "__id__": 260
       },
       {
-        "__id__": 262
+        "__id__": 264
       },
       {
-        "__id__": 266
+        "__id__": 268
       },
       {
-        "__id__": 267
+        "__id__": 269
       },
       {
-        "__id__": 271
+        "__id__": 273
+      },
+      {
+        "__id__": 277
       }
     ],
     "_entryState": {
-      "__id__": 191
+      "__id__": 193
     },
     "_exitState": {
-      "__id__": 192
+      "__id__": 194
     },
     "_anyState": {
-      "__id__": 193
+      "__id__": 195
     }
   },
   {
@@ -2454,14 +2482,14 @@
     "name": "turnRightBottom",
     "_components": [
       {
-        "__id__": 195
+        "__id__": 197
       }
     ],
     "motion": {
-      "__id__": 196
+      "__id__": 198
     },
     "speed": {
-      "__id__": 197
+      "__id__": 199
     }
   },
   {
@@ -2494,14 +2522,14 @@
     "name": "turnRightLeft",
     "_components": [
       {
-        "__id__": 199
+        "__id__": 201
       }
     ],
     "motion": {
-      "__id__": 200
+      "__id__": 202
     },
     "speed": {
-      "__id__": 201
+      "__id__": 203
     }
   },
   {
@@ -2534,14 +2562,14 @@
     "name": "turnRightRight",
     "_components": [
       {
-        "__id__": 203
+        "__id__": 205
       }
     ],
     "motion": {
-      "__id__": 204
+      "__id__": 206
     },
     "speed": {
-      "__id__": 205
+      "__id__": 207
     }
   },
   {
@@ -2574,14 +2602,14 @@
     "name": "turnRIghtTop",
     "_components": [
       {
-        "__id__": 207
+        "__id__": 209
       }
     ],
     "motion": {
-      "__id__": 208
+      "__id__": 210
     },
     "speed": {
-      "__id__": 209
+      "__id__": 211
     }
   },
   {
@@ -2607,14 +2635,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 198
+      "__id__": 200
     },
     "to": {
-      "__id__": 206
+      "__id__": 208
     },
     "conditions": [
       {
-        "__id__": 211
+        "__id__": 213
       }
     ],
     "duration": 0,
@@ -2626,10 +2654,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 212
+      "__id__": 214
     },
     "rhs": {
-      "__id__": 213
+      "__id__": 215
     }
   },
   {
@@ -2645,14 +2673,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 206
+      "__id__": 208
     },
     "to": {
-      "__id__": 198
+      "__id__": 200
     },
     "conditions": [
       {
-        "__id__": 215
+        "__id__": 217
       }
     ],
     "duration": 0,
@@ -2664,10 +2692,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 216
+      "__id__": 218
     },
     "rhs": {
-      "__id__": 217
+      "__id__": 219
     }
   },
   {
@@ -2683,14 +2711,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 198
+      "__id__": 200
     },
     "to": {
-      "__id__": 194
+      "__id__": 196
     },
     "conditions": [
       {
-        "__id__": 219
+        "__id__": 221
       }
     ],
     "duration": 0,
@@ -2702,10 +2730,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 220
+      "__id__": 222
     },
     "rhs": {
-      "__id__": 221
+      "__id__": 223
     }
   },
   {
@@ -2721,14 +2749,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 194
+      "__id__": 196
     },
     "to": {
-      "__id__": 198
+      "__id__": 200
     },
     "conditions": [
       {
-        "__id__": 223
+        "__id__": 225
       }
     ],
     "duration": 0,
@@ -2740,10 +2768,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 224
+      "__id__": 226
     },
     "rhs": {
-      "__id__": 225
+      "__id__": 227
     }
   },
   {
@@ -2759,14 +2787,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 198
+      "__id__": 200
     },
     "to": {
-      "__id__": 202
+      "__id__": 204
     },
     "conditions": [
       {
-        "__id__": 227
+        "__id__": 229
       }
     ],
     "duration": 0,
@@ -2778,10 +2806,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 228
+      "__id__": 230
     },
     "rhs": {
-      "__id__": 229
+      "__id__": 231
     }
   },
   {
@@ -2797,14 +2825,14 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 202
+      "__id__": 204
     },
     "to": {
-      "__id__": 198
+      "__id__": 200
     },
     "conditions": [
       {
-        "__id__": 231
+        "__id__": 233
       }
     ],
     "duration": 0,
@@ -2816,10 +2844,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 232
+      "__id__": 234
     },
     "rhs": {
-      "__id__": 233
+      "__id__": 235
     }
   },
   {
@@ -2834,307 +2862,307 @@
   },
   {
     "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 191
-    },
-    "to": {
-      "__id__": 206
-    },
-    "conditions": [
-      {
-        "__id__": 235
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 236
-    },
-    "rhs": {
-      "__id__": 237
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 191
-    },
-    "to": {
-      "__id__": 198
-    },
-    "conditions": [
-      {
-        "__id__": 239
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 240
-    },
-    "rhs": {
-      "__id__": 241
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 2
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 202
-    },
-    "to": {
-      "__id__": 194
-    },
-    "conditions": [
-      {
-        "__id__": 243
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 244
-    },
-    "rhs": {
-      "__id__": 245
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 1
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 194
-    },
-    "to": {
-      "__id__": 202
-    },
-    "conditions": [
-      {
-        "__id__": 247
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 248
-    },
-    "rhs": {
-      "__id__": 249
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 3
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 202
-    },
-    "to": {
-      "__id__": 206
-    },
-    "conditions": [
-      {
-        "__id__": 251
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 252
-    },
-    "rhs": {
-      "__id__": 253
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 206
-    },
-    "to": {
-      "__id__": 202
-    },
-    "conditions": [
-      {
-        "__id__": 255
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 256
-    },
-    "rhs": {
-      "__id__": 257
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 3
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 206
-    },
-    "to": {
-      "__id__": 194
-    },
-    "conditions": [
-      {
-        "__id__": 259
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 260
-    },
-    "rhs": {
-      "__id__": 261
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 1
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 194
-    },
-    "to": {
-      "__id__": 206
-    },
-    "conditions": [
-      {
-        "__id__": 263
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 264
-    },
-    "rhs": {
-      "__id__": 265
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
     "from": {
       "__id__": 193
     },
     "to": {
-      "__id__": 192
+      "__id__": 208
+    },
+    "conditions": [
+      {
+        "__id__": 237
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 238
+    },
+    "rhs": {
+      "__id__": 239
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 193
+    },
+    "to": {
+      "__id__": 200
+    },
+    "conditions": [
+      {
+        "__id__": 241
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 242
+    },
+    "rhs": {
+      "__id__": 243
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 2
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 204
+    },
+    "to": {
+      "__id__": 196
+    },
+    "conditions": [
+      {
+        "__id__": 245
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 246
+    },
+    "rhs": {
+      "__id__": 247
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 196
+    },
+    "to": {
+      "__id__": 204
+    },
+    "conditions": [
+      {
+        "__id__": 249
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 250
+    },
+    "rhs": {
+      "__id__": 251
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 3
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 204
+    },
+    "to": {
+      "__id__": 208
+    },
+    "conditions": [
+      {
+        "__id__": 253
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 254
+    },
+    "rhs": {
+      "__id__": 255
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 208
+    },
+    "to": {
+      "__id__": 204
+    },
+    "conditions": [
+      {
+        "__id__": 257
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 258
+    },
+    "rhs": {
+      "__id__": 259
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 3
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 208
+    },
+    "to": {
+      "__id__": 196
+    },
+    "conditions": [
+      {
+        "__id__": 261
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 262
+    },
+    "rhs": {
+      "__id__": 263
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 196
+    },
+    "to": {
+      "__id__": 208
+    },
+    "conditions": [
+      {
+        "__id__": 265
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 266
+    },
+    "rhs": {
+      "__id__": 267
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 195
+    },
+    "to": {
+      "__id__": 194
     },
     "conditions": [],
     "duration": 0,
@@ -3145,14 +3173,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 191
+      "__id__": 193
     },
     "to": {
-      "__id__": 202
+      "__id__": 204
     },
     "conditions": [
       {
-        "__id__": 268
+        "__id__": 270
       }
     ]
   },
@@ -3160,10 +3188,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 269
+      "__id__": 271
     },
     "rhs": {
-      "__id__": 270
+      "__id__": 272
     }
   },
   {
@@ -3179,14 +3207,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 191
+      "__id__": 193
     },
     "to": {
-      "__id__": 194
+      "__id__": 196
     },
     "conditions": [
       {
-        "__id__": 272
+        "__id__": 274
       }
     ]
   },
@@ -3194,10 +3222,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 273
+      "__id__": 275
     },
     "rhs": {
-      "__id__": 274
+      "__id__": 276
     }
   },
   {
@@ -3209,6 +3237,28 @@
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
     "value": 1
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 195
+    },
+    "to": {
+      "__id__": 194
+    },
+    "conditions": [
+      {
+        "__id__": 278
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "turnleft"
   },
   {
     "__type__": "cc.animation.SubStateMachine",
@@ -3220,7 +3270,7 @@
     "name": "State Machine",
     "_components": [],
     "_stateMachine": {
-      "__id__": 276
+      "__id__": 280
     }
   },
   {
@@ -3234,16 +3284,13 @@
     },
     "_states": [
       {
-        "__id__": 277
+        "__id__": 281
       },
       {
-        "__id__": 278
+        "__id__": 282
       },
       {
-        "__id__": 279
-      },
-      {
-        "__id__": 280
+        "__id__": 283
       },
       {
         "__id__": 284
@@ -3253,12 +3300,12 @@
       },
       {
         "__id__": 292
+      },
+      {
+        "__id__": 296
       }
     ],
     "_transitions": [
-      {
-        "__id__": 296
-      },
       {
         "__id__": 300
       },
@@ -3306,16 +3353,19 @@
       },
       {
         "__id__": 360
+      },
+      {
+        "__id__": 364
       }
     ],
     "_entryState": {
-      "__id__": 277
+      "__id__": 281
     },
     "_exitState": {
-      "__id__": 278
+      "__id__": 282
     },
     "_anyState": {
-      "__id__": 279
+      "__id__": 283
     }
   },
   {
@@ -3355,14 +3405,14 @@
     "name": "blockFrontTop",
     "_components": [
       {
-        "__id__": 281
+        "__id__": 285
       }
     ],
     "motion": {
-      "__id__": 282
+      "__id__": 286
     },
     "speed": {
-      "__id__": 283
+      "__id__": 287
     }
   },
   {
@@ -3395,14 +3445,14 @@
     "name": "blockFrontBottom",
     "_components": [
       {
-        "__id__": 285
+        "__id__": 289
       }
     ],
     "motion": {
-      "__id__": 286
+      "__id__": 290
     },
     "speed": {
-      "__id__": 287
+      "__id__": 291
     }
   },
   {
@@ -3435,14 +3485,14 @@
     "name": "blockFrontLeft",
     "_components": [
       {
-        "__id__": 289
+        "__id__": 293
       }
     ],
     "motion": {
-      "__id__": 290
+      "__id__": 294
     },
     "speed": {
-      "__id__": 291
+      "__id__": 295
     }
   },
   {
@@ -3475,14 +3525,14 @@
     "name": "blockFrontRight",
     "_components": [
       {
-        "__id__": 293
+        "__id__": 297
       }
     ],
     "motion": {
-      "__id__": 294
+      "__id__": 298
     },
     "speed": {
-      "__id__": 295
+      "__id__": 299
     }
   },
   {
@@ -3508,48 +3558,10 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 280
-    },
-    "to": {
-      "__id__": 284
-    },
-    "conditions": [
-      {
-        "__id__": 297
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 298
-    },
-    "rhs": {
-      "__id__": 299
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 1
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
       "__id__": 284
     },
     "to": {
-      "__id__": 280
+      "__id__": 288
     },
     "conditions": [
       {
@@ -3579,15 +3591,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 292
+      "__id__": 288
     },
     "to": {
-      "__id__": 280
+      "__id__": 284
     },
     "conditions": [
       {
@@ -3622,10 +3634,10 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 280
+      "__id__": 296
     },
     "to": {
-      "__id__": 288
+      "__id__": 284
     },
     "conditions": [
       {
@@ -3655,15 +3667,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 292
+      "__id__": 284
     },
     "to": {
-      "__id__": 284
+      "__id__": 292
     },
     "conditions": [
       {
@@ -3693,15 +3705,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 280
+      "__id__": 296
     },
     "to": {
-      "__id__": 292
+      "__id__": 288
     },
     "conditions": [
       {
@@ -3731,7 +3743,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -3739,7 +3751,7 @@
       "__id__": 284
     },
     "to": {
-      "__id__": 288
+      "__id__": 296
     },
     "conditions": [
       {
@@ -3769,7 +3781,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -3777,7 +3789,7 @@
       "__id__": 288
     },
     "to": {
-      "__id__": 280
+      "__id__": 292
     },
     "conditions": [
       {
@@ -3807,12 +3819,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 288
+      "__id__": 292
     },
     "to": {
       "__id__": 284
@@ -3845,15 +3857,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 284
+      "__id__": 292
     },
     "to": {
-      "__id__": 292
+      "__id__": 288
     },
     "conditions": [
       {
@@ -3883,15 +3895,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 292
+      "__id__": 288
     },
     "to": {
-      "__id__": 288
+      "__id__": 296
     },
     "conditions": [
       {
@@ -3921,12 +3933,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 288
+      "__id__": 296
     },
     "to": {
       "__id__": 292
@@ -3959,21 +3971,25 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 2
   },
   {
-    "__type__": "cc.animation.Transition",
+    "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 277
+      "__id__": 292
     },
     "to": {
-      "__id__": 288
+      "__id__": 296
     },
     "conditions": [
       {
         "__id__": 345
       }
-    ]
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
   },
   {
     "__type__": "cc.animation.BinaryCondition",
@@ -3993,15 +4009,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 3
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 277
+      "__id__": 281
     },
     "to": {
-      "__id__": 280
+      "__id__": 292
     },
     "conditions": [
       {
@@ -4027,15 +4043,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 2
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 277
+      "__id__": 281
     },
     "to": {
-      "__id__": 292
+      "__id__": 284
     },
     "conditions": [
       {
@@ -4061,15 +4077,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 0
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 277
+      "__id__": 281
     },
     "to": {
-      "__id__": 284
+      "__id__": 296
     },
     "conditions": [
       {
@@ -4095,15 +4111,49 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
+    "value": 3
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 281
+    },
+    "to": {
+      "__id__": 288
+    },
+    "conditions": [
+      {
+        "__id__": 361
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 362
+    },
+    "rhs": {
+      "__id__": 363
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
     "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 279
+      "__id__": 283
     },
     "to": {
-      "__id__": 278
+      "__id__": 282
     },
     "conditions": [],
     "duration": 0,
@@ -4121,7 +4171,7 @@
     "name": "State Machine",
     "_components": [],
     "_stateMachine": {
-      "__id__": 362
+      "__id__": 366
     }
   },
   {
@@ -4135,16 +4185,13 @@
     },
     "_states": [
       {
-        "__id__": 363
+        "__id__": 367
       },
       {
-        "__id__": 364
+        "__id__": 368
       },
       {
-        "__id__": 365
-      },
-      {
-        "__id__": 366
+        "__id__": 369
       },
       {
         "__id__": 370
@@ -4154,12 +4201,12 @@
       },
       {
         "__id__": 378
+      },
+      {
+        "__id__": 382
       }
     ],
     "_transitions": [
-      {
-        "__id__": 382
-      },
       {
         "__id__": 386
       },
@@ -4207,16 +4254,19 @@
       },
       {
         "__id__": 446
+      },
+      {
+        "__id__": 450
       }
     ],
     "_entryState": {
-      "__id__": 363
+      "__id__": 367
     },
     "_exitState": {
-      "__id__": 364
+      "__id__": 368
     },
     "_anyState": {
-      "__id__": 365
+      "__id__": 369
     }
   },
   {
@@ -4256,14 +4306,14 @@
     "name": "blockBackBottom",
     "_components": [
       {
-        "__id__": 367
+        "__id__": 371
       }
     ],
     "motion": {
-      "__id__": 368
+      "__id__": 372
     },
     "speed": {
-      "__id__": 369
+      "__id__": 373
     }
   },
   {
@@ -4296,14 +4346,14 @@
     "name": "blockBackLeft",
     "_components": [
       {
-        "__id__": 371
+        "__id__": 375
       }
     ],
     "motion": {
-      "__id__": 372
+      "__id__": 376
     },
     "speed": {
-      "__id__": 373
+      "__id__": 377
     }
   },
   {
@@ -4336,14 +4386,14 @@
     "name": "blockBackTop",
     "_components": [
       {
-        "__id__": 375
+        "__id__": 379
       }
     ],
     "motion": {
-      "__id__": 376
+      "__id__": 380
     },
     "speed": {
-      "__id__": 377
+      "__id__": 381
     }
   },
   {
@@ -4376,14 +4426,14 @@
     "name": "blockBackRight",
     "_components": [
       {
-        "__id__": 379
+        "__id__": 383
       }
     ],
     "motion": {
-      "__id__": 380
+      "__id__": 384
     },
     "speed": {
-      "__id__": 381
+      "__id__": 385
     }
   },
   {
@@ -4409,48 +4459,10 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 374
-    },
-    "to": {
-      "__id__": 378
-    },
-    "conditions": [
-      {
-        "__id__": 383
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 384
-    },
-    "rhs": {
-      "__id__": 385
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 3
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
       "__id__": 378
     },
     "to": {
-      "__id__": 366
+      "__id__": 382
     },
     "conditions": [
       {
@@ -4480,15 +4492,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 366
+      "__id__": 382
     },
     "to": {
-      "__id__": 378
+      "__id__": 370
     },
     "conditions": [
       {
@@ -4518,7 +4530,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -4526,7 +4538,7 @@
       "__id__": 370
     },
     "to": {
-      "__id__": 366
+      "__id__": 382
     },
     "conditions": [
       {
@@ -4556,12 +4568,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 366
+      "__id__": 374
     },
     "to": {
       "__id__": 370
@@ -4594,12 +4606,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 366
+      "__id__": 370
     },
     "to": {
       "__id__": 374
@@ -4632,15 +4644,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 374
+      "__id__": 370
     },
     "to": {
-      "__id__": 366
+      "__id__": 378
     },
     "conditions": [
       {
@@ -4670,15 +4682,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 370
+      "__id__": 378
     },
     "to": {
-      "__id__": 374
+      "__id__": 370
     },
     "conditions": [
       {
@@ -4708,7 +4720,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -4716,7 +4728,7 @@
       "__id__": 374
     },
     "to": {
-      "__id__": 370
+      "__id__": 378
     },
     "conditions": [
       {
@@ -4746,15 +4758,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 370
+      "__id__": 378
     },
     "to": {
-      "__id__": 378
+      "__id__": 374
     },
     "conditions": [
       {
@@ -4784,15 +4796,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 378
+      "__id__": 374
     },
     "to": {
-      "__id__": 370
+      "__id__": 382
     },
     "conditions": [
       {
@@ -4822,12 +4834,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 3
   },
   {
-    "__type__": "cc.animation.Transition",
+    "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 363
+      "__id__": 382
     },
     "to": {
       "__id__": 374
@@ -4836,7 +4848,11 @@
       {
         "__id__": 427
       }
-    ]
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
   },
   {
     "__type__": "cc.animation.BinaryCondition",
@@ -4856,15 +4872,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 2
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 363
+      "__id__": 367
     },
     "to": {
-      "__id__": 370
+      "__id__": 378
     },
     "conditions": [
       {
@@ -4890,15 +4906,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 0
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 363
+      "__id__": 367
     },
     "to": {
-      "__id__": 366
+      "__id__": 374
     },
     "conditions": [
       {
@@ -4924,15 +4940,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 2
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 363
+      "__id__": 367
     },
     "to": {
-      "__id__": 378
+      "__id__": 370
     },
     "conditions": [
       {
@@ -4958,25 +4974,21 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 1
   },
   {
-    "__type__": "cc.animation.AnimationTransition",
+    "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 378
+      "__id__": 367
     },
     "to": {
-      "__id__": 374
+      "__id__": 382
     },
     "conditions": [
       {
         "__id__": 443
       }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
+    ]
   },
   {
     "__type__": "cc.animation.BinaryCondition",
@@ -4996,15 +5008,53 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
+    "value": 3
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 382
+    },
+    "to": {
+      "__id__": 378
+    },
+    "conditions": [
+      {
+        "__id__": 447
+      }
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 448
+    },
+    "rhs": {
+      "__id__": 449
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
     "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 365
+      "__id__": 369
     },
     "to": {
-      "__id__": 364
+      "__id__": 368
     },
     "conditions": [],
     "duration": 0,
@@ -5022,7 +5072,7 @@
     "name": "State Machine",
     "_components": [],
     "_stateMachine": {
-      "__id__": 448
+      "__id__": 452
     }
   },
   {
@@ -5036,16 +5086,13 @@
     },
     "_states": [
       {
-        "__id__": 449
+        "__id__": 453
       },
       {
-        "__id__": 450
+        "__id__": 454
       },
       {
-        "__id__": 451
-      },
-      {
-        "__id__": 452
+        "__id__": 455
       },
       {
         "__id__": 456
@@ -5055,12 +5102,12 @@
       },
       {
         "__id__": 464
+      },
+      {
+        "__id__": 468
       }
     ],
     "_transitions": [
-      {
-        "__id__": 468
-      },
       {
         "__id__": 472
       },
@@ -5108,16 +5155,19 @@
       },
       {
         "__id__": 532
+      },
+      {
+        "__id__": 536
       }
     ],
     "_entryState": {
-      "__id__": 449
+      "__id__": 453
     },
     "_exitState": {
-      "__id__": 450
+      "__id__": 454
     },
     "_anyState": {
-      "__id__": 451
+      "__id__": 455
     }
   },
   {
@@ -5157,14 +5207,14 @@
     "name": "blockLeftBottom",
     "_components": [
       {
-        "__id__": 453
+        "__id__": 457
       }
     ],
     "motion": {
-      "__id__": 454
+      "__id__": 458
     },
     "speed": {
-      "__id__": 455
+      "__id__": 459
     }
   },
   {
@@ -5197,14 +5247,14 @@
     "name": "blockLeftTop",
     "_components": [
       {
-        "__id__": 457
+        "__id__": 461
       }
     ],
     "motion": {
-      "__id__": 458
+      "__id__": 462
     },
     "speed": {
-      "__id__": 459
+      "__id__": 463
     }
   },
   {
@@ -5237,14 +5287,14 @@
     "name": "blockLeftLeft",
     "_components": [
       {
-        "__id__": 461
+        "__id__": 465
       }
     ],
     "motion": {
-      "__id__": 462
+      "__id__": 466
     },
     "speed": {
-      "__id__": 463
+      "__id__": 467
     }
   },
   {
@@ -5277,14 +5327,14 @@
     "name": "blockLeftRight",
     "_components": [
       {
-        "__id__": 465
+        "__id__": 469
       }
     ],
     "motion": {
-      "__id__": 466
+      "__id__": 470
     },
     "speed": {
-      "__id__": 467
+      "__id__": 471
     }
   },
   {
@@ -5310,45 +5360,7 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 456
-    },
-    "to": {
-      "__id__": 452
-    },
-    "conditions": [
-      {
-        "__id__": 469
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 470
-    },
-    "rhs": {
-      "__id__": 471
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 1
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 452
+      "__id__": 460
     },
     "to": {
       "__id__": 456
@@ -5381,7 +5393,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -5389,14 +5401,14 @@
       "__id__": 456
     },
     "to": {
-      "__id__": 464
+      "__id__": 460
     },
     "conditions": [
       {
         "__id__": 477
       }
     ],
-    "duration": 3,
+    "duration": 0,
     "relativeDuration": false,
     "exitConditionEnabled": false,
     "_exitCondition": 1
@@ -5419,22 +5431,22 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 464
+      "__id__": 460
     },
     "to": {
-      "__id__": 456
+      "__id__": 468
     },
     "conditions": [
       {
         "__id__": 481
       }
     ],
-    "duration": 0,
+    "duration": 3,
     "relativeDuration": false,
     "exitConditionEnabled": false,
     "_exitCondition": 1
@@ -5457,12 +5469,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 456
+      "__id__": 468
     },
     "to": {
       "__id__": 460
@@ -5495,7 +5507,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -5503,7 +5515,7 @@
       "__id__": 460
     },
     "to": {
-      "__id__": 456
+      "__id__": 464
     },
     "conditions": [
       {
@@ -5533,15 +5545,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 460
+      "__id__": 464
     },
     "to": {
-      "__id__": 464
+      "__id__": 460
     },
     "conditions": [
       {
@@ -5571,7 +5583,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -5579,7 +5591,7 @@
       "__id__": 464
     },
     "to": {
-      "__id__": 460
+      "__id__": 468
     },
     "conditions": [
       {
@@ -5609,15 +5621,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 460
+      "__id__": 468
     },
     "to": {
-      "__id__": 452
+      "__id__": 464
     },
     "conditions": [
       {
@@ -5647,15 +5659,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 452
+      "__id__": 464
     },
     "to": {
-      "__id__": 464
+      "__id__": 456
     },
     "conditions": [
       {
@@ -5685,15 +5697,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 464
+      "__id__": 456
     },
     "to": {
-      "__id__": 452
+      "__id__": 468
     },
     "conditions": [
       {
@@ -5723,15 +5735,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 452
+      "__id__": 468
     },
     "to": {
-      "__id__": 460
+      "__id__": 456
     },
     "conditions": [
       {
@@ -5761,21 +5773,25 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 1
   },
   {
-    "__type__": "cc.animation.Transition",
+    "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 449
+      "__id__": 456
     },
     "to": {
-      "__id__": 456
+      "__id__": 464
     },
     "conditions": [
       {
         "__id__": 517
       }
-    ]
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
   },
   {
     "__type__": "cc.animation.BinaryCondition",
@@ -5795,15 +5811,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 2
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 449
+      "__id__": 453
     },
     "to": {
-      "__id__": 464
+      "__id__": 460
     },
     "conditions": [
       {
@@ -5829,15 +5845,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 0
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 449
+      "__id__": 453
     },
     "to": {
-      "__id__": 452
+      "__id__": 468
     },
     "conditions": [
       {
@@ -5863,15 +5879,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 3
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 449
+      "__id__": 453
     },
     "to": {
-      "__id__": 460
+      "__id__": 456
     },
     "conditions": [
       {
@@ -5897,15 +5913,49 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 453
+    },
+    "to": {
+      "__id__": 464
+    },
+    "conditions": [
+      {
+        "__id__": 533
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 534
+    },
+    "rhs": {
+      "__id__": 535
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
     "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 451
+      "__id__": 455
     },
     "to": {
-      "__id__": 450
+      "__id__": 454
     },
     "conditions": [],
     "duration": 0,
@@ -5923,7 +5973,7 @@
     "name": "State Machine",
     "_components": [],
     "_stateMachine": {
-      "__id__": 534
+      "__id__": 538
     }
   },
   {
@@ -5937,16 +5987,13 @@
     },
     "_states": [
       {
-        "__id__": 535
+        "__id__": 539
       },
       {
-        "__id__": 536
+        "__id__": 540
       },
       {
-        "__id__": 537
-      },
-      {
-        "__id__": 538
+        "__id__": 541
       },
       {
         "__id__": 542
@@ -5956,12 +6003,12 @@
       },
       {
         "__id__": 550
+      },
+      {
+        "__id__": 554
       }
     ],
     "_transitions": [
-      {
-        "__id__": 554
-      },
       {
         "__id__": 558
       },
@@ -6009,16 +6056,19 @@
       },
       {
         "__id__": 618
+      },
+      {
+        "__id__": 622
       }
     ],
     "_entryState": {
-      "__id__": 535
+      "__id__": 539
     },
     "_exitState": {
-      "__id__": 536
+      "__id__": 540
     },
     "_anyState": {
-      "__id__": 537
+      "__id__": 541
     }
   },
   {
@@ -6058,14 +6108,14 @@
     "name": "blockRightBottom",
     "_components": [
       {
-        "__id__": 539
+        "__id__": 543
       }
     ],
     "motion": {
-      "__id__": 540
+      "__id__": 544
     },
     "speed": {
-      "__id__": 541
+      "__id__": 545
     }
   },
   {
@@ -6098,14 +6148,14 @@
     "name": "blockRightRight",
     "_components": [
       {
-        "__id__": 543
+        "__id__": 547
       }
     ],
     "motion": {
-      "__id__": 544
+      "__id__": 548
     },
     "speed": {
-      "__id__": 545
+      "__id__": 549
     }
   },
   {
@@ -6138,14 +6188,14 @@
     "name": "blockRightTop",
     "_components": [
       {
-        "__id__": 547
+        "__id__": 551
       }
     ],
     "motion": {
-      "__id__": 548
+      "__id__": 552
     },
     "speed": {
-      "__id__": 549
+      "__id__": 553
     }
   },
   {
@@ -6178,14 +6228,14 @@
     "name": "blockRightLeft",
     "_components": [
       {
-        "__id__": 551
+        "__id__": 555
       }
     ],
     "motion": {
-      "__id__": 552
+      "__id__": 556
     },
     "speed": {
-      "__id__": 553
+      "__id__": 557
     }
   },
   {
@@ -6211,45 +6261,7 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 546
-    },
-    "to": {
-      "__id__": 542
-    },
-    "conditions": [
-      {
-        "__id__": 555
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 556
-    },
-    "rhs": {
-      "__id__": 557
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 3
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 542
+      "__id__": 550
     },
     "to": {
       "__id__": 546
@@ -6282,7 +6294,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -6290,7 +6302,7 @@
       "__id__": 546
     },
     "to": {
-      "__id__": 538
+      "__id__": 550
     },
     "conditions": [
       {
@@ -6320,15 +6332,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 538
+      "__id__": 550
     },
     "to": {
-      "__id__": 546
+      "__id__": 542
     },
     "conditions": [
       {
@@ -6358,12 +6370,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 546
+      "__id__": 542
     },
     "to": {
       "__id__": 550
@@ -6396,7 +6408,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -6404,7 +6416,7 @@
       "__id__": 550
     },
     "to": {
-      "__id__": 546
+      "__id__": 554
     },
     "conditions": [
       {
@@ -6434,15 +6446,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 550
+      "__id__": 554
     },
     "to": {
-      "__id__": 542
+      "__id__": 550
     },
     "conditions": [
       {
@@ -6472,15 +6484,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 542
+      "__id__": 554
     },
     "to": {
-      "__id__": 550
+      "__id__": 546
     },
     "conditions": [
       {
@@ -6510,15 +6522,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 550
+      "__id__": 546
     },
     "to": {
-      "__id__": 538
+      "__id__": 554
     },
     "conditions": [
       {
@@ -6548,15 +6560,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 538
+      "__id__": 554
     },
     "to": {
-      "__id__": 550
+      "__id__": 542
     },
     "conditions": [
       {
@@ -6586,15 +6598,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 538
+      "__id__": 542
     },
     "to": {
-      "__id__": 542
+      "__id__": 554
     },
     "conditions": [
       {
@@ -6624,7 +6636,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -6632,7 +6644,7 @@
       "__id__": 542
     },
     "to": {
-      "__id__": 538
+      "__id__": 546
     },
     "conditions": [
       {
@@ -6662,21 +6674,25 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 3
   },
   {
-    "__type__": "cc.animation.Transition",
+    "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 535
+      "__id__": 546
     },
     "to": {
-      "__id__": 546
+      "__id__": 542
     },
     "conditions": [
       {
         "__id__": 603
       }
-    ]
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
   },
   {
     "__type__": "cc.animation.BinaryCondition",
@@ -6696,15 +6712,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 1
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 535
+      "__id__": 539
     },
     "to": {
-      "__id__": 538
+      "__id__": 550
     },
     "conditions": [
       {
@@ -6730,15 +6746,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 0
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 535
+      "__id__": 539
     },
     "to": {
-      "__id__": 550
+      "__id__": 542
     },
     "conditions": [
       {
@@ -6764,15 +6780,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 1
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 535
+      "__id__": 539
     },
     "to": {
-      "__id__": 542
+      "__id__": 554
     },
     "conditions": [
       {
@@ -6798,15 +6814,49 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
+    "value": 2
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 539
+    },
+    "to": {
+      "__id__": 546
+    },
+    "conditions": [
+      {
+        "__id__": 619
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 620
+    },
+    "rhs": {
+      "__id__": 621
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
     "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 537
+      "__id__": 541
     },
     "to": {
-      "__id__": 536
+      "__id__": 540
     },
     "conditions": [],
     "duration": 0,
@@ -6824,7 +6874,7 @@
     "name": "State Machine",
     "_components": [],
     "_stateMachine": {
-      "__id__": 620
+      "__id__": 624
     }
   },
   {
@@ -6838,16 +6888,13 @@
     },
     "_states": [
       {
-        "__id__": 621
+        "__id__": 625
       },
       {
-        "__id__": 622
+        "__id__": 626
       },
       {
-        "__id__": 623
-      },
-      {
-        "__id__": 624
+        "__id__": 627
       },
       {
         "__id__": 628
@@ -6857,12 +6904,12 @@
       },
       {
         "__id__": 636
+      },
+      {
+        "__id__": 640
       }
     ],
     "_transitions": [
-      {
-        "__id__": 640
-      },
       {
         "__id__": 644
       },
@@ -6910,16 +6957,19 @@
       },
       {
         "__id__": 704
+      },
+      {
+        "__id__": 708
       }
     ],
     "_entryState": {
-      "__id__": 621
+      "__id__": 625
     },
     "_exitState": {
-      "__id__": 622
+      "__id__": 626
     },
     "_anyState": {
-      "__id__": 623
+      "__id__": 627
     }
   },
   {
@@ -6959,14 +7009,14 @@
     "name": "blockTurnLeftBottom",
     "_components": [
       {
-        "__id__": 625
+        "__id__": 629
       }
     ],
     "motion": {
-      "__id__": 626
+      "__id__": 630
     },
     "speed": {
-      "__id__": 627
+      "__id__": 631
     }
   },
   {
@@ -6999,14 +7049,14 @@
     "name": "blockTurnLeftLeft",
     "_components": [
       {
-        "__id__": 629
+        "__id__": 633
       }
     ],
     "motion": {
-      "__id__": 630
+      "__id__": 634
     },
     "speed": {
-      "__id__": 631
+      "__id__": 635
     }
   },
   {
@@ -7039,14 +7089,14 @@
     "name": "blockTurnLeftRight",
     "_components": [
       {
-        "__id__": 633
+        "__id__": 637
       }
     ],
     "motion": {
-      "__id__": 634
+      "__id__": 638
     },
     "speed": {
-      "__id__": 635
+      "__id__": 639
     }
   },
   {
@@ -7079,14 +7129,14 @@
     "name": "blockTurnLeftTop",
     "_components": [
       {
-        "__id__": 637
+        "__id__": 641
       }
     ],
     "motion": {
-      "__id__": 638
+      "__id__": 642
     },
     "speed": {
-      "__id__": 639
+      "__id__": 643
     }
   },
   {
@@ -7112,48 +7162,10 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 636
+      "__id__": 640
     },
     "to": {
-      "__id__": 624
-    },
-    "conditions": [
-      {
-        "__id__": 641
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 642
-    },
-    "rhs": {
-      "__id__": 643
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 1
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 624
-    },
-    "to": {
-      "__id__": 636
+      "__id__": 628
     },
     "conditions": [
       {
@@ -7183,15 +7195,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 636
+      "__id__": 628
     },
     "to": {
-      "__id__": 632
+      "__id__": 640
     },
     "conditions": [
       {
@@ -7221,12 +7233,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 632
+      "__id__": 640
     },
     "to": {
       "__id__": 636
@@ -7259,7 +7271,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -7267,7 +7279,7 @@
       "__id__": 636
     },
     "to": {
-      "__id__": 628
+      "__id__": 640
     },
     "conditions": [
       {
@@ -7297,15 +7309,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 628
+      "__id__": 640
     },
     "to": {
-      "__id__": 636
+      "__id__": 632
     },
     "conditions": [
       {
@@ -7335,15 +7347,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 624
+      "__id__": 632
     },
     "to": {
-      "__id__": 632
+      "__id__": 640
     },
     "conditions": [
       {
@@ -7373,15 +7385,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 632
+      "__id__": 628
     },
     "to": {
-      "__id__": 624
+      "__id__": 636
     },
     "conditions": [
       {
@@ -7411,12 +7423,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 624
+      "__id__": 636
     },
     "to": {
       "__id__": 628
@@ -7449,7 +7461,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -7457,7 +7469,7 @@
       "__id__": 628
     },
     "to": {
-      "__id__": 624
+      "__id__": 632
     },
     "conditions": [
       {
@@ -7487,15 +7499,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 628
+      "__id__": 632
     },
     "to": {
-      "__id__": 632
+      "__id__": 628
     },
     "conditions": [
       {
@@ -7525,7 +7537,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -7533,7 +7545,7 @@
       "__id__": 632
     },
     "to": {
-      "__id__": 628
+      "__id__": 636
     },
     "conditions": [
       {
@@ -7563,21 +7575,25 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 3
   },
   {
-    "__type__": "cc.animation.Transition",
+    "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 621
+      "__id__": 636
     },
     "to": {
-      "__id__": 636
+      "__id__": 632
     },
     "conditions": [
       {
         "__id__": 689
       }
-    ]
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
   },
   {
     "__type__": "cc.animation.BinaryCondition",
@@ -7597,15 +7613,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 2
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 621
+      "__id__": 625
     },
     "to": {
-      "__id__": 624
+      "__id__": 640
     },
     "conditions": [
       {
@@ -7631,12 +7647,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 0
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 621
+      "__id__": 625
     },
     "to": {
       "__id__": 628
@@ -7665,12 +7681,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 1
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 621
+      "__id__": 625
     },
     "to": {
       "__id__": 632
@@ -7699,15 +7715,49 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
+    "value": 2
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 625
+    },
+    "to": {
+      "__id__": 636
+    },
+    "conditions": [
+      {
+        "__id__": 705
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 706
+    },
+    "rhs": {
+      "__id__": 707
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
     "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 623
+      "__id__": 627
     },
     "to": {
-      "__id__": 622
+      "__id__": 626
     },
     "conditions": [],
     "duration": 0,
@@ -7725,7 +7775,7 @@
     "name": "State Machine",
     "_components": [],
     "_stateMachine": {
-      "__id__": 706
+      "__id__": 710
     }
   },
   {
@@ -7739,16 +7789,13 @@
     },
     "_states": [
       {
-        "__id__": 707
+        "__id__": 711
       },
       {
-        "__id__": 708
+        "__id__": 712
       },
       {
-        "__id__": 709
-      },
-      {
-        "__id__": 710
+        "__id__": 713
       },
       {
         "__id__": 714
@@ -7758,12 +7805,12 @@
       },
       {
         "__id__": 722
+      },
+      {
+        "__id__": 726
       }
     ],
     "_transitions": [
-      {
-        "__id__": 726
-      },
       {
         "__id__": 730
       },
@@ -7811,16 +7858,19 @@
       },
       {
         "__id__": 790
+      },
+      {
+        "__id__": 794
       }
     ],
     "_entryState": {
-      "__id__": 707
+      "__id__": 711
     },
     "_exitState": {
-      "__id__": 708
+      "__id__": 712
     },
     "_anyState": {
-      "__id__": 709
+      "__id__": 713
     }
   },
   {
@@ -7860,14 +7910,14 @@
     "name": "blockTurnRightBottom",
     "_components": [
       {
-        "__id__": 711
+        "__id__": 715
       }
     ],
     "motion": {
-      "__id__": 712
+      "__id__": 716
     },
     "speed": {
-      "__id__": 713
+      "__id__": 717
     }
   },
   {
@@ -7900,14 +7950,14 @@
     "name": "blockTurnRightLeft",
     "_components": [
       {
-        "__id__": 715
+        "__id__": 719
       }
     ],
     "motion": {
-      "__id__": 716
+      "__id__": 720
     },
     "speed": {
-      "__id__": 717
+      "__id__": 721
     }
   },
   {
@@ -7940,14 +7990,14 @@
     "name": "blockTurnRightRight",
     "_components": [
       {
-        "__id__": 719
+        "__id__": 723
       }
     ],
     "motion": {
-      "__id__": 720
+      "__id__": 724
     },
     "speed": {
-      "__id__": 721
+      "__id__": 725
     }
   },
   {
@@ -7980,14 +8030,14 @@
     "name": "blockTurnRightTop",
     "_components": [
       {
-        "__id__": 723
+        "__id__": 727
       }
     ],
     "motion": {
-      "__id__": 724
+      "__id__": 728
     },
     "speed": {
-      "__id__": 725
+      "__id__": 729
     }
   },
   {
@@ -8013,48 +8063,10 @@
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 722
+      "__id__": 726
     },
     "to": {
-      "__id__": 710
-    },
-    "conditions": [
-      {
-        "__id__": 727
-      }
-    ],
-    "duration": 0,
-    "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
-  },
-  {
-    "__type__": "cc.animation.BinaryCondition",
-    "operator": 0,
-    "lhs": {
-      "__id__": 728
-    },
-    "rhs": {
-      "__id__": 729
-    }
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "direction",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 1
-  },
-  {
-    "__type__": "cc.animation.AnimationTransition",
-    "from": {
-      "__id__": 710
-    },
-    "to": {
-      "__id__": 722
+      "__id__": 714
     },
     "conditions": [
       {
@@ -8084,15 +8096,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 722
+      "__id__": 714
     },
     "to": {
-      "__id__": 718
+      "__id__": 726
     },
     "conditions": [
       {
@@ -8122,12 +8134,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 718
+      "__id__": 726
     },
     "to": {
       "__id__": 722
@@ -8160,7 +8172,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -8168,7 +8180,7 @@
       "__id__": 722
     },
     "to": {
-      "__id__": 714
+      "__id__": 726
     },
     "conditions": [
       {
@@ -8198,15 +8210,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 714
+      "__id__": 726
     },
     "to": {
-      "__id__": 722
+      "__id__": 718
     },
     "conditions": [
       {
@@ -8236,15 +8248,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 714
+      "__id__": 718
     },
     "to": {
-      "__id__": 710
+      "__id__": 726
     },
     "conditions": [
       {
@@ -8274,12 +8286,12 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 0
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 710
+      "__id__": 718
     },
     "to": {
       "__id__": 714
@@ -8312,7 +8324,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -8350,7 +8362,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 2
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -8358,7 +8370,7 @@
       "__id__": 718
     },
     "to": {
-      "__id__": 710
+      "__id__": 722
     },
     "conditions": [
       {
@@ -8388,15 +8400,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 710
+      "__id__": 722
     },
     "to": {
-      "__id__": 718
+      "__id__": 714
     },
     "conditions": [
       {
@@ -8426,15 +8438,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 3
+    "value": 1
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 718
+      "__id__": 714
     },
     "to": {
-      "__id__": 714
+      "__id__": 722
     },
     "conditions": [
       {
@@ -8464,21 +8476,25 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 3
   },
   {
-    "__type__": "cc.animation.Transition",
+    "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 707
+      "__id__": 722
     },
     "to": {
-      "__id__": 722
+      "__id__": 718
     },
     "conditions": [
       {
         "__id__": 775
       }
-    ]
+    ],
+    "duration": 0,
+    "relativeDuration": false,
+    "exitConditionEnabled": false,
+    "_exitCondition": 1
   },
   {
     "__type__": "cc.animation.BinaryCondition",
@@ -8498,15 +8514,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 0
+    "value": 2
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 707
+      "__id__": 711
     },
     "to": {
-      "__id__": 714
+      "__id__": 726
     },
     "conditions": [
       {
@@ -8532,15 +8548,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 2
+    "value": 0
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 707
+      "__id__": 711
     },
     "to": {
-      "__id__": 710
+      "__id__": 718
     },
     "conditions": [
       {
@@ -8566,15 +8582,15 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 2
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 707
+      "__id__": 711
     },
     "to": {
-      "__id__": 718
+      "__id__": 714
     },
     "conditions": [
       {
@@ -8600,15 +8616,49 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 711
+    },
+    "to": {
+      "__id__": 722
+    },
+    "conditions": [
+      {
+        "__id__": 791
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 0,
+    "lhs": {
+      "__id__": 792
+    },
+    "rhs": {
+      "__id__": 793
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "direction",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
     "value": 3
   },
   {
     "__type__": "cc.animation.AnimationTransition",
     "from": {
-      "__id__": 709
+      "__id__": 713
     },
     "to": {
-      "__id__": 708
+      "__id__": 712
     },
     "conditions": [],
     "duration": 0,
@@ -8632,11 +8682,11 @@
       "__id__": 103
     },
     "to": {
-      "__id__": 189
+      "__id__": 191
     },
     "conditions": [
       {
-        "__id__": 793
+        "__id__": 797
       }
     ]
   },
@@ -8647,14 +8697,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 189
+      "__id__": 191
     },
     "to": {
       "__id__": 103
     },
     "conditions": [
       {
-        "__id__": 795
+        "__id__": 799
       }
     ]
   },
@@ -8665,14 +8715,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 189
+      "__id__": 191
     },
     "to": {
       "__id__": 6
     },
     "conditions": [
       {
-        "__id__": 797
+        "__id__": 801
       }
     ]
   },
@@ -8686,43 +8736,7 @@
       "__id__": 6
     },
     "to": {
-      "__id__": 189
-    },
-    "conditions": [
-      {
-        "__id__": 799
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "turnright"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 275
-    },
-    "to": {
-      "__id__": 189
-    },
-    "conditions": [
-      {
-        "__id__": 801
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "turnright"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 189
-    },
-    "to": {
-      "__id__": 275
+      "__id__": 191
     },
     "conditions": [
       {
@@ -8732,15 +8746,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockfront"
+    "trigger": "turnright"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 275
+      "__id__": 279
     },
     "to": {
-      "__id__": 103
+      "__id__": 191
     },
     "conditions": [
       {
@@ -8750,15 +8764,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "turnleft"
+    "trigger": "turnright"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 103
+      "__id__": 191
     },
     "to": {
-      "__id__": 275
+      "__id__": 279
     },
     "conditions": [
       {
@@ -8773,10 +8787,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 275
+      "__id__": 279
     },
     "to": {
-      "__id__": 6
+      "__id__": 103
     },
     "conditions": [
       {
@@ -8786,15 +8800,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "idle"
+    "trigger": "turnleft"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 6
+      "__id__": 103
     },
     "to": {
-      "__id__": 275
+      "__id__": 279
     },
     "conditions": [
       {
@@ -8809,6 +8823,42 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
+      "__id__": 279
+    },
+    "to": {
+      "__id__": 6
+    },
+    "conditions": [
+      {
+        "__id__": 813
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "idle"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 6
+    },
+    "to": {
+      "__id__": 279
+    },
+    "conditions": [
+      {
+        "__id__": 815
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockfront"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
       "__id__": 6
     },
     "to": {
@@ -8816,7 +8866,7 @@
     },
     "conditions": [
       {
-        "__id__": 813
+        "__id__": 817
       }
     ]
   },
@@ -8834,7 +8884,7 @@
     },
     "conditions": [
       {
-        "__id__": 815
+        "__id__": 819
       }
     ]
   },
@@ -8845,14 +8895,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 189
+      "__id__": 191
     },
     "to": {
-      "__id__": 361
+      "__id__": 365
     },
     "conditions": [
       {
-        "__id__": 817
+        "__id__": 821
       }
     ]
   },
@@ -8863,14 +8913,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 361
+      "__id__": 365
     },
     "to": {
-      "__id__": 189
+      "__id__": 191
     },
     "conditions": [
       {
-        "__id__": 819
+        "__id__": 823
       }
     ]
   },
@@ -8881,14 +8931,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 361
+      "__id__": 365
     },
     "to": {
       "__id__": 6
     },
     "conditions": [
       {
-        "__id__": 821
+        "__id__": 825
       }
     ]
   },
@@ -8902,43 +8952,7 @@
       "__id__": 6
     },
     "to": {
-      "__id__": 361
-    },
-    "conditions": [
-      {
-        "__id__": 823
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockback"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 361
-    },
-    "to": {
-      "__id__": 103
-    },
-    "conditions": [
-      {
-        "__id__": 825
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "turnleft"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 103
-    },
-    "to": {
-      "__id__": 361
+      "__id__": 365
     },
     "conditions": [
       {
@@ -8953,14 +8967,32 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 275
+      "__id__": 365
     },
     "to": {
-      "__id__": 361
+      "__id__": 103
     },
     "conditions": [
       {
         "__id__": 829
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "turnleft"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 103
+    },
+    "to": {
+      "__id__": 365
+    },
+    "conditions": [
+      {
+        "__id__": 831
       }
     ]
   },
@@ -8971,28 +9003,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 361
+      "__id__": 279
     },
     "to": {
-      "__id__": 275
-    },
-    "conditions": [
-      {
-        "__id__": 831
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockfront"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 447
-    },
-    "to": {
-      "__id__": 361
+      "__id__": 365
     },
     "conditions": [
       {
@@ -9007,32 +9021,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 361
+      "__id__": 365
     },
     "to": {
-      "__id__": 447
+      "__id__": 279
     },
     "conditions": [
       {
         "__id__": 835
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockleft"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 447
-    },
-    "to": {
-      "__id__": 275
-    },
-    "conditions": [
-      {
-        "__id__": 837
       }
     ]
   },
@@ -9043,10 +9039,28 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 275
+      "__id__": 451
     },
     "to": {
-      "__id__": 447
+      "__id__": 365
+    },
+    "conditions": [
+      {
+        "__id__": 837
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockback"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 365
+    },
+    "to": {
+      "__id__": 451
     },
     "conditions": [
       {
@@ -9061,10 +9075,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 447
+      "__id__": 451
     },
     "to": {
-      "__id__": 189
+      "__id__": 279
     },
     "conditions": [
       {
@@ -9074,15 +9088,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "turnright"
+    "trigger": "blockfront"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 189
+      "__id__": 279
     },
     "to": {
-      "__id__": 447
+      "__id__": 451
     },
     "conditions": [
       {
@@ -9097,10 +9111,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 447
+      "__id__": 451
     },
     "to": {
-      "__id__": 103
+      "__id__": 191
     },
     "conditions": [
       {
@@ -9110,15 +9124,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "turnleft"
+    "trigger": "turnright"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 103
+      "__id__": 191
     },
     "to": {
-      "__id__": 447
+      "__id__": 451
     },
     "conditions": [
       {
@@ -9133,10 +9147,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 447
+      "__id__": 451
     },
     "to": {
-      "__id__": 6
+      "__id__": 103
     },
     "conditions": [
       {
@@ -9146,15 +9160,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "idle"
+    "trigger": "turnleft"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 6
+      "__id__": 103
     },
     "to": {
-      "__id__": 447
+      "__id__": 451
     },
     "conditions": [
       {
@@ -9169,14 +9183,32 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 533
+      "__id__": 451
     },
     "to": {
-      "__id__": 447
+      "__id__": 6
     },
     "conditions": [
       {
         "__id__": 853
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "idle"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 6
+    },
+    "to": {
+      "__id__": 451
+    },
+    "conditions": [
+      {
+        "__id__": 855
       }
     ]
   },
@@ -9187,28 +9219,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 447
+      "__id__": 537
     },
     "to": {
-      "__id__": 533
-    },
-    "conditions": [
-      {
-        "__id__": 855
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockright"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 533
-    },
-    "to": {
-      "__id__": 361
+      "__id__": 451
     },
     "conditions": [
       {
@@ -9218,15 +9232,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockback"
+    "trigger": "blockleft"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 361
+      "__id__": 451
     },
     "to": {
-      "__id__": 533
+      "__id__": 537
     },
     "conditions": [
       {
@@ -9241,14 +9255,32 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 275
+      "__id__": 537
     },
     "to": {
-      "__id__": 533
+      "__id__": 365
     },
     "conditions": [
       {
         "__id__": 861
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockback"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 365
+    },
+    "to": {
+      "__id__": 537
+    },
+    "conditions": [
+      {
+        "__id__": 863
       }
     ]
   },
@@ -9259,14 +9291,32 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 533
+      "__id__": 279
     },
     "to": {
-      "__id__": 275
+      "__id__": 537
     },
     "conditions": [
       {
-        "__id__": 863
+        "__id__": 865
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockright"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 537
+    },
+    "to": {
+      "__id__": 279
+    },
+    "conditions": [
+      {
+        "__id__": 867
       }
     ]
   },
@@ -9277,14 +9327,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 533
+      "__id__": 537
     },
     "to": {
-      "__id__": 189
+      "__id__": 191
     },
     "conditions": [
       {
-        "__id__": 865
+        "__id__": 869
       }
     ]
   },
@@ -9295,50 +9345,50 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 189
+      "__id__": 191
     },
     "to": {
-      "__id__": 533
-    },
-    "conditions": [
-      {
-        "__id__": 867
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockright"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 103
-    },
-    "to": {
-      "__id__": 533
-    },
-    "conditions": [
-      {
-        "__id__": 869
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockright"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 533
-    },
-    "to": {
-      "__id__": 103
+      "__id__": 537
     },
     "conditions": [
       {
         "__id__": 871
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockright"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 103
+    },
+    "to": {
+      "__id__": 537
+    },
+    "conditions": [
+      {
+        "__id__": 873
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockright"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 537
+    },
+    "to": {
+      "__id__": 103
+    },
+    "conditions": [
+      {
+        "__id__": 875
       }
     ]
   },
@@ -9349,14 +9399,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 533
+      "__id__": 537
     },
     "to": {
       "__id__": 6
     },
     "conditions": [
       {
-        "__id__": 873
+        "__id__": 877
       }
     ]
   },
@@ -9370,43 +9420,7 @@
       "__id__": 6
     },
     "to": {
-      "__id__": 533
-    },
-    "conditions": [
-      {
-        "__id__": 875
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockright"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 619
-    },
-    "to": {
-      "__id__": 533
-    },
-    "conditions": [
-      {
-        "__id__": 877
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockright"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 533
-    },
-    "to": {
-      "__id__": 619
+      "__id__": 537
     },
     "conditions": [
       {
@@ -9416,15 +9430,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockturnleft"
+    "trigger": "blockright"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 619
+      "__id__": 623
     },
     "to": {
-      "__id__": 447
+      "__id__": 537
     },
     "conditions": [
       {
@@ -9434,15 +9448,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockleft"
+    "trigger": "blockright"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 447
+      "__id__": 537
     },
     "to": {
-      "__id__": 619
+      "__id__": 623
     },
     "conditions": [
       {
@@ -9457,14 +9471,32 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 361
+      "__id__": 623
     },
     "to": {
-      "__id__": 619
+      "__id__": 451
     },
     "conditions": [
       {
         "__id__": 885
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockleft"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 451
+    },
+    "to": {
+      "__id__": 623
+    },
+    "conditions": [
+      {
+        "__id__": 887
       }
     ]
   },
@@ -9475,14 +9507,32 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 619
+      "__id__": 365
     },
     "to": {
-      "__id__": 361
+      "__id__": 623
     },
     "conditions": [
       {
-        "__id__": 887
+        "__id__": 889
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockturnleft"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 623
+    },
+    "to": {
+      "__id__": 365
+    },
+    "conditions": [
+      {
+        "__id__": 891
       }
     ]
   },
@@ -9493,14 +9543,14 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 619
+      "__id__": 623
     },
     "to": {
-      "__id__": 275
+      "__id__": 279
     },
     "conditions": [
       {
-        "__id__": 889
+        "__id__": 893
       }
     ]
   },
@@ -9511,46 +9561,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 275
+      "__id__": 279
     },
     "to": {
-      "__id__": 619
-    },
-    "conditions": [
-      {
-        "__id__": 891
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockturnleft"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 619
-    },
-    "to": {
-      "__id__": 189
-    },
-    "conditions": [
-      {
-        "__id__": 893
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "turnright"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 189
-    },
-    "to": {
-      "__id__": 619
+      "__id__": 623
     },
     "conditions": [
       {
@@ -9565,10 +9579,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 619
+      "__id__": 623
     },
     "to": {
-      "__id__": 103
+      "__id__": 191
     },
     "conditions": [
       {
@@ -9578,15 +9592,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "turnleft"
+    "trigger": "turnright"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 103
+      "__id__": 191
     },
     "to": {
-      "__id__": 619
+      "__id__": 623
     },
     "conditions": [
       {
@@ -9601,10 +9615,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 619
+      "__id__": 623
     },
     "to": {
-      "__id__": 6
+      "__id__": 103
     },
     "conditions": [
       {
@@ -9614,15 +9628,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "idle"
+    "trigger": "turnleft"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 6
+      "__id__": 103
     },
     "to": {
-      "__id__": 619
+      "__id__": 623
     },
     "conditions": [
       {
@@ -9637,14 +9651,32 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 705
+      "__id__": 623
     },
     "to": {
-      "__id__": 619
+      "__id__": 6
     },
     "conditions": [
       {
         "__id__": 905
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "idle"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 6
+    },
+    "to": {
+      "__id__": 623
+    },
+    "conditions": [
+      {
+        "__id__": 907
       }
     ]
   },
@@ -9655,28 +9687,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 619
+      "__id__": 709
     },
     "to": {
-      "__id__": 705
-    },
-    "conditions": [
-      {
-        "__id__": 907
-      }
-    ]
-  },
-  {
-    "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockturnright"
-  },
-  {
-    "__type__": "cc.animation.Transition",
-    "from": {
-      "__id__": 705
-    },
-    "to": {
-      "__id__": 533
+      "__id__": 623
     },
     "conditions": [
       {
@@ -9686,15 +9700,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockright"
+    "trigger": "blockturnleft"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 533
+      "__id__": 623
     },
     "to": {
-      "__id__": 705
+      "__id__": 709
     },
     "conditions": [
       {
@@ -9709,10 +9723,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 705
+      "__id__": 709
     },
     "to": {
-      "__id__": 447
+      "__id__": 537
     },
     "conditions": [
       {
@@ -9722,15 +9736,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockleft"
+    "trigger": "blockright"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 447
+      "__id__": 537
     },
     "to": {
-      "__id__": 705
+      "__id__": 709
     },
     "conditions": [
       {
@@ -9745,10 +9759,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 705
+      "__id__": 709
     },
     "to": {
-      "__id__": 361
+      "__id__": 451
     },
     "conditions": [
       {
@@ -9758,15 +9772,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockback"
+    "trigger": "blockleft"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 361
+      "__id__": 451
     },
     "to": {
-      "__id__": 705
+      "__id__": 709
     },
     "conditions": [
       {
@@ -9781,10 +9795,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 705
+      "__id__": 709
     },
     "to": {
-      "__id__": 275
+      "__id__": 365
     },
     "conditions": [
       {
@@ -9794,15 +9808,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "blockfront"
+    "trigger": "blockback"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 275
+      "__id__": 365
     },
     "to": {
-      "__id__": 705
+      "__id__": 709
     },
     "conditions": [
       {
@@ -9817,10 +9831,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 705
+      "__id__": 709
     },
     "to": {
-      "__id__": 189
+      "__id__": 279
     },
     "conditions": [
       {
@@ -9830,15 +9844,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "turnright"
+    "trigger": "blockfront"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 189
+      "__id__": 279
     },
     "to": {
-      "__id__": 705
+      "__id__": 709
     },
     "conditions": [
       {
@@ -9853,10 +9867,10 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 705
+      "__id__": 709
     },
     "to": {
-      "__id__": 103
+      "__id__": 191
     },
     "conditions": [
       {
@@ -9866,15 +9880,15 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "turnleft"
+    "trigger": "turnright"
   },
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 103
+      "__id__": 191
     },
     "to": {
-      "__id__": 705
+      "__id__": 709
     },
     "conditions": [
       {
@@ -9889,14 +9903,50 @@
   {
     "__type__": "cc.animation.Transition",
     "from": {
-      "__id__": 705
+      "__id__": 709
+    },
+    "to": {
+      "__id__": 103
+    },
+    "conditions": [
+      {
+        "__id__": 933
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "turnleft"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 103
+    },
+    "to": {
+      "__id__": 709
+    },
+    "conditions": [
+      {
+        "__id__": 935
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "blockturnright"
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 709
     },
     "to": {
       "__id__": 6
     },
     "conditions": [
       {
-        "__id__": 933
+        "__id__": 937
       }
     ]
   },
@@ -9910,11 +9960,11 @@
       "__id__": 6
     },
     "to": {
-      "__id__": 705
+      "__id__": 709
     },
     "conditions": [
       {
-        "__id__": 935
+        "__id__": 939
       }
     ]
   },

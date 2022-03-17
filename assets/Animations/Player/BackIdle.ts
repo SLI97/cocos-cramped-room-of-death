@@ -27,11 +27,11 @@ export class BackIdle extends animation.StateMachineComponent {
     controller: animation.AnimationController,
     motionStateStatus: Readonly<animation.MotionStateStatus>,
   ): void {
-    for (const [key, value] of controller.getVariables()) {
-      if (value.type === animation.VariableType.TRIGGER && key !== PARAMS_NAME_ENUM.IDLE.toLowerCase()) {
-        controller.setValue(key, false);
-      }
-    }
+    // for (const [key, value] of controller.getVariables()) {
+    //   if (value.type === animation.VariableType.TRIGGER && key !== PARAMS_NAME_ENUM.IDLE.toLowerCase()) {
+    //     controller.setValue(key, false);
+    //   }
+    // }
   }
   /**
   //  * Called when a motion state is going to be exited.
@@ -49,11 +49,20 @@ export class BackIdle extends animation.StateMachineComponent {
   //  * @param controller The animation controller it within.
   //  * @param motionStateStatus The status of the motion.
   //  */
-  // public onMotionStateUpdate(
-  //   controller: animation.AnimationController,
-  //   motionStateStatus: Readonly<animation.MotionStateStatus>,
-  // ): void {
-  // }
+  public onMotionStateUpdate(
+    controller: animation.AnimationController,
+    motionStateStatus: Readonly<animation.MotionStateStatus>,
+  ): void {
+    for (const [key, value] of controller.getVariables()) {
+      if (
+        value.type === animation.VariableType.TRIGGER &&
+        controller.getValue(key) &&
+        key !== PARAMS_NAME_ENUM.IDLE.toLowerCase()
+      ) {
+        controller.setValue(key, false);
+      }
+    }
+  }
   // /**
   //  * Called when a state machine right after it entered.
   //  * @param controller The animation controller it within.
