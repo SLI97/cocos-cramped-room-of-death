@@ -3,6 +3,7 @@ import EventManager from '../Runtime/EventManager';
 import { CONTROLLER_ENUM, DIRECTION_ENUM, ENTITY_STATE_ENUM, EVENT_ENUM } from '../Enum';
 import DataManager from '../Runtime/DataManager';
 import { EntityManager } from '../Base/EntityManager';
+import { IEntity } from '../Levels';
 
 const { ccclass } = _decorator;
 
@@ -11,20 +12,12 @@ export class PlayerManager extends EntityManager {
   private readonly speed = 1 / 10;
   targetX: number;
   targetY: number;
+  isMoveing = false;
 
-  init() {
-    super.init();
-
-    this.x = 2;
-    this.y = 8;
+  init(params: IEntity) {
+    super.init(params);
     this.targetX = this.x;
     this.targetY = this.y;
-    this.direction = DIRECTION_ENUM.TOP;
-    this.state = ENTITY_STATE_ENUM.IDLE;
-  }
-
-  onLoad() {
-    super.onLoad();
     EventManager.Instance.on(EVENT_ENUM.PLAYER_CTRL, this.inputProcess, this);
   }
 
@@ -57,8 +50,8 @@ export class PlayerManager extends EntityManager {
     if (Math.abs(this.targetX - this.x) < 0.01 && Math.abs(this.targetY - this.y) < 0.01) {
       this.x = this.targetX;
       this.y = this.targetY;
-      // this.isMoveing = false;
-      // EventManager.Instance.emit(EVENT_ENUM.PLAYER_MOVE_END);
+      this.isMoveing = false;
+      EventManager.Instance.emit(EVENT_ENUM.PLAYER_MOVE_END);
     }
   }
 
@@ -89,6 +82,7 @@ export class PlayerManager extends EntityManager {
         this.direction = DIRECTION_ENUM.TOP;
       }
       this.state = ENTITY_STATE_ENUM.TURNLEFT;
+      EventManager.Instance.emit(EVENT_ENUM.PLAYER_MOVE_END);
     } else if (inputDirection === CONTROLLER_ENUM.TURNRIGHT) {
       if (this.direction === DIRECTION_ENUM.TOP) {
         this.direction = DIRECTION_ENUM.RIGHT;
@@ -100,6 +94,7 @@ export class PlayerManager extends EntityManager {
         this.direction = DIRECTION_ENUM.BOTTOM;
       }
       this.state = ENTITY_STATE_ENUM.TURNRIGHT;
+      EventManager.Instance.emit(EVENT_ENUM.PLAYER_MOVE_END);
     }
   }
 

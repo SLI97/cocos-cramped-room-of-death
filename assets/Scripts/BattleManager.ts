@@ -1,8 +1,12 @@
-import { _decorator, Component, Node, instantiate, Prefab, director, view, resources, SpriteFrame } from 'cc';
+import { _decorator, Component, instantiate, Node, Prefab, view } from 'cc';
 import DataManager from '../Runtime/DataManager';
-const { ccclass, property } = _decorator;
 import Levels, { ILevel } from '../Levels';
 import { TILE_HEIGHT, TILE_WIDTH } from './TileManager';
+import { PlayerManager } from './PlayerManager';
+import { DIRECTION_ENUM, ENTITY_STATE_ENUM, ENTITY_TYPE_ENUM } from '../Enum';
+import { WoodenSkeletonManager } from './WoodenSkeletonManager';
+
+const { ccclass, property } = _decorator;
 
 const size = view.getVisibleSize();
 export const SCREEN_WIDTH = size.width;
@@ -74,11 +78,29 @@ export class BattleManager extends Component {
   generatePlayer() {
     const player = instantiate(this.player);
     player.setParent(this.stage);
+    const playerManager = player.getComponent(PlayerManager);
+    playerManager.init({
+      x: 2,
+      y: 2,
+      direction: DIRECTION_ENUM.TOP,
+      state: ENTITY_STATE_ENUM.IDLE,
+      type: ENTITY_TYPE_ENUM.PLAYER,
+    });
+    DataManager.Instance.player = playerManager;
   }
 
   generateEnemies() {
     const woodenSkeleton = instantiate(this.woodenSkeleton);
     woodenSkeleton.setParent(this.stage);
+    const woodenSkeletonManager = woodenSkeleton.getComponent(WoodenSkeletonManager);
+    woodenSkeletonManager.init({
+      x: 6,
+      y: 7,
+      direction: DIRECTION_ENUM.TOP,
+      state: ENTITY_STATE_ENUM.IDLE,
+      type: ENTITY_TYPE_ENUM.SKELETON_WOODEN,
+    });
+    DataManager.Instance.enemies.push(woodenSkeletonManager);
   }
 
   nextLevel() {

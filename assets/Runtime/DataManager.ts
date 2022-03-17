@@ -2,6 +2,8 @@ import Singleton from '../Base/Singleton';
 // import TileManager from '../Scenes/Battle/GameObjects/Tile/TileManager';
 import { ILevel, ITile } from '../Levels';
 import { TileManager } from '../Scripts/TileManager';
+import { PlayerManager } from '../Scripts/PlayerManager';
+import { WoodenSkeletonManager } from '../Scripts/WoodenSkeletonManager';
 // import PlayerManager from '../Scenes/Battle/GameObjects/Player/Scripts/PlayerManager';
 // import EnemyManager from '../Base/EnemyManager';
 // import DoorManager from '../Scenes/Battle/GameObjects/Door/Scripts/DoorManager';
@@ -19,8 +21,9 @@ export default class DataManager extends Singleton {
     return super.GetInstance<DataManager>();
   }
 
-  // player: PlayerManager;
+  player: PlayerManager;
   // enemies: EnemyManager[];
+  enemies: WoodenSkeletonManager[];
   // spikes: SpikesManager[];
   // bursts: BurstManager[];
   // door: DoorManager;
@@ -46,8 +49,8 @@ export default class DataManager extends Singleton {
     this.mapColumnCount = 0;
     //
     // //活动元素信息
-    // this.player = null;
-    // this.enemies = [];
+    this.player = null;
+    this.enemies = [];
     // this.spikes = [];
     // this.bursts = [];
     //
