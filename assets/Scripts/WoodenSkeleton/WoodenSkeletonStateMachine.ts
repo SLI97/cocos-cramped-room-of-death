@@ -20,8 +20,12 @@ export class WoodenSkeletonStateMachine extends StateMachine {
   }
 
   initAnimationEvent() {
-    this.animationComponent.on(Animation.EventType.FINISHED, e => {
-      this.node.getComponent(EntityManager).state = ENTITY_STATE_ENUM.IDLE
+    this.animationComponent.on(Animation.EventType.FINISHED, () => {
+      const whiteList = ['attack']
+      const name = this.animationComponent.defaultClip.name
+      if (whiteList.some(v => name.includes(v))) {
+        this.node.getComponent(EntityManager).state = ENTITY_STATE_ENUM.IDLE
+      }
     })
   }
 

@@ -31,7 +31,7 @@ export class BattleManager extends Component {
     // })
   }
 
-  initLevel() {
+  async initLevel() {
     const level = Levels['level' + DataManager.Instance.levelIndex]
     if (level) {
       this.clearLevel()
@@ -42,8 +42,8 @@ export class BattleManager extends Component {
       DataManager.Instance.mapRowCount = this.level.mapInfo.length || 0
       DataManager.Instance.mapColumnCount = this.level.mapInfo[0]?.length || 0
       this.generateTileMap()
-      this.generatePlayer()
       this.generateEnemies()
+      this.generatePlayer()
     }
   }
 
@@ -56,7 +56,7 @@ export class BattleManager extends Component {
     this.stage.setParent(this.node)
   }
 
-  generateTileMap() {
+  async generateTileMap() {
     const node = createUINode()
     node.setParent(this.stage)
     node.addComponent(TileMapManager)
@@ -70,11 +70,11 @@ export class BattleManager extends Component {
     this.stage.setPosition(-disX, disY)
   }
 
-  generatePlayer() {
+  async generatePlayer() {
     const node = createUINode()
     node.setParent(this.stage)
     const playerManager = node.addComponent(PlayerManager)
-    playerManager.init({
+    await playerManager.init({
       x: 2,
       y: 8,
       direction: DIRECTION_ENUM.TOP,
@@ -84,11 +84,11 @@ export class BattleManager extends Component {
     DataManager.Instance.player = playerManager
   }
 
-  generateEnemies() {
+  async generateEnemies() {
     const node = createUINode()
     node.setParent(this.stage)
     const woodenSkeletonManager = node.addComponent(WoodenSkeletonManager)
-    woodenSkeletonManager.init({
+    await woodenSkeletonManager.init({
       x: 5,
       y: 2,
       direction: DIRECTION_ENUM.TOP,

@@ -10,11 +10,13 @@ const { ccclass } = _decorator
 export class EnemyManager extends EntityManager {
   async init(params: IEntity) {
     super.init(params)
+    EventManager.Instance.on(EVENT_ENUM.ATTACK_ENEMY, this.onDead, this)
     EventManager.Instance.on(EVENT_ENUM.PLAYER_MOVE_END, this.onChangeDirection, this)
   }
 
   onDestroy() {
     super.onDestroy()
+    EventManager.Instance.off(EVENT_ENUM.ATTACK_ENEMY, this.onDead)
     EventManager.Instance.off(EVENT_ENUM.PLAYER_MOVE_END, this.onChangeDirection)
   }
 
@@ -53,6 +55,15 @@ export class EnemyManager extends EntityManager {
       //第四象限
     } else if (playerX >= this.x && playerY >= this.y) {
       this.direction = disX >= disY ? DIRECTION_ENUM.RIGHT : DIRECTION_ENUM.BOTTOM
+    }
+  }
+
+  onDead(id: string) {
+    if (this.state === ENTITY_STATE_ENUM.DEATH) {
+      return
+    }
+    if (this.id === id) {
+      this.state = ENTITY_STATE_ENUM.DEATH
     }
   }
 }
