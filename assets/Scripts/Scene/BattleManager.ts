@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, view, resources, SpriteFrame, UITransform, Vec2 } from 'cc'
+import { _decorator, Component, Node, view } from 'cc'
 import DataManager from '../../Runtime/DataManager'
 import Levels, { ILevel } from '../../Levels'
 import { DIRECTION_ENUM, ENTITY_STATE_ENUM, ENTITY_TYPE_ENUM } from '../../Enum'
@@ -7,7 +7,8 @@ import { createUINode } from '../../Utils'
 import { TILE_HEIGHT, TILE_WIDTH } from '../TIle/TileManager'
 import { PlayerManager } from '../Player/PlayerManager'
 import { TileMapManager } from '../TIle/TileMapManager'
-import { DoorManager } from 'db://assets/Scripts/Door/DoorManager'
+import { DoorManager } from '../Door/DoorManager'
+import { IronSkeletonManager } from 'db://assets/Scripts/IronSkeleton/IronSkeletonManager'
 
 const { ccclass, property } = _decorator
 
@@ -98,6 +99,18 @@ export class BattleManager extends Component {
       type: ENTITY_TYPE_ENUM.SKELETON_WOODEN,
     })
     DataManager.Instance.enemies.push(woodenSkeletonManager)
+
+    const node1 = createUINode()
+    node1.setParent(this.stage)
+    const ironSkeletonManager = node1.addComponent(IronSkeletonManager)
+    await ironSkeletonManager.init({
+      x: 8,
+      y: 8,
+      direction: DIRECTION_ENUM.TOP,
+      state: ENTITY_STATE_ENUM.IDLE,
+      type: ENTITY_TYPE_ENUM.SKELETON_IRON,
+    })
+    DataManager.Instance.enemies.push(ironSkeletonManager)
   }
 
   async generateDoor() {

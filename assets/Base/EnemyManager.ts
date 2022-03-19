@@ -12,16 +12,14 @@ export class EnemyManager extends EntityManager {
     super.init(params)
     EventManager.Instance.on(EVENT_ENUM.ATTACK_ENEMY, this.onDead, this)
     EventManager.Instance.on(EVENT_ENUM.PLAYER_MOVE_END, this.onChangeDirection, this)
+
+    this.onChangeDirection(true)
   }
 
   onDestroy() {
     super.onDestroy()
     EventManager.Instance.off(EVENT_ENUM.ATTACK_ENEMY, this.onDead)
     EventManager.Instance.off(EVENT_ENUM.PLAYER_MOVE_END, this.onChangeDirection)
-  }
-
-  start() {
-    this.onChangeDirection(true)
   }
 
   /***
