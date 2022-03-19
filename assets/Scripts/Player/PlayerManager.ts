@@ -15,9 +15,10 @@ export class PlayerManager extends EntityManager {
   targetY: number
   isMoving = false
 
-  init(params: IEntity) {
+  async init(params: IEntity) {
     this.fsm = this.addComponent(PlayerStateMachine)
-    this.fsm.init()
+    await this.fsm.init()
+
     super.init(params)
     this.targetX = this.x
     this.targetY = this.y
@@ -66,6 +67,7 @@ export class PlayerManager extends EntityManager {
     // if (this.willBlock(inputDirection)) {
     //   return
     // }
+
     this.move(inputDirection)
   }
 

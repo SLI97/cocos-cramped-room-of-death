@@ -15,35 +15,21 @@ const { ccclass, property } = _decorator
 
 @ccclass('PlayerStateMachine')
 export class PlayerStateMachine extends StateMachine {
-  init() {
+  async init() {
     this.animationComponent = this.node.addComponent(Animation)
-    // this.animationComponent.playOnLoad = true
 
     this.initParams()
     this.initStateMachines()
     this.initAnimationEvent()
+
+    await Promise.all(this.waitingList)
   }
 
   initAnimationEvent() {
     this.animationComponent.on(Animation.EventType.FINISHED, e => {
       console.log('FINISHED', e)
       this.node.getComponent(PlayerManager).state = ENTITY_STATE_ENUM.IDLE
-      // this.gameObject.getComponent(PlayerManager).state = ENTITY_STATE_ENUM.IDLE
-      //   const list = ['player_turn', 'player_block', 'player_attack']
-      //   if (list.some(item =>  this.animationComponent.resource.startsWith(item))) {
-      //     this.gameObject.getComponent(PlayerManager).state = ENTITY_STATE_ENUM.IDLE
-      //   }
-      // })
     })
-    //  this.animationComponent.on('complete', () => {
-    //   if (!this.gameObject || !this.gameObject.getComponent(PlayerManager)) {
-    //     return
-    //   }
-    //   const list = ['player_turn', 'player_block', 'player_attack']
-    //   if (list.some(item =>  this.animationComponent.resource.startsWith(item))) {
-    //     this.gameObject.getComponent(PlayerManager).state = ENTITY_STATE_ENUM.IDLE
-    //   }
-    // })
     //
     //  this.animationComponent.on('frameChange', () => {
     //   //攻击动画第五帧的时候震动屏幕
@@ -95,8 +81,8 @@ export class PlayerStateMachine extends StateMachine {
     // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNLEFT, new BlockTurnLeftSubStateMachine(this))
     // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNRIGHT, new BlockTurnRightSubStateMachine(this))
     // this.stateMachines.set(PARAMS_NAME_ENUM.ATTACK, new AttackSubStateMachine(this))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.DEATH, new DeathSubStateMachine(this,  this.animationComponent))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.AIRDEATH, new AirDeathSubStateMachine(this,  this.animationComponent))
+    // this.stateMachines.set(PARAMS_NAME_ENUM.DEATH, new DeathSubStateMachine(this, this.animationComponent))
+    // this.stateMachines.set(PARAMS_NAME_ENUM.AIRDEATH, new AirDeathSubStateMachine(this, this.animationComponent))
   }
 
   /***

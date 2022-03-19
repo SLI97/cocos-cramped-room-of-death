@@ -1,5 +1,7 @@
 import { Animation, animation, AnimationClip, resources, Sprite, SpriteFrame } from 'cc'
 import { ResourceManager } from '../Runtime/ResourceManager'
+import { sortSpriteFrame } from 'db://assets/Utils'
+import StateMachine from 'db://assets/Base/StateMachine'
 
 /***
  * unit:milisecond
@@ -12,7 +14,7 @@ export const ANIMATION_SPEED = 1 / 8
 export default class State {
   private animationClip: AnimationClip
   constructor(
-    private animationComponent: Animation,
+    private fsm: StateMachine,
     private spriteFrameDir: string,
     private wrapMode: AnimationClip.WrapMode = AnimationClip.WrapMode.Loop,
   ) {
@@ -23,9 +25,11 @@ export default class State {
     //生成动画轨道属性
     const track = new animation.ObjectTrack()
     track.path = new animation.TrackPath().toComponent(Sprite).toProperty('spriteFrame')
-    const res = await ResourceManager.Instance.loadDir(this.spriteFrameDir, SpriteFrame)
-    console.log(res)
-    const frames: Array<[number, SpriteFrame]> = res.map((item, index) => [index * ANIMATION_SPEED, item])
+    const waiting = ResourceManager.Instance.loadDir(this.spriteFrameDir, SpriteFrame)
+    this.fsm.waitingList.push(waiting)
+    const spriteFrames = await waiting
+    sortSpriteFrame(spriteFrames)
+    const frames: Array<[number, SpriteFrame]> = spriteFrames.map((item, index) => [index * ANIMATION_SPEED, item])
     track.channel.curve.assignSorted(frames)
 
     //动画添加轨道
@@ -37,7 +41,7 @@ export default class State {
   }
 
   run() {
-    this.animationComponent.defaultClip = this.animationClip
-    this.animationComponent.play()
+    this.fsm.animationComponent.defaultClip = this.animationClip
+    this.fsm.animationComponent.play()
   }
 }

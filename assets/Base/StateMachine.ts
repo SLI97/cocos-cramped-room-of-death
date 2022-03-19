@@ -44,6 +44,7 @@ export default abstract class StateMachine extends Component {
   params: Map<string, IParamsValue> = new Map()
   stateMachines: Map<string, SubStateMachine | State> = new Map()
   animationComponent: Animation
+  waitingList: Array<Promise<any>> = []
 
   getParams(paramName: string) {
     if (this.params.has(paramName)) {

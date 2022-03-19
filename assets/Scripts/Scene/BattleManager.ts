@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, view, resources, SpriteFrame } from 'cc'
+import { _decorator, Component, Node, view, resources, SpriteFrame, UITransform, Vec2 } from 'cc'
 import DataManager from '../../Runtime/DataManager'
 import Levels, { ILevel } from '../../Levels'
 import { DIRECTION_ENUM, ENTITY_STATE_ENUM, ENTITY_TYPE_ENUM } from '../../Enum'
@@ -26,7 +26,9 @@ export class BattleManager extends Component {
 
   start() {
     this.generateStage()
+    // resources.loadDir('texture/', SpriteFrame, (a, b) => {
     this.initLevel()
+    // })
   }
 
   initLevel() {

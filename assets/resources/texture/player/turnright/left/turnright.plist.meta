@@ -2,7 +2,7 @@
   "ver": "1.0.6",
   "importer": "sprite-atlas",
   "imported": true,
-  "uuid": "05982c5c-7a8b-4a5f-b190-5fb5f189de44",
+  "uuid": "d5b48725-75ae-4168-8629-cb479e276978",
   "files": [
     ".plist",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "35660": {
       "importer": "sprite-frame",
-      "uuid": "05982c5c-7a8b-4a5f-b190-5fb5f189de44@35660",
+      "uuid": "d5b48725-75ae-4168-8629-cb479e276978@35660",
       "displayName": "",
       "id": "35660",
       "name": "turn (17)",
@@ -32,8 +32,8 @@
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "f03e6645-de8f-456a-a9f9-93c4825cd0df@6c48a",
-        "atlasUuid": "05982c5c-7a8b-4a5f-b190-5fb5f189de44"
+        "imageUuidOrDatabaseUri": "1e95cb83-767a-48a6-9b5b-56f02346379c@6c48a",
+        "atlasUuid": "d5b48725-75ae-4168-8629-cb479e276978"
       },
       "ver": "1.0.9",
       "imported": true,
@@ -44,7 +44,7 @@
     },
     "c175d": {
       "importer": "sprite-frame",
-      "uuid": "05982c5c-7a8b-4a5f-b190-5fb5f189de44@c175d",
+      "uuid": "d5b48725-75ae-4168-8629-cb479e276978@c175d",
       "displayName": "",
       "id": "c175d",
       "name": "turn (16)",
@@ -66,8 +66,8 @@
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "f03e6645-de8f-456a-a9f9-93c4825cd0df@6c48a",
-        "atlasUuid": "05982c5c-7a8b-4a5f-b190-5fb5f189de44"
+        "imageUuidOrDatabaseUri": "1e95cb83-767a-48a6-9b5b-56f02346379c@6c48a",
+        "atlasUuid": "d5b48725-75ae-4168-8629-cb479e276978"
       },
       "ver": "1.0.9",
       "imported": true,
@@ -78,7 +78,7 @@
     },
     "a7e76": {
       "importer": "sprite-frame",
-      "uuid": "05982c5c-7a8b-4a5f-b190-5fb5f189de44@a7e76",
+      "uuid": "d5b48725-75ae-4168-8629-cb479e276978@a7e76",
       "displayName": "",
       "id": "a7e76",
       "name": "turn (18)",
@@ -100,8 +100,8 @@
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "f03e6645-de8f-456a-a9f9-93c4825cd0df@6c48a",
-        "atlasUuid": "05982c5c-7a8b-4a5f-b190-5fb5f189de44"
+        "imageUuidOrDatabaseUri": "1e95cb83-767a-48a6-9b5b-56f02346379c@6c48a",
+        "atlasUuid": "d5b48725-75ae-4168-8629-cb479e276978"
       },
       "ver": "1.0.9",
       "imported": true,
@@ -114,7 +114,7 @@
   "userData": {
     "atlasTextureName": "turnright.png",
     "format": 3,
-    "uuid": "05982c5c-7a8b-4a5f-b190-5fb5f189de44",
-    "textureUuid": "f03e6645-de8f-456a-a9f9-93c4825cd0df@6c48a"
+    "uuid": "d5b48725-75ae-4168-8629-cb479e276978",
+    "textureUuid": "1e95cb83-767a-48a6-9b5b-56f02346379c@6c48a"
   }
 }

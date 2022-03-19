@@ -41,7 +41,6 @@ export class TileManager extends Component {
     const spriteFrame = await ResourceManager.Instance.loadRes(`texture/tile/tile/${imgSrc}`)
     sprite.spriteFrame = spriteFrame
     uiTransform.setContentSize(TILE_WIDTH, TILE_HEIGHT)
-    uiTransform.anchorPoint = new Vec2(0, 1)
     this.node.setPosition(i * TILE_WIDTH, -j * TILE_HEIGHT)
   }
 }
