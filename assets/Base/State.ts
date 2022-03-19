@@ -1,7 +1,7 @@
 import { Animation, animation, AnimationClip, resources, Sprite, SpriteAtlas, SpriteFrame } from 'cc'
 import { ResourceManager } from '../Runtime/ResourceManager'
-import { sortSpriteFrame } from 'db://assets/Utils'
-import StateMachine from 'db://assets/Base/StateMachine'
+import { sortSpriteFrame } from '../Utils'
+import StateMachine from './StateMachine'
 
 /***
  * unit:milisecond
@@ -29,7 +29,10 @@ export default class State {
     this.fsm.waitingList.push(waiting)
     const spriteFrames = await waiting
     sortSpriteFrame(spriteFrames)
-    const frames: Array<[number, SpriteFrame]> = spriteFrames.map((item, index) => [index * ANIMATION_SPEED, item])
+    const frames: Array<[number, SpriteFrame]> = sortSpriteFrame(spriteFrames).map((item, index) => [
+      index * ANIMATION_SPEED,
+      item,
+    ])
     track.channel.curve.assignSorted(frames)
 
     //动画添加轨道

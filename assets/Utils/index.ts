@@ -47,6 +47,5 @@ export const getNumberWithinString = (str: string) => {
   return parseInt(str.match(INDEX_REG)?.[1] || '0')
 }
 
-export const sortSpriteFrame = (spriteFrame: Array<SpriteFrame>) => {
+export const sortSpriteFrame = (spriteFrame: Array<SpriteFrame>) =>
   spriteFrame.sort((a, b) => getNumberWithinString(a.name) - getNumberWithinString(b.name))
-}

@@ -5,6 +5,7 @@ import DataManager from '../../Runtime/DataManager'
 import { EntityManager } from '../../Base/EntityManager'
 import { IEntity } from '../../Levels'
 import { PlayerStateMachine } from './PlayerStateMachine'
+import { EnemyManager } from '../../Base/EnemyManager'
 
 const { ccclass } = _decorator
 
@@ -70,7 +71,21 @@ export class PlayerManager extends EntityManager {
       return
     }
 
-    if (this.state === ENTITY_STATE_ENUM.DEATH || this.state === ENTITY_STATE_ENUM.AIRDEATH) {
+    if (
+      this.state === ENTITY_STATE_ENUM.DEATH ||
+      this.state === ENTITY_STATE_ENUM.AIRDEATH ||
+      this.state === ENTITY_STATE_ENUM.ATTACK
+    ) {
+      return
+    }
+
+    const id = this.willAttack(inputDirection)
+    if (id) {
+      // EventManager.Instance.emit(EVENT_ENUM.RECORD_STEP)
+      this.state = ENTITY_STATE_ENUM.ATTACK
+      EventManager.Instance.emit(EVENT_ENUM.ATTACK_ENEMY, id)
+      // EventManager.Instance.emit(EVENT_ENUM.PLAYER_MOVE_END);
+      // EventManager.Instance.emit(EVENT_ENUM.DOOR_OPEN);
       return
     }
 
@@ -119,6 +134,47 @@ export class PlayerManager extends EntityManager {
       this.state = ENTITY_STATE_ENUM.TURNRIGHT
       EventManager.Instance.emit(EVENT_ENUM.PLAYER_MOVE_END)
     }
+  }
+
+  willAttack(inputDirection: CONTROLLER_ENUM) {
+    const enemies = DataManager.Instance.enemies.filter(
+      (enemy: EnemyManager) => enemy.state !== ENTITY_STATE_ENUM.DEATH,
+    )
+    for (let i = 0; i < enemies.length; i++) {
+      const enemy = enemies[i]
+      const { x: enemyX, y: enemyY, id: enemyId } = enemy
+      if (
+        this.direction === DIRECTION_ENUM.TOP &&
+        inputDirection === CONTROLLER_ENUM.TOP &&
+        enemyY === this.targetY - 2 &&
+        enemyX === this.x
+      ) {
+        return enemyId
+      } else if (
+        this.direction === DIRECTION_ENUM.BOTTOM &&
+        inputDirection === CONTROLLER_ENUM.BOTTOM &&
+        enemyY === this.targetY + 2 &&
+        enemyX === this.x
+      ) {
+        return enemyId
+      } else if (
+        this.direction === DIRECTION_ENUM.LEFT &&
+        inputDirection === CONTROLLER_ENUM.LEFT &&
+        enemyX === this.targetX - 2 &&
+        enemyY === this.y
+      ) {
+        return enemyId
+      } else if (
+        this.direction === DIRECTION_ENUM.RIGHT &&
+        inputDirection === CONTROLLER_ENUM.RIGHT &&
+        enemyX === this.targetX + 2 &&
+        enemyY === this.y
+      ) {
+        return enemyId
+      }
+    }
+
+    return ''
   }
 
   willBlock(type: CONTROLLER_ENUM) {

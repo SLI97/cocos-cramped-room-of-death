@@ -1,10 +1,10 @@
 import { _decorator, Animation } from 'cc'
+import { EntityManager } from '../../Base/EntityManager'
 import StateMachine, { getInitParamsNumber, getInitParamsTrigger } from '../../Base/StateMachine'
 import { ENTITY_STATE_ENUM, PARAMS_NAME_ENUM } from '../../Enum'
+import AttackSubStateMachine from './AttackSubStateMachine'
+import DeathSubStateMachine from './DeathSubStateMachine'
 import IdleSubStateMachine from './IdleSubStateMachine'
-import AttackSubStateMachine from 'db://assets/Scripts/WoodenSkeleton/AttackSubStateMachine'
-import DeathSubStateMachine from 'db://assets/Scripts/WoodenSkeleton/DeathSubStateMachine'
-import { EntityManager } from 'db://assets/Base/EntityManager'
 const { ccclass, property } = _decorator
 
 @ccclass('WoodenSkeletonStateMachine')
