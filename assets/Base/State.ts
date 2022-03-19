@@ -1,4 +1,4 @@
-import { Animation, animation, AnimationClip, resources, Sprite, SpriteFrame } from 'cc'
+import { Animation, animation, AnimationClip, resources, Sprite, SpriteAtlas, SpriteFrame } from 'cc'
 import { ResourceManager } from '../Runtime/ResourceManager'
 import { sortSpriteFrame } from 'db://assets/Utils'
 import StateMachine from 'db://assets/Base/StateMachine'
@@ -16,7 +16,7 @@ export default class State {
   constructor(
     private fsm: StateMachine,
     private spriteFrameDir: string,
-    private wrapMode: AnimationClip.WrapMode = AnimationClip.WrapMode.Loop,
+    private wrapMode: AnimationClip.WrapMode = AnimationClip.WrapMode.Normal,
   ) {
     this.init()
   }
@@ -41,6 +41,11 @@ export default class State {
   }
 
   run() {
+    const state = this.fsm.animationComponent.getState(this.animationClip.name)
+    //当前动画正在播放
+    if (state && state.isPlaying) {
+      return
+    }
     this.fsm.animationComponent.defaultClip = this.animationClip
     this.fsm.animationComponent.play()
   }

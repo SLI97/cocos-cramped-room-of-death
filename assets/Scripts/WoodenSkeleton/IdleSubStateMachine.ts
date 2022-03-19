@@ -4,7 +4,7 @@ import { DIRECTION_ENUM } from '../../Enum'
 import State from '../../Base/State'
 import { AnimationClip } from 'cc'
 
-const BASE_URL = 'texture/player/idle'
+const BASE_URL = 'texture/woodenskeleton/idle'
 
 export default class IdleSubStateMachine extends DirectionSubStateMachine {
   constructor(fsm: StateMachine) {

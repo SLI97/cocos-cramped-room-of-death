@@ -24,11 +24,13 @@ export class PlayerManager extends EntityManager {
     this.targetY = this.y
 
     EventManager.Instance.on(EVENT_ENUM.PLAYER_CTRL, this.inputProcess, this)
+    EventManager.Instance.on(EVENT_ENUM.ATTACK_PLAYER, this.onDead, this)
   }
 
   onDestroy() {
     super.onDestroy()
     EventManager.Instance.off(EVENT_ENUM.PLAYER_CTRL, this.inputProcess)
+    EventManager.Instance.off(EVENT_ENUM.ATTACK_PLAYER, this.onDead)
   }
   update() {
     this.updateXY()
@@ -59,8 +61,16 @@ export class PlayerManager extends EntityManager {
     }
   }
 
+  onDead(type: ENTITY_STATE_ENUM) {
+    this.state = type
+  }
+
   inputProcess(inputDirection: CONTROLLER_ENUM) {
     if (this.isMoving) {
+      return
+    }
+
+    if (this.state === ENTITY_STATE_ENUM.DEATH || this.state === ENTITY_STATE_ENUM.AIRDEATH) {
       return
     }
 

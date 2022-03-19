@@ -43,6 +43,10 @@ export const createUINode = (name: string = '') => {
 
 const INDEX_REG = /\((\d+)\)/
 
+export const getNumberWithinString = (str: string) => {
+  return parseInt(str.match(INDEX_REG)?.[1] || '0')
+}
+
 export const sortSpriteFrame = (spriteFrame: Array<SpriteFrame>) => {
-  return spriteFrame.sort((a, b) => parseInt(a.name.match(INDEX_REG)[1]) - parseInt(b.name.match(INDEX_REG)[1]))
+  spriteFrame.sort((a, b) => getNumberWithinString(a.name) - getNumberWithinString(b.name))
 }

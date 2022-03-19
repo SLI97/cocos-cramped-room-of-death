@@ -30,45 +30,11 @@
         ".json"
       ],
       "subMetas": {}
-    },
-    "f9941": {
-      "importer": "sprite-frame",
-      "uuid": "3fa2153f-a602-41e1-b310-7139e83eb2b4@f9941",
-      "displayName": "attack",
-      "id": "f9941",
-      "name": "spriteFrame",
-      "userData": {
-        "trimType": "auto",
-        "trimThreshold": 1,
-        "rotated": false,
-        "offsetX": 32.5,
-        "offsetY": 5,
-        "trimX": 115,
-        "trimY": 115,
-        "width": 795,
-        "height": 720,
-        "rawWidth": 960,
-        "rawHeight": 960,
-        "borderTop": 0,
-        "borderBottom": 0,
-        "borderLeft": 0,
-        "borderRight": 0,
-        "packable": true,
-        "isUuid": true,
-        "imageUuidOrDatabaseUri": "3fa2153f-a602-41e1-b310-7139e83eb2b4@6c48a",
-        "atlasUuid": ""
-      },
-      "ver": "1.0.9",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
     }
   },
   "userData": {
-    "type": "sprite-frame",
+    "type": "texture",
     "hasAlpha": true,
-    "redirect": "3fa2153f-a602-41e1-b310-7139e83eb2b4@f9941"
+    "redirect": "3fa2153f-a602-41e1-b310-7139e83eb2b4@6c48a"
   }
 }

@@ -1,4 +1,4 @@
-import { _decorator, Animation, Component } from 'cc'
+import { _decorator, Animation, Component, SpriteFrame } from 'cc'
 import { FSM_PARAM_TYPE_ENUM } from '../Enum'
 const { ccclass, property } = _decorator
 import State from './State'
@@ -44,7 +44,7 @@ export default abstract class StateMachine extends Component {
   params: Map<string, IParamsValue> = new Map()
   stateMachines: Map<string, SubStateMachine | State> = new Map()
   animationComponent: Animation
-  waitingList: Array<Promise<any>> = []
+  waitingList: Array<Promise<SpriteFrame[]>> = []
 
   getParams(paramName: string) {
     if (this.params.has(paramName)) {

@@ -43,7 +43,7 @@ export class BattleManager extends Component {
       DataManager.Instance.mapColumnCount = this.level.mapInfo[0]?.length || 0
       this.generateTileMap()
       this.generatePlayer()
-      // this.generateEnemies()
+      this.generateEnemies()
     }
   }
 
@@ -58,8 +58,8 @@ export class BattleManager extends Component {
 
   generateTileMap() {
     const node = createUINode()
-    node.addComponent(TileMapManager)
     node.setParent(this.stage)
+    node.addComponent(TileMapManager)
     this.adaptMapPos()
   }
 
@@ -72,8 +72,8 @@ export class BattleManager extends Component {
 
   generatePlayer() {
     const node = createUINode()
-    const playerManager = node.addComponent(PlayerManager)
     node.setParent(this.stage)
+    const playerManager = node.addComponent(PlayerManager)
     playerManager.init({
       x: 2,
       y: 8,
@@ -86,8 +86,8 @@ export class BattleManager extends Component {
 
   generateEnemies() {
     const node = createUINode()
-    const woodenSkeletonManager = node.addComponent(WoodenSkeletonManager)
     node.setParent(this.stage)
+    const woodenSkeletonManager = node.addComponent(WoodenSkeletonManager)
     woodenSkeletonManager.init({
       x: 5,
       y: 2,

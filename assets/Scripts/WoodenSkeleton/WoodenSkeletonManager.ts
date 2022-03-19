@@ -4,15 +4,16 @@ import { EntityManager } from '../../Base/EntityManager'
 import DataManager from '../../Runtime/DataManager'
 import EventManager from '../../Runtime/EventManager'
 import { IEntity } from '../../Levels'
+import { WoodenSkeletonStateMachine } from 'db://assets/Scripts/WoodenSkeleton/WoodenSkeletonStateMachine'
 const { ccclass } = _decorator
 
 @ccclass('WoodenSkeletonManager')
 export class WoodenSkeletonManager extends EntityManager {
   async init(params: IEntity) {
-    // this.fsm = this.addComponent()
-    // await super.init(params);
-    // this.onChangeDirection(true);
+    this.fsm = this.addComponent(WoodenSkeletonStateMachine)
+    await this.fsm.init()
 
+    super.init(params)
     EventManager.Instance.on(EVENT_ENUM.PLAYER_MOVE_END, this.onChangeDirection, this)
     EventManager.Instance.on(EVENT_ENUM.PLAYER_MOVE_END, this.onAttack, this)
   }
@@ -74,7 +75,7 @@ export class WoodenSkeletonManager extends EntityManager {
       playerState !== ENTITY_STATE_ENUM.AIRDEATH
     ) {
       this.state = ENTITY_STATE_ENUM.ATTACK
-      // EventManager.Instance.emit(EVENT_ENUM.ATTACK_PLAYER, ENTITY_STATE_ENUM.DEATH);
+      EventManager.Instance.emit(EVENT_ENUM.ATTACK_PLAYER, ENTITY_STATE_ENUM.DEATH)
     } else {
       this.state = ENTITY_STATE_ENUM.IDLE
     }

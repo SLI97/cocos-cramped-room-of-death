@@ -8,13 +8,9 @@ export class ResourceManager extends Singleton {
     return super.GetInstance<ResourceManager>()
   }
 
-  loadRes<T extends Asset = SpriteFrame>(
-    path: string,
-    // eslint-disable-next-line @typescript-eslint/camelcase
-    type?: __private._cocos_core_asset_manager_shared__AssetType<T> | null,
-  ) {
-    return new Promise<T>((resolve, reject) => {
-      resources.load<T>(path, type, (err, res) => {
+  loadRes(path: string, type: typeof SpriteFrame = SpriteFrame) {
+    return new Promise<SpriteFrame>((resolve, reject) => {
+      resources.load<SpriteFrame>(path, type, (err, res) => {
         if (err) {
           reject(err)
           return
@@ -24,13 +20,9 @@ export class ResourceManager extends Singleton {
     })
   }
 
-  loadDir<T extends Asset = SpriteFrame>(
-    path: string,
-    // eslint-disable-next-line @typescript-eslint/camelcase
-    type?: __private._cocos_core_asset_manager_shared__AssetType<T> | null,
-  ) {
-    return new Promise<T[]>((resolve, reject) => {
-      resources.loadDir<T>(path, type, (err, res) => {
+  loadDir(path: string, type: typeof SpriteFrame = SpriteFrame) {
+    return new Promise<SpriteFrame[]>((resolve, reject) => {
+      resources.loadDir<SpriteFrame>(path, type, (err, res) => {
         if (err) {
           reject(err)
           return

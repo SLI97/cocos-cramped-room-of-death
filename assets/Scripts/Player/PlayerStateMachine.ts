@@ -11,6 +11,8 @@ import BlockRightSubStateMachine from 'db://assets/Scripts/Player/BlockRightSubS
 import BlockTurnLeftSubStateMachine from 'db://assets/Scripts/Player/BlockTurnLeftSubStateMachine'
 import BlockTurnRightSubStateMachine from 'db://assets/Scripts/Player/BlockTurnRightSubStateMachine'
 import { PlayerManager } from 'db://assets/Scripts/Player/PlayerManager'
+import { EntityManager } from 'db://assets/Base/EntityManager'
+import DeathSubStateMachine from 'db://assets/Scripts/Player/DeathSubStateMachine'
 const { ccclass, property } = _decorator
 
 @ccclass('PlayerStateMachine')
@@ -26,9 +28,12 @@ export class PlayerStateMachine extends StateMachine {
   }
 
   initAnimationEvent() {
-    this.animationComponent.on(Animation.EventType.FINISHED, e => {
-      console.log('FINISHED', e)
-      this.node.getComponent(PlayerManager).state = ENTITY_STATE_ENUM.IDLE
+    this.animationComponent.on(Animation.EventType.FINISHED, () => {
+      const whiteList = ['block', 'turn', 'attack']
+      const name = this.animationComponent.defaultClip.name
+      if (whiteList.some(v => name.includes(v))) {
+        this.node.getComponent(EntityManager).state = ENTITY_STATE_ENUM.IDLE
+      }
     })
     //
     //  this.animationComponent.on('frameChange', () => {
@@ -81,7 +86,7 @@ export class PlayerStateMachine extends StateMachine {
     // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNLEFT, new BlockTurnLeftSubStateMachine(this))
     // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNRIGHT, new BlockTurnRightSubStateMachine(this))
     // this.stateMachines.set(PARAMS_NAME_ENUM.ATTACK, new AttackSubStateMachine(this))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.DEATH, new DeathSubStateMachine(this, this.animationComponent))
+    this.stateMachines.set(PARAMS_NAME_ENUM.DEATH, new DeathSubStateMachine(this))
     // this.stateMachines.set(PARAMS_NAME_ENUM.AIRDEATH, new AirDeathSubStateMachine(this, this.animationComponent))
   }
 
