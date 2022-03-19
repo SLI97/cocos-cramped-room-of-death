@@ -1,59 +1,55 @@
-import { _decorator, animation, Component, Node, UITransform } from 'cc';
-import { DIRECTION_ENUM, DIRECTION_ORDER_ENUM, ENTITY_STATE_ENUM, PARAMS_NAME_ENUM } from '../Enum';
-import { TILE_HEIGHT, TILE_WIDTH } from '../Scripts/TileManager';
-import { IEntity } from '../Levels';
-const { ccclass, property } = _decorator;
+import { _decorator, animation, Component, Node, UITransform } from 'cc'
+import { DIRECTION_ENUM, DIRECTION_ORDER_ENUM, ENTITY_STATE_ENUM, PARAMS_NAME_ENUM } from '../Enum'
+import { IEntity } from '../Levels'
+import { TILE_HEIGHT, TILE_WIDTH } from '../Scripts/TIle/TileManager'
+import { randomByLength } from '../Utils'
+import StateMachine from './StateMachine'
+import { PlayerStateMachine } from '../Scripts/Player/PlayerStateMachine'
+const { ccclass, property } = _decorator
 
 @ccclass('EntityManager')
 export class EntityManager extends Component {
-  private controller: animation.AnimationController;
-  private transform: UITransform;
-  private _state: ENTITY_STATE_ENUM;
-  private _direction: DIRECTION_ENUM;
+  id: string = randomByLength(12)
+  fsm: StateMachine
 
-  protected initParams: IEntity;
+  private transform: UITransform
+  private _state: ENTITY_STATE_ENUM
+  private _direction: DIRECTION_ENUM
 
-  x: number;
-  y: number;
+  x: number
+  y: number
 
   get direction() {
-    return this._direction;
+    return this._direction
   }
 
   set direction(newDirection) {
-    this._direction = newDirection;
-    this.controller.setValue(PARAMS_NAME_ENUM.DIRECTION.toLowerCase(), DIRECTION_ORDER_ENUM[this._direction]);
+    this._direction = newDirection
+    // this.controller.setValue(PARAMS_NAME_ENUM.DIRECTION.toLowerCase(), DIRECTION_ORDER_ENUM[this._direction])
   }
 
   get state() {
-    return this._state;
+    return this._state
   }
 
   set state(newState) {
-    this._state = newState;
-    this.controller.setValue(newState.toLowerCase(), true);
+    this._state = newState
+    // this.controller.setValue(newState.toLowerCase(), true)
   }
 
   init(params: IEntity) {
-    this.controller = this.getComponent(animation.AnimationController);
-    this.transform = this.getComponent(UITransform);
-    this.transform.setContentSize(TILE_WIDTH * 4, TILE_HEIGHT * 4);
-    this.x = params.x;
-    this.y = params.y;
+    this.transform = this.getComponent(UITransform)
+    this.transform.setContentSize(TILE_WIDTH * 4, TILE_HEIGHT * 4)
+    this.x = params.x
+    this.y = params.y
 
-    Promise.resolve().then(() => {
-      this.direction = params.direction;
-      this.state = params.state;
-    });
+    this.direction = params.direction
+    this.state = params.state
   }
-
-  onLoad() {}
-
-  start() {}
 
   onDestroy() {}
 
   update() {
-    this.node.setPosition(this.x * TILE_WIDTH - TILE_WIDTH * 1.5, -this.y * TILE_HEIGHT + TILE_HEIGHT * 1.5);
+    this.node.setPosition(this.x * TILE_WIDTH - TILE_WIDTH * 1.5, -this.y * TILE_HEIGHT + TILE_HEIGHT * 1.5)
   }
 }
