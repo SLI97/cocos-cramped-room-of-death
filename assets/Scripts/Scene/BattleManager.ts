@@ -7,6 +7,7 @@ import { createUINode } from '../../Utils'
 import { TILE_HEIGHT, TILE_WIDTH } from '../TIle/TileManager'
 import { PlayerManager } from '../Player/PlayerManager'
 import { TileMapManager } from '../TIle/TileMapManager'
+import { DoorManager } from 'db://assets/Scripts/Door/DoorManager'
 
 const { ccclass, property } = _decorator
 
@@ -44,6 +45,7 @@ export class BattleManager extends Component {
       this.generateTileMap()
       this.generateEnemies()
       this.generatePlayer()
+      this.generateDoor()
     }
   }
 
@@ -96,6 +98,20 @@ export class BattleManager extends Component {
       type: ENTITY_TYPE_ENUM.SKELETON_WOODEN,
     })
     DataManager.Instance.enemies.push(woodenSkeletonManager)
+  }
+
+  async generateDoor() {
+    const node = createUINode()
+    node.setParent(this.stage)
+    const doorManager = node.addComponent(DoorManager)
+    await doorManager.init({
+      x: 7,
+      y: 8,
+      direction: DIRECTION_ENUM.BOTTOM,
+      state: ENTITY_STATE_ENUM.IDLE,
+      type: ENTITY_TYPE_ENUM.DOOR,
+    })
+    DataManager.Instance.door = doorManager
   }
 
   nextLevel() {

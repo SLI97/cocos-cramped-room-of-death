@@ -4,6 +4,8 @@ import { ILevel, ITile } from '../Levels'
 import { WoodenSkeletonManager } from '../Scripts/WoodenSkeleton/WoodenSkeletonManager'
 import { PlayerManager } from '../Scripts/Player/PlayerManager'
 import { TileManager } from '../Scripts/TIle/TileManager'
+import { DoorManager } from '../Scripts/Door/DoorManager'
+import { EnemyManager } from '../Base/EnemyManager'
 // import PlayerManager from '../Scenes/Battle/GameObjects/Player/Scripts/PlayerManager';
 // import EnemyManager from '../Base/EnemyManager';
 // import DoorManager from '../Scenes/Battle/GameObjects/Door/Scripts/DoorManager';
@@ -22,11 +24,10 @@ export default class DataManager extends Singleton {
   }
 
   player: PlayerManager
-  // enemies: EnemyManager[];
-  enemies: WoodenSkeletonManager[]
+  enemies: EnemyManager[]
   // spikes: SpikesManager[];
   // bursts: BurstManager[];
-  // door: DoorManager;
+  door: DoorManager
   // smokes: SmokeManager[];
   mapRowCount: number
   mapColumnCount: number
@@ -54,7 +55,7 @@ export default class DataManager extends Singleton {
     // this.spikes = [];
     // this.bursts = [];
     //
-    // this.door = null;
+    this.door = null
     // this.smokes = [];
     //
     // this.records = [];
