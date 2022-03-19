@@ -12,7 +12,7 @@ export class EntityManager extends Component {
   id: string = randomByLength(12)
   fsm: StateMachine
 
-  private transform: UITransform
+  protected transform: UITransform
   private _state: ENTITY_STATE_ENUM
   private _direction: DIRECTION_ENUM
 

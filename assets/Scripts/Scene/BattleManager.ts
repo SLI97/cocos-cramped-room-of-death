@@ -9,6 +9,7 @@ import { PlayerManager } from '../Player/PlayerManager'
 import { TileMapManager } from '../TIle/TileMapManager'
 import { DoorManager } from '../Door/DoorManager'
 import { IronSkeletonManager } from 'db://assets/Scripts/IronSkeleton/IronSkeletonManager'
+import { BurstManager } from 'db://assets/Scripts/Burst/BurstManager'
 
 const { ccclass, property } = _decorator
 
@@ -44,9 +45,10 @@ export class BattleManager extends Component {
       DataManager.Instance.mapRowCount = this.level.mapInfo.length || 0
       DataManager.Instance.mapColumnCount = this.level.mapInfo[0]?.length || 0
       this.generateTileMap()
-      this.generateEnemies()
+      this.generateBursts()
+      // this.generateEnemies()
       this.generatePlayer()
-      this.generateDoor()
+      // this.generateDoor()
     }
   }
 
@@ -111,6 +113,20 @@ export class BattleManager extends Component {
       type: ENTITY_TYPE_ENUM.SKELETON_IRON,
     })
     DataManager.Instance.enemies.push(ironSkeletonManager)
+  }
+
+  async generateBursts() {
+    const node = createUINode()
+    node.setParent(this.stage)
+    const burstManager = node.addComponent(BurstManager)
+    await burstManager.init({
+      x: 5,
+      y: 2,
+      direction: DIRECTION_ENUM.TOP,
+      state: ENTITY_STATE_ENUM.IDLE,
+      type: ENTITY_TYPE_ENUM.BURST,
+    })
+    DataManager.Instance.bursts.push(burstManager)
   }
 
   async generateDoor() {

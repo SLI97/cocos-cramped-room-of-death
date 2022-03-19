@@ -6,6 +6,7 @@ import { PlayerManager } from '../Scripts/Player/PlayerManager'
 import { TileManager } from '../Scripts/TIle/TileManager'
 import { DoorManager } from '../Scripts/Door/DoorManager'
 import { EnemyManager } from '../Base/EnemyManager'
+import { BurstManager } from '../Scripts/Burst/BurstManager'
 // import PlayerManager from '../Scenes/Battle/GameObjects/Player/Scripts/PlayerManager';
 // import EnemyManager from '../Base/EnemyManager';
 // import DoorManager from '../Scenes/Battle/GameObjects/Door/Scripts/DoorManager';
@@ -26,7 +27,7 @@ export default class DataManager extends Singleton {
   player: PlayerManager
   enemies: EnemyManager[]
   // spikes: SpikesManager[];
-  // bursts: BurstManager[];
+  bursts: BurstManager[]
   door: DoorManager
   // smokes: SmokeManager[];
   mapRowCount: number
@@ -53,7 +54,7 @@ export default class DataManager extends Singleton {
     this.player = null
     this.enemies = []
     // this.spikes = [];
-    // this.bursts = [];
+    this.bursts = []
     //
     this.door = null
     // this.smokes = [];
