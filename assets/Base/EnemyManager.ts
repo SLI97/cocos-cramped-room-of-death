@@ -8,8 +8,9 @@ const { ccclass } = _decorator
 
 @ccclass('EnemyManager')
 export class EnemyManager extends EntityManager {
-  async init(params: IEntity) {
+  init(params: IEntity) {
     super.init(params)
+    EventManager.Instance.on(EVENT_ENUM.PLAYER_BORN, this.onChangeDirection, this)
     EventManager.Instance.on(EVENT_ENUM.ATTACK_ENEMY, this.onDead, this)
     EventManager.Instance.on(EVENT_ENUM.PLAYER_MOVE_END, this.onChangeDirection, this)
 
@@ -18,6 +19,7 @@ export class EnemyManager extends EntityManager {
 
   onDestroy() {
     super.onDestroy()
+    EventManager.Instance.off(EVENT_ENUM.PLAYER_BORN, this.onChangeDirection)
     EventManager.Instance.off(EVENT_ENUM.ATTACK_ENEMY, this.onDead)
     EventManager.Instance.off(EVENT_ENUM.PLAYER_MOVE_END, this.onChangeDirection)
   }

@@ -2,17 +2,15 @@ import { _decorator, Component, Prefab, instantiate } from 'cc'
 import DataManager from '../../Runtime/DataManager'
 import { createUINode, randomByRange } from '../../Utils'
 import { TileManager } from './TileManager'
+import { ResourceManager } from 'db://assets/Runtime/ResourceManager'
 const { ccclass, property } = _decorator
 
 @ccclass('TileMapManager')
 export class TileMapManager extends Component {
-  start() {
-    this.initTile()
-  }
-
-  initTile() {
+  async init() {
     const { mapInfo } = DataManager.Instance
     DataManager.Instance.tileInfo = []
+    const spriteFrames = await ResourceManager.Instance.loadDir('texture/tile/tile/')
     for (let i = 0; i < mapInfo.length; i++) {
       const column = mapInfo[i]
       DataManager.Instance.tileInfo[i] = []
@@ -34,10 +32,11 @@ export class TileMapManager extends Component {
         }
 
         const imgSrc = `tile (${number})`
+        const spriteFrame = spriteFrames.find(item => item.name === imgSrc) || spriteFrames[0]
         const type = item.type
         const tile = createUINode()
         const tileManager = tile.addComponent(TileManager)
-        tileManager.init(type, imgSrc, i, j)
+        tileManager.init(type, spriteFrame, i, j)
         tile.setParent(this.node)
         DataManager.Instance.tileInfo[i][j] = tileManager
       }

@@ -1,4 +1,4 @@
-import { Animation, animation, AnimationClip, resources, Sprite, SpriteAtlas, SpriteFrame } from 'cc'
+import { animation, AnimationClip, Sprite, SpriteFrame } from 'cc'
 import { ResourceManager } from '../Runtime/ResourceManager'
 import { sortSpriteFrame } from '../Utils'
 import StateMachine from './StateMachine'
@@ -17,6 +17,8 @@ export default class State {
     private fsm: StateMachine,
     private spriteFrameDir: string,
     private wrapMode: AnimationClip.WrapMode = AnimationClip.WrapMode.Normal,
+    private speed: number = ANIMATION_SPEED,
+    private events: Array<AnimationClip.IEvent> = [],
   ) {
     this.init()
   }
@@ -28,9 +30,8 @@ export default class State {
     const waiting = ResourceManager.Instance.loadDir(this.spriteFrameDir, SpriteFrame)
     this.fsm.waitingList.push(waiting)
     const spriteFrames = await waiting
-    sortSpriteFrame(spriteFrames)
     const frames: Array<[number, SpriteFrame]> = sortSpriteFrame(spriteFrames).map((item, index) => [
-      index * ANIMATION_SPEED,
+      index * this.speed,
       item,
     ])
     track.channel.curve.assignSorted(frames)
@@ -38,17 +39,20 @@ export default class State {
     //动画添加轨道
     this.animationClip = new AnimationClip()
     this.animationClip.name = this.spriteFrameDir
-    this.animationClip.duration = frames.length * ANIMATION_SPEED
+    this.animationClip.duration = frames.length * this.speed
     this.animationClip.addTrack(track)
     this.animationClip.wrapMode = this.wrapMode
+    for (const event of this.events) {
+      this.animationClip.events.push(event)
+    }
+    this.animationClip.updateEventDatas()
   }
 
   run() {
-    const state = this.fsm.animationComponent.getState(this.animationClip.name)
-    //当前动画正在播放
-    if (state && state.isPlaying) {
+    if (this.fsm.animationComponent.defaultClip?.name === this.animationClip.name) {
       return
     }
+
     this.fsm.animationComponent.defaultClip = this.animationClip
     this.fsm.animationComponent.play()
   }

@@ -1,4 +1,4 @@
-import { _decorator, Component, Sprite, UITransform, Vec2 } from 'cc'
+import { _decorator, Component, Sprite, UITransform, Vec2, SpriteFrame } from 'cc'
 import { TILE_TYPE_ENUM } from '../../Enum'
 import { ResourceManager } from '../../Runtime/ResourceManager'
 const { ccclass, property } = _decorator
@@ -12,7 +12,7 @@ export class TileManager extends Component {
   moveable: boolean
   turnable: boolean
 
-  async init(type: TILE_TYPE_ENUM, imgSrc: string, i: number, j: number) {
+  async init(type: TILE_TYPE_ENUM, spriteFrame: SpriteFrame, i: number, j: number) {
     this.type = type
     if (
       this.type === TILE_TYPE_ENUM.WALL_LEFT_TOP ||
@@ -38,7 +38,6 @@ export class TileManager extends Component {
 
     const uiTransform = this.getComponent(UITransform)
     const sprite = this.node.addComponent(Sprite)
-    const spriteFrame = await ResourceManager.Instance.loadRes(`texture/tile/tile/${imgSrc}`)
     sprite.spriteFrame = spriteFrame
     uiTransform.setContentSize(TILE_WIDTH, TILE_HEIGHT)
     this.node.setPosition(i * TILE_WIDTH, -j * TILE_HEIGHT)

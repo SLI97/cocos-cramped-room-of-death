@@ -82,6 +82,9 @@ export default abstract class StateMachine extends Component {
   }
 
   set currentState(newState) {
+    if (!newState) {
+      return
+    }
     this._currentState = newState
     this._currentState.run()
   }

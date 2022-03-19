@@ -1,20 +1,14 @@
 import Singleton from '../Base/Singleton'
-// import TileManager from '../Scenes/Battle/GameObjects/Tile/TileManager';
 import { ILevel, ITile } from '../Levels'
-import { WoodenSkeletonManager } from '../Scripts/WoodenSkeleton/WoodenSkeletonManager'
 import { PlayerManager } from '../Scripts/Player/PlayerManager'
 import { TileManager } from '../Scripts/TIle/TileManager'
 import { DoorManager } from '../Scripts/Door/DoorManager'
 import { EnemyManager } from '../Base/EnemyManager'
 import { BurstManager } from '../Scripts/Burst/BurstManager'
-// import PlayerManager from '../Scenes/Battle/GameObjects/Player/Scripts/PlayerManager';
-// import EnemyManager from '../Base/EnemyManager';
-// import DoorManager from '../Scenes/Battle/GameObjects/Door/Scripts/DoorManager';
-// import SpikesManager from '../Scenes/Battle/GameObjects/Spikes/Scripts/SpikesManager';
-// import BurstManager from '../Scenes/Battle/GameObjects/Burst/Scripts/BurstManager';
-// import SmokeManager from '../Scenes/Battle/GameObjects/Smoke/Scripts/SmokeManager';
+import SpikesManager from '../Scripts/Spikes/SpikesManager'
+import { SmokeManager } from '../Scripts/Smoke/SmokeManager'
 
-// export type IRecord = Omit<ILevel, 'mapInfo'>;
+export type IRecord = Omit<ILevel, 'mapInfo'>
 
 /**
  * 全局数据管理类
@@ -26,17 +20,16 @@ export default class DataManager extends Singleton {
 
   player: PlayerManager
   enemies: EnemyManager[]
-  // spikes: SpikesManager[];
+  spikes: SpikesManager[]
   bursts: BurstManager[]
   door: DoorManager
-  // smokes: SmokeManager[];
+  smokes: SmokeManager[]
   mapRowCount: number
   mapColumnCount: number
   levelIndex: number = 1
-  // frame: number = 0;
   mapInfo: Array<Array<ITile>> = [] //关卡的描述数据
   tileInfo: Array<Array<TileManager>> = [] //实例化出来的tileManager实例
-  // records: IRecord[]; //撤回数据za
+  records: IRecord[] //撤回数据za
 
   constructor() {
     super()
@@ -53,12 +46,12 @@ export default class DataManager extends Singleton {
     // //活动元素信息
     this.player = null
     this.enemies = []
-    // this.spikes = [];
+    this.spikes = []
     this.bursts = []
     //
     this.door = null
-    // this.smokes = [];
-    //
-    // this.records = [];
+    this.smokes = []
+
+    this.records = []
   }
 }
