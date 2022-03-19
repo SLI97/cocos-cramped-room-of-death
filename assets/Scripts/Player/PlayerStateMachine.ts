@@ -7,6 +7,7 @@ import { EntityManager } from '../../Base/EntityManager'
 import TurnRightSubStateMachine from './TurnRightSubStateMachine'
 import TurnLeftSubStateMachine from './TurnLeftSubStateMachine'
 import DeathSubStateMachine from './DeathSubStateMachine'
+import AirDeathSubStateMachine from './AirDeathSubStateMachine'
 const { ccclass, property } = _decorator
 
 @ccclass('PlayerStateMachine')
@@ -81,7 +82,7 @@ export class PlayerStateMachine extends StateMachine {
     // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNRIGHT, new BlockTurnRightSubStateMachine(this))
     this.stateMachines.set(PARAMS_NAME_ENUM.ATTACK, new AttackSubStateMachine(this))
     this.stateMachines.set(PARAMS_NAME_ENUM.DEATH, new DeathSubStateMachine(this))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.AIRDEATH, new AirDeathSubStateMachine(this, this.animationComponent))
+    this.stateMachines.set(PARAMS_NAME_ENUM.AIRDEATH, new AirDeathSubStateMachine(this))
   }
 
   /***
