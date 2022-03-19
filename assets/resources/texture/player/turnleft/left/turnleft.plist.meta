@@ -1,0 +1,120 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "93f05d33-587c-4883-955a-68599c99af6a",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "32d58": {
+      "importer": "sprite-frame",
+      "uuid": "93f05d33-587c-4883-955a-68599c99af6a@32d58",
+      "displayName": "",
+      "id": "32d58",
+      "name": "turn (4)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "34de8fc7-ebc4-4cc8-ad0c-ecb85451bf68@6c48a",
+        "atlasUuid": "93f05d33-587c-4883-955a-68599c99af6a"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3b35c": {
+      "importer": "sprite-frame",
+      "uuid": "93f05d33-587c-4883-955a-68599c99af6a@3b35c",
+      "displayName": "",
+      "id": "3b35c",
+      "name": "turn (5)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 320,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "34de8fc7-ebc4-4cc8-ad0c-ecb85451bf68@6c48a",
+        "atlasUuid": "93f05d33-587c-4883-955a-68599c99af6a"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e9002": {
+      "importer": "sprite-frame",
+      "uuid": "93f05d33-587c-4883-955a-68599c99af6a@e9002",
+      "displayName": "",
+      "id": "e9002",
+      "name": "turn (6)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 640,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "34de8fc7-ebc4-4cc8-ad0c-ecb85451bf68@6c48a",
+        "atlasUuid": "93f05d33-587c-4883-955a-68599c99af6a"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "turnleft.png",
+    "format": 3,
+    "uuid": "93f05d33-587c-4883-955a-68599c99af6a",
+    "textureUuid": "34de8fc7-ebc4-4cc8-ad0c-ecb85451bf68@6c48a"
+  }
+}

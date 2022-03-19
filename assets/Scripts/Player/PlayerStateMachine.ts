@@ -1,35 +1,23 @@
-import { _decorator, AnimationClip, animation, Sprite, SpriteFrame, resources, Animation } from 'cc'
+import { _decorator, Animation } from 'cc'
 import StateMachine, { getInitParamsNumber, getInitParamsTrigger } from '../../Base/StateMachine'
-import { PARAMS_NAME_ENUM } from '../../Enum'
+import { ENTITY_STATE_ENUM, PARAMS_NAME_ENUM } from '../../Enum'
 import IdleSubStateMachine from './IdleSubStateMachine'
+import TurnLeftSubStateMachine from 'db://assets/Scripts/Player/TurnLeftSubStateMachine'
+import TurnRightSubStateMachine from 'db://assets/Scripts/Player/TurnRightSubStateMachine'
+import BlockFrontSubStateMachine from 'db://assets/Scripts/Player/BlockFrontSubStateMachine'
+import BlockBackSubStateMachine from 'db://assets/Scripts/Player/BlockBackSubStateMachine'
+import BlockLeftSubStateMachine from 'db://assets/Scripts/Player/BlockLeftSubStateMachine'
+import BlockRightSubStateMachine from 'db://assets/Scripts/Player/BlockRightSubStateMachine'
+import BlockTurnLeftSubStateMachine from 'db://assets/Scripts/Player/BlockTurnLeftSubStateMachine'
+import BlockTurnRightSubStateMachine from 'db://assets/Scripts/Player/BlockTurnRightSubStateMachine'
+import { PlayerManager } from 'db://assets/Scripts/Player/PlayerManager'
 const { ccclass, property } = _decorator
 
 @ccclass('PlayerStateMachine')
 export class PlayerStateMachine extends StateMachine {
-  // start() {
-  //   const animationClip = new AnimationClip()
-  //   const track = new animation.ObjectTrack()
-  //   track.path = new animation.TrackPath().toComponent(Sprite).toProperty('spriteFrame')
-  //   resources.load(`texture/bg/${`bg (${1})`}/spriteFrame`, SpriteFrame, (err, spriteFrame) => {
-  //     if (err) {
-  //       console.error(err)
-  //       return
-  //     }
-  //     track.channel.curve.assignSorted([[0.1, spriteFrame]])
-  //     // sprite.spriteFrame = spriteFrame
-  //     // transform.setContentSize(TILE_WIDTH, TILE_HEIGHT)
-  //     // this.node.setPosition(i * TILE_WIDTH, -j * TILE_HEIGHT)
-  //     animationClip.addTrack(track)
-  //     const animationComponent = this.getComponent(Animation)
-  //     console.log(animationClip.name)
-  //     animationComponent.defaultClip = animationClip
-  //     animationComponent.play()
-  //   })
-  // }
-
   init() {
-    this.node.addComponent(Sprite)
     this.animationComponent = this.node.addComponent(Animation)
+    // this.animationComponent.playOnLoad = true
 
     this.initParams()
     this.initStateMachines()
@@ -37,20 +25,30 @@ export class PlayerStateMachine extends StateMachine {
   }
 
   initAnimationEvent() {
-    // spriteAnimation.on('complete', () => {
+    this.animationComponent.on(Animation.EventType.FINISHED, e => {
+      console.log('FINISHED', e)
+      this.node.getComponent(PlayerManager).state = ENTITY_STATE_ENUM.IDLE
+      // this.gameObject.getComponent(PlayerManager).state = ENTITY_STATE_ENUM.IDLE
+      //   const list = ['player_turn', 'player_block', 'player_attack']
+      //   if (list.some(item =>  this.animationComponent.resource.startsWith(item))) {
+      //     this.gameObject.getComponent(PlayerManager).state = ENTITY_STATE_ENUM.IDLE
+      //   }
+      // })
+    })
+    //  this.animationComponent.on('complete', () => {
     //   if (!this.gameObject || !this.gameObject.getComponent(PlayerManager)) {
     //     return
     //   }
     //   const list = ['player_turn', 'player_block', 'player_attack']
-    //   if (list.some(item => spriteAnimation.resource.startsWith(item))) {
+    //   if (list.some(item =>  this.animationComponent.resource.startsWith(item))) {
     //     this.gameObject.getComponent(PlayerManager).state = ENTITY_STATE_ENUM.IDLE
     //   }
     // })
     //
-    // spriteAnimation.on('frameChange', () => {
+    //  this.animationComponent.on('frameChange', () => {
     //   //攻击动画第五帧的时候震动屏幕
-    //   if (spriteAnimation.resource.startsWith('player_attack') && spriteAnimation.currentFrame === 4) {
-    //     switch (spriteAnimation.resource) {
+    //   if ( this.animationComponent.resource.startsWith('player_attack') &&  this.animationComponent.currentFrame === 4) {
+    //     switch ( this.animationComponent.resource) {
     //       case 'player_attack_top':
     //         EventManager.Instance.emit(EVENT_ENUM.SCREEN_SHAKE, SHAKE_TYPE_ENUM.TOP)
     //         break
@@ -88,17 +86,17 @@ export class PlayerStateMachine extends StateMachine {
 
   initStateMachines() {
     this.stateMachines.set(PARAMS_NAME_ENUM.IDLE, new IdleSubStateMachine(this))
+    this.stateMachines.set(PARAMS_NAME_ENUM.TURNLEFT, new TurnLeftSubStateMachine(this))
+    this.stateMachines.set(PARAMS_NAME_ENUM.TURNRIGHT, new TurnRightSubStateMachine(this))
+    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKFRONT, new BlockFrontSubStateMachine(this))
+    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKBACK, new BlockBackSubStateMachine(this))
+    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKLEFT, new BlockLeftSubStateMachine(this))
+    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKRIGHT, new BlockRightSubStateMachine(this))
+    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNLEFT, new BlockTurnLeftSubStateMachine(this))
+    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNRIGHT, new BlockTurnRightSubStateMachine(this))
     // this.stateMachines.set(PARAMS_NAME_ENUM.ATTACK, new AttackSubStateMachine(this))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.TURNLEFT, new TurnLeftSubStateMachine(this, spriteAnimation))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.TURNRIGHT, new TurnRightSubStateMachine(this, spriteAnimation))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKFRONT, new BlockFrontSubStateMachine(this, spriteAnimation))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKBACK, new BlockBackSubStateMachine(this, spriteAnimation))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKLEFT, new BlockLeftSubStateMachine(this, spriteAnimation))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKRIGHT, new BlockRightSubStateMachine(this, spriteAnimation))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNLEFT, new BlockTurnLeftSubStateMachine(this, spriteAnimation))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNRIGHT, new BlockTurnRightSubStateMachine(this, spriteAnimation))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.DEATH, new DeathSubStateMachine(this, spriteAnimation))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.AIRDEATH, new AirDeathSubStateMachine(this, spriteAnimation))
+    // this.stateMachines.set(PARAMS_NAME_ENUM.DEATH, new DeathSubStateMachine(this,  this.animationComponent))
+    // this.stateMachines.set(PARAMS_NAME_ENUM.AIRDEATH, new AirDeathSubStateMachine(this,  this.animationComponent))
   }
 
   /***

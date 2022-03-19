@@ -1,0 +1,52 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "078d1b30-1aa1-4e17-8e39-f97fc48d93e1",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "74804": {
+      "importer": "sprite-frame",
+      "uuid": "078d1b30-1aa1-4e17-8e39-f97fc48d93e1@74804",
+      "displayName": "",
+      "id": "74804",
+      "name": "burst (2)",
+      "userData": {
+        "trimType": "none",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 160,
+        "height": 160,
+        "rawWidth": 160,
+        "rawHeight": 160,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "c852154a-1ded-4a74-bb83-3a43d8ba63dd@6c48a",
+        "atlasUuid": "078d1b30-1aa1-4e17-8e39-f97fc48d93e1"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "idle.png",
+    "format": 3,
+    "uuid": "078d1b30-1aa1-4e17-8e39-f97fc48d93e1",
+    "textureUuid": "c852154a-1ded-4a74-bb83-3a43d8ba63dd@6c48a"
+  }
+}

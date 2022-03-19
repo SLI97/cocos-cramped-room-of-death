@@ -1,0 +1,154 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "b86f2fe8-f77c-4abc-a10e-997c438b502e",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "61e32": {
+      "importer": "sprite-frame",
+      "uuid": "b86f2fe8-f77c-4abc-a10e-997c438b502e@61e32",
+      "displayName": "",
+      "id": "61e32",
+      "name": "ironskeleton (5)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "7f61e510-929f-4d74-890a-7af04c794162@6c48a",
+        "atlasUuid": "b86f2fe8-f77c-4abc-a10e-997c438b502e"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1452e": {
+      "importer": "sprite-frame",
+      "uuid": "b86f2fe8-f77c-4abc-a10e-997c438b502e@1452e",
+      "displayName": "",
+      "id": "1452e",
+      "name": "ironskeleton (6)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 320,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "7f61e510-929f-4d74-890a-7af04c794162@6c48a",
+        "atlasUuid": "b86f2fe8-f77c-4abc-a10e-997c438b502e"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e195b": {
+      "importer": "sprite-frame",
+      "uuid": "b86f2fe8-f77c-4abc-a10e-997c438b502e@e195b",
+      "displayName": "",
+      "id": "e195b",
+      "name": "ironskeleton (7)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 640,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "7f61e510-929f-4d74-890a-7af04c794162@6c48a",
+        "atlasUuid": "b86f2fe8-f77c-4abc-a10e-997c438b502e"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "dc122": {
+      "importer": "sprite-frame",
+      "uuid": "b86f2fe8-f77c-4abc-a10e-997c438b502e@dc122",
+      "displayName": "",
+      "id": "dc122",
+      "name": "ironskeleton (8)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 960,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "7f61e510-929f-4d74-890a-7af04c794162@6c48a",
+        "atlasUuid": "b86f2fe8-f77c-4abc-a10e-997c438b502e"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "idle.png",
+    "format": 3,
+    "uuid": "b86f2fe8-f77c-4abc-a10e-997c438b502e",
+    "textureUuid": "7f61e510-929f-4d74-890a-7af04c794162@6c48a"
+  }
+}

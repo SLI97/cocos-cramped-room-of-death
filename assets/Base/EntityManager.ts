@@ -1,4 +1,4 @@
-import { _decorator, animation, Component, Node, UITransform } from 'cc'
+import { _decorator, animation, Component, Node, UITransform, Sprite } from 'cc'
 import { DIRECTION_ENUM, DIRECTION_ORDER_ENUM, ENTITY_STATE_ENUM, PARAMS_NAME_ENUM } from '../Enum'
 import { IEntity } from '../Levels'
 import { TILE_HEIGHT, TILE_WIDTH } from '../Scripts/TIle/TileManager'
@@ -25,7 +25,7 @@ export class EntityManager extends Component {
 
   set direction(newDirection) {
     this._direction = newDirection
-    // this.controller.setValue(PARAMS_NAME_ENUM.DIRECTION.toLowerCase(), DIRECTION_ORDER_ENUM[this._direction])
+    this.fsm.setParams(PARAMS_NAME_ENUM.DIRECTION, DIRECTION_ORDER_ENUM[this._direction])
   }
 
   get state() {
@@ -34,10 +34,12 @@ export class EntityManager extends Component {
 
   set state(newState) {
     this._state = newState
-    // this.controller.setValue(newState.toLowerCase(), true)
+    this.fsm.setParams(newState, true)
   }
 
   init(params: IEntity) {
+    const sprite = this.node.addComponent(Sprite)
+    sprite.sizeMode = Sprite.SizeMode.CUSTOM
     this.transform = this.getComponent(UITransform)
     this.transform.setContentSize(TILE_WIDTH * 4, TILE_HEIGHT * 4)
     this.x = params.x

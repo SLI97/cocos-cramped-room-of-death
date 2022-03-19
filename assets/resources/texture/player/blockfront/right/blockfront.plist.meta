@@ -1,0 +1,154 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "aee7b7bd-a225-48fc-b306-c6f8f2e0143b",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "1c3bc": {
+      "importer": "sprite-frame",
+      "uuid": "aee7b7bd-a225-48fc-b306-c6f8f2e0143b@1c3bc",
+      "displayName": "",
+      "id": "1c3bc",
+      "name": "blockface (25)",
+      "userData": {
+        "trimType": "none",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5bd5d291-01d7-443c-86f9-d2e49582bc82@6c48a",
+        "atlasUuid": "aee7b7bd-a225-48fc-b306-c6f8f2e0143b"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e0f87": {
+      "importer": "sprite-frame",
+      "uuid": "aee7b7bd-a225-48fc-b306-c6f8f2e0143b@e0f87",
+      "displayName": "",
+      "id": "e0f87",
+      "name": "blockface (26)",
+      "userData": {
+        "trimType": "none",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 320,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5bd5d291-01d7-443c-86f9-d2e49582bc82@6c48a",
+        "atlasUuid": "aee7b7bd-a225-48fc-b306-c6f8f2e0143b"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "aa264": {
+      "importer": "sprite-frame",
+      "uuid": "aee7b7bd-a225-48fc-b306-c6f8f2e0143b@aa264",
+      "displayName": "",
+      "id": "aa264",
+      "name": "blockface (27)",
+      "userData": {
+        "trimType": "none",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 640,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5bd5d291-01d7-443c-86f9-d2e49582bc82@6c48a",
+        "atlasUuid": "aee7b7bd-a225-48fc-b306-c6f8f2e0143b"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e4611": {
+      "importer": "sprite-frame",
+      "uuid": "aee7b7bd-a225-48fc-b306-c6f8f2e0143b@e4611",
+      "displayName": "",
+      "id": "e4611",
+      "name": "blockface (28)",
+      "userData": {
+        "trimType": "none",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 960,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5bd5d291-01d7-443c-86f9-d2e49582bc82@6c48a",
+        "atlasUuid": "aee7b7bd-a225-48fc-b306-c6f8f2e0143b"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "blockfront.png",
+    "format": 3,
+    "uuid": "aee7b7bd-a225-48fc-b306-c6f8f2e0143b",
+    "textureUuid": "5bd5d291-01d7-443c-86f9-d2e49582bc82@6c48a"
+  }
+}

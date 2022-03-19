@@ -1,0 +1,52 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "e93fd8b9-51f6-4e0f-8f0d-3f563a0762a2",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "bb0c1": {
+      "importer": "sprite-frame",
+      "uuid": "e93fd8b9-51f6-4e0f-8f0d-3f563a0762a2@bb0c1",
+      "displayName": "",
+      "id": "bb0c1",
+      "name": "spikes (7)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "89bdadaa-c90d-43bb-a52a-12e2052a16bf@6c48a",
+        "atlasUuid": "e93fd8b9-51f6-4e0f-8f0d-3f563a0762a2"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "zero.png",
+    "format": 3,
+    "uuid": "e93fd8b9-51f6-4e0f-8f0d-3f563a0762a2",
+    "textureUuid": "89bdadaa-c90d-43bb-a52a-12e2052a16bf@6c48a"
+  }
+}

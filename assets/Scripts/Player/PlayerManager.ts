@@ -63,13 +63,9 @@ export class PlayerManager extends EntityManager {
       return
     }
 
-    if (this.state !== ENTITY_STATE_ENUM.IDLE) {
-      return
-    }
-
-    if (this.willBlock(inputDirection)) {
-      return
-    }
+    // if (this.willBlock(inputDirection)) {
+    //   return
+    // }
     this.move(inputDirection)
   }
 

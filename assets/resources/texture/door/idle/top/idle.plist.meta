@@ -1,0 +1,52 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "a0291cb4-d737-4dbc-bcc8-1a34c8303be6",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "d5a9b": {
+      "importer": "sprite-frame",
+      "uuid": "a0291cb4-d737-4dbc-bcc8-1a34c8303be6@d5a9b",
+      "displayName": "",
+      "id": "d5a9b",
+      "name": "door (1)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "36e0d14e-931f-4821-8665-33c46251a1fa@6c48a",
+        "atlasUuid": "a0291cb4-d737-4dbc-bcc8-1a34c8303be6"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "idle.png",
+    "format": 3,
+    "uuid": "a0291cb4-d737-4dbc-bcc8-1a34c8303be6",
+    "textureUuid": "36e0d14e-931f-4821-8665-33c46251a1fa@6c48a"
+  }
+}

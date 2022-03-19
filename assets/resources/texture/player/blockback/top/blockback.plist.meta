@@ -1,0 +1,154 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "d129ed3f-1efb-4048-a0bf-32c903328aed",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "1631d": {
+      "importer": "sprite-frame",
+      "uuid": "d129ed3f-1efb-4048-a0bf-32c903328aed@1631d",
+      "displayName": "",
+      "id": "1631d",
+      "name": "blockface (5)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e0831215-bdf6-4c32-8a23-37a2f8d59d5d@6c48a",
+        "atlasUuid": "d129ed3f-1efb-4048-a0bf-32c903328aed"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "dda2e": {
+      "importer": "sprite-frame",
+      "uuid": "d129ed3f-1efb-4048-a0bf-32c903328aed@dda2e",
+      "displayName": "",
+      "id": "dda2e",
+      "name": "blockface (6)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 320,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e0831215-bdf6-4c32-8a23-37a2f8d59d5d@6c48a",
+        "atlasUuid": "d129ed3f-1efb-4048-a0bf-32c903328aed"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3c16e": {
+      "importer": "sprite-frame",
+      "uuid": "d129ed3f-1efb-4048-a0bf-32c903328aed@3c16e",
+      "displayName": "",
+      "id": "3c16e",
+      "name": "blockface (7)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 640,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e0831215-bdf6-4c32-8a23-37a2f8d59d5d@6c48a",
+        "atlasUuid": "d129ed3f-1efb-4048-a0bf-32c903328aed"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cce39": {
+      "importer": "sprite-frame",
+      "uuid": "d129ed3f-1efb-4048-a0bf-32c903328aed@cce39",
+      "displayName": "",
+      "id": "cce39",
+      "name": "blockface (8)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 960,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e0831215-bdf6-4c32-8a23-37a2f8d59d5d@6c48a",
+        "atlasUuid": "d129ed3f-1efb-4048-a0bf-32c903328aed"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "blockback.png",
+    "format": 3,
+    "uuid": "d129ed3f-1efb-4048-a0bf-32c903328aed",
+    "textureUuid": "e0831215-bdf6-4c32-8a23-37a2f8d59d5d@6c48a"
+  }
+}

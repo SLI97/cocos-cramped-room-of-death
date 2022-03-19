@@ -1,0 +1,52 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "bb79db3e-f3f1-4996-903f-a1e79103bc3c",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "2bd38": {
+      "importer": "sprite-frame",
+      "uuid": "bb79db3e-f3f1-4996-903f-a1e79103bc3c@2bd38",
+      "displayName": "",
+      "id": "2bd38",
+      "name": "death",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "a881ee54-5281-40fc-b7c8-692273b006c5@6c48a",
+        "atlasUuid": "bb79db3e-f3f1-4996-903f-a1e79103bc3c"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "death.png",
+    "format": 3,
+    "uuid": "bb79db3e-f3f1-4996-903f-a1e79103bc3c",
+    "textureUuid": "a881ee54-5281-40fc-b7c8-692273b006c5@6c48a"
+  }
+}

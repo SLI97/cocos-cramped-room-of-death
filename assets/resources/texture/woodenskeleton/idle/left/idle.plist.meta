@@ -1,0 +1,154 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "ecaa3cbf-5441-4985-b50f-467c99bad203",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "f57dc": {
+      "importer": "sprite-frame",
+      "uuid": "ecaa3cbf-5441-4985-b50f-467c99bad203@f57dc",
+      "displayName": "",
+      "id": "f57dc",
+      "name": "woodenskeleton (5)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "3c87b97e-538c-4609-82a3-a370e1c11ee0@6c48a",
+        "atlasUuid": "ecaa3cbf-5441-4985-b50f-467c99bad203"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e261b": {
+      "importer": "sprite-frame",
+      "uuid": "ecaa3cbf-5441-4985-b50f-467c99bad203@e261b",
+      "displayName": "",
+      "id": "e261b",
+      "name": "woodenskeleton (6)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 320,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "3c87b97e-538c-4609-82a3-a370e1c11ee0@6c48a",
+        "atlasUuid": "ecaa3cbf-5441-4985-b50f-467c99bad203"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f4569": {
+      "importer": "sprite-frame",
+      "uuid": "ecaa3cbf-5441-4985-b50f-467c99bad203@f4569",
+      "displayName": "",
+      "id": "f4569",
+      "name": "woodenskeleton (7)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 640,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "3c87b97e-538c-4609-82a3-a370e1c11ee0@6c48a",
+        "atlasUuid": "ecaa3cbf-5441-4985-b50f-467c99bad203"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "64eab": {
+      "importer": "sprite-frame",
+      "uuid": "ecaa3cbf-5441-4985-b50f-467c99bad203@64eab",
+      "displayName": "",
+      "id": "64eab",
+      "name": "woodenskeleton (8)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 960,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "3c87b97e-538c-4609-82a3-a370e1c11ee0@6c48a",
+        "atlasUuid": "ecaa3cbf-5441-4985-b50f-467c99bad203"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "idle.png",
+    "format": 3,
+    "uuid": "ecaa3cbf-5441-4985-b50f-467c99bad203",
+    "textureUuid": "3c87b97e-538c-4609-82a3-a370e1c11ee0@6c48a"
+  }
+}

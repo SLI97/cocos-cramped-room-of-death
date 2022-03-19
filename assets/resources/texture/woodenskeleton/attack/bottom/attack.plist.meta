@@ -1,0 +1,290 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "429757a5-5a24-4609-b452-fe06c64bfcd0",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "42074": {
+      "importer": "sprite-frame",
+      "uuid": "429757a5-5a24-4609-b452-fe06c64bfcd0@42074",
+      "displayName": "",
+      "id": "42074",
+      "name": "woodenskeleton (39)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 640,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ab0649bf-5ac0-4641-9bdb-7e5dda923fb8@6c48a",
+        "atlasUuid": "429757a5-5a24-4609-b452-fe06c64bfcd0"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b42ae": {
+      "importer": "sprite-frame",
+      "uuid": "429757a5-5a24-4609-b452-fe06c64bfcd0@b42ae",
+      "displayName": "",
+      "id": "b42ae",
+      "name": "woodenskeleton (33)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ab0649bf-5ac0-4641-9bdb-7e5dda923fb8@6c48a",
+        "atlasUuid": "429757a5-5a24-4609-b452-fe06c64bfcd0"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "96db9": {
+      "importer": "sprite-frame",
+      "uuid": "429757a5-5a24-4609-b452-fe06c64bfcd0@96db9",
+      "displayName": "",
+      "id": "96db9",
+      "name": "woodenskeleton (34)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 320,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ab0649bf-5ac0-4641-9bdb-7e5dda923fb8@6c48a",
+        "atlasUuid": "429757a5-5a24-4609-b452-fe06c64bfcd0"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3b028": {
+      "importer": "sprite-frame",
+      "uuid": "429757a5-5a24-4609-b452-fe06c64bfcd0@3b028",
+      "displayName": "",
+      "id": "3b028",
+      "name": "woodenskeleton (35)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 640,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ab0649bf-5ac0-4641-9bdb-7e5dda923fb8@6c48a",
+        "atlasUuid": "429757a5-5a24-4609-b452-fe06c64bfcd0"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0363d": {
+      "importer": "sprite-frame",
+      "uuid": "429757a5-5a24-4609-b452-fe06c64bfcd0@0363d",
+      "displayName": "",
+      "id": "0363d",
+      "name": "woodenskeleton (36)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 320,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ab0649bf-5ac0-4641-9bdb-7e5dda923fb8@6c48a",
+        "atlasUuid": "429757a5-5a24-4609-b452-fe06c64bfcd0"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2d83a": {
+      "importer": "sprite-frame",
+      "uuid": "429757a5-5a24-4609-b452-fe06c64bfcd0@2d83a",
+      "displayName": "",
+      "id": "2d83a",
+      "name": "woodenskeleton (37)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 320,
+        "trimY": 320,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ab0649bf-5ac0-4641-9bdb-7e5dda923fb8@6c48a",
+        "atlasUuid": "429757a5-5a24-4609-b452-fe06c64bfcd0"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d05ef": {
+      "importer": "sprite-frame",
+      "uuid": "429757a5-5a24-4609-b452-fe06c64bfcd0@d05ef",
+      "displayName": "",
+      "id": "d05ef",
+      "name": "woodenskeleton (38)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 640,
+        "trimY": 320,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ab0649bf-5ac0-4641-9bdb-7e5dda923fb8@6c48a",
+        "atlasUuid": "429757a5-5a24-4609-b452-fe06c64bfcd0"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6cdb2": {
+      "importer": "sprite-frame",
+      "uuid": "429757a5-5a24-4609-b452-fe06c64bfcd0@6cdb2",
+      "displayName": "",
+      "id": "6cdb2",
+      "name": "woodenskeleton (40)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 320,
+        "trimY": 640,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ab0649bf-5ac0-4641-9bdb-7e5dda923fb8@6c48a",
+        "atlasUuid": "429757a5-5a24-4609-b452-fe06c64bfcd0"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "attack.png",
+    "format": 3,
+    "uuid": "429757a5-5a24-4609-b452-fe06c64bfcd0",
+    "textureUuid": "ab0649bf-5ac0-4641-9bdb-7e5dda923fb8@6c48a"
+  }
+}

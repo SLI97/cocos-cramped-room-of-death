@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, view } from 'cc'
+import { _decorator, Component, Node, view, resources, SpriteFrame } from 'cc'
 import DataManager from '../../Runtime/DataManager'
 import Levels, { ILevel } from '../../Levels'
 import { DIRECTION_ENUM, ENTITY_STATE_ENUM, ENTITY_TYPE_ENUM } from '../../Enum'
@@ -41,7 +41,7 @@ export class BattleManager extends Component {
       DataManager.Instance.mapColumnCount = this.level.mapInfo[0]?.length || 0
       this.generateTileMap()
       this.generatePlayer()
-      this.generateEnemies()
+      // this.generateEnemies()
     }
   }
 
@@ -74,7 +74,7 @@ export class BattleManager extends Component {
     node.setParent(this.stage)
     playerManager.init({
       x: 2,
-      y: 2,
+      y: 8,
       direction: DIRECTION_ENUM.TOP,
       state: ENTITY_STATE_ENUM.IDLE,
       type: ENTITY_TYPE_ENUM.PLAYER,

@@ -33,7 +33,7 @@ export class TileMapManager extends Component {
           number += randomByRange(0, 4)
         }
 
-        const imgSrc = `bg (${number})`
+        const imgSrc = `tile (${number})`
         const type = item.type
         const tile = createUINode()
         const tileManager = tile.addComponent(TileManager)

@@ -1,0 +1,154 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "fe28e12f-9460-4208-88c7-0847e493bf86",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "885a5": {
+      "importer": "sprite-frame",
+      "uuid": "fe28e12f-9460-4208-88c7-0847e493bf86@885a5",
+      "displayName": "",
+      "id": "885a5",
+      "name": "blockturn (5)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0d274969-ea23-4b60-9dc4-c1ae30cf57a4@6c48a",
+        "atlasUuid": "fe28e12f-9460-4208-88c7-0847e493bf86"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "af500": {
+      "importer": "sprite-frame",
+      "uuid": "fe28e12f-9460-4208-88c7-0847e493bf86@af500",
+      "displayName": "",
+      "id": "af500",
+      "name": "blockturn (6)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 320,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0d274969-ea23-4b60-9dc4-c1ae30cf57a4@6c48a",
+        "atlasUuid": "fe28e12f-9460-4208-88c7-0847e493bf86"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "88fee": {
+      "importer": "sprite-frame",
+      "uuid": "fe28e12f-9460-4208-88c7-0847e493bf86@88fee",
+      "displayName": "",
+      "id": "88fee",
+      "name": "blockturn (7)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 640,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0d274969-ea23-4b60-9dc4-c1ae30cf57a4@6c48a",
+        "atlasUuid": "fe28e12f-9460-4208-88c7-0847e493bf86"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b915f": {
+      "importer": "sprite-frame",
+      "uuid": "fe28e12f-9460-4208-88c7-0847e493bf86@b915f",
+      "displayName": "",
+      "id": "b915f",
+      "name": "blockturn (8)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 960,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0d274969-ea23-4b60-9dc4-c1ae30cf57a4@6c48a",
+        "atlasUuid": "fe28e12f-9460-4208-88c7-0847e493bf86"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "blockturnright.png",
+    "format": 3,
+    "uuid": "fe28e12f-9460-4208-88c7-0847e493bf86",
+    "textureUuid": "0d274969-ea23-4b60-9dc4-c1ae30cf57a4@6c48a"
+  }
+}

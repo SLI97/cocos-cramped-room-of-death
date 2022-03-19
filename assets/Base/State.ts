@@ -1,27 +1,21 @@
 import { Animation, animation, AnimationClip, resources, Sprite, SpriteFrame } from 'cc'
 import { ResourceManager } from '../Runtime/ResourceManager'
 
-export const ANIMATION_SPEED = 1000 / 8
+/***
+ * unit:milisecond
+ */
+export const ANIMATION_SPEED = 1 / 8
 
 /***
  * 状态（每组动画的承载容器，持有SpriteAnimation组件执行播放）
  */
 export default class State {
-  constructor(public animationComponent: Animation, public spriteFrameDir: string, public times?: number) {
-    // resources.load(`texture/bg/${`bg (${1})`}/spriteFrame`, SpriteFrame, (err, spriteFrame) => {
-    //   if (err) {
-    //     console.error(err)
-    //     return
-    //   }
-    //   track.channel.curve.assignSorted([[0.1, spriteFrame]])
-    //   // sprite.spriteFrame = spriteFrame
-    //   // transform.setContentSize(TILE_WIDTH, TILE_HEIGHT)
-    //   // this.node.setPosition(i * TILE_WIDTH, -j * TILE_HEIGHT)
-    //   animationClip.addTrack(track)
-    //   console.log(animationClip.name)
-    //   this.animationComponent.defaultClip = animationClip
-    //   this.animationComponent.play()
-    // })
+  private animationClip: AnimationClip
+  constructor(
+    private animationComponent: Animation,
+    private spriteFrameDir: string,
+    private wrapMode: AnimationClip.WrapMode = AnimationClip.WrapMode.Loop,
+  ) {
     this.init()
   }
 
@@ -30,16 +24,20 @@ export default class State {
     const track = new animation.ObjectTrack()
     track.path = new animation.TrackPath().toComponent(Sprite).toProperty('spriteFrame')
     const res = await ResourceManager.Instance.loadDir(this.spriteFrameDir, SpriteFrame)
-    track.channel.curve.assignSorted(res.map(item => [0.1, item]))
+    console.log(res)
+    const frames: Array<[number, SpriteFrame]> = res.map((item, index) => [index * ANIMATION_SPEED, item])
+    track.channel.curve.assignSorted(frames)
 
     //动画添加轨道
-    const animationClip = new AnimationClip()
-    animationClip.addTrack(track)
-    this.animationComponent.defaultClip = animationClip
-    this.animationComponent.play()
+    this.animationClip = new AnimationClip()
+    this.animationClip.name = this.spriteFrameDir
+    this.animationClip.duration = frames.length * ANIMATION_SPEED
+    this.animationClip.addTrack(track)
+    this.animationClip.wrapMode = this.wrapMode
   }
 
   run() {
+    this.animationComponent.defaultClip = this.animationClip
     this.animationComponent.play()
   }
 }

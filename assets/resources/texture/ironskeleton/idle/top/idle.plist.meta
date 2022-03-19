@@ -1,0 +1,154 @@
+{
+  "ver": "1.0.6",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "54c5d79c-3fe7-42be-b986-9d60af12fb66",
+  "files": [
+    ".plist",
+    ".json"
+  ],
+  "subMetas": {
+    "36018": {
+      "importer": "sprite-frame",
+      "uuid": "54c5d79c-3fe7-42be-b986-9d60af12fb66@36018",
+      "displayName": "",
+      "id": "36018",
+      "name": "ironskeleton (13)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "6e0191e9-f28b-4e0a-8cb6-5a0f564118cd@6c48a",
+        "atlasUuid": "54c5d79c-3fe7-42be-b986-9d60af12fb66"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "80f7e": {
+      "importer": "sprite-frame",
+      "uuid": "54c5d79c-3fe7-42be-b986-9d60af12fb66@80f7e",
+      "displayName": "",
+      "id": "80f7e",
+      "name": "ironskeleton (14)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 320,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "6e0191e9-f28b-4e0a-8cb6-5a0f564118cd@6c48a",
+        "atlasUuid": "54c5d79c-3fe7-42be-b986-9d60af12fb66"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1ecea": {
+      "importer": "sprite-frame",
+      "uuid": "54c5d79c-3fe7-42be-b986-9d60af12fb66@1ecea",
+      "displayName": "",
+      "id": "1ecea",
+      "name": "ironskeleton (15)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 640,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "6e0191e9-f28b-4e0a-8cb6-5a0f564118cd@6c48a",
+        "atlasUuid": "54c5d79c-3fe7-42be-b986-9d60af12fb66"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f0a83": {
+      "importer": "sprite-frame",
+      "uuid": "54c5d79c-3fe7-42be-b986-9d60af12fb66@f0a83",
+      "displayName": "",
+      "id": "f0a83",
+      "name": "ironskeleton (16)",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 960,
+        "trimY": 0,
+        "width": 320,
+        "height": 320,
+        "rawWidth": 320,
+        "rawHeight": 320,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "6e0191e9-f28b-4e0a-8cb6-5a0f564118cd@6c48a",
+        "atlasUuid": "54c5d79c-3fe7-42be-b986-9d60af12fb66"
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "idle.png",
+    "format": 3,
+    "uuid": "54c5d79c-3fe7-42be-b986-9d60af12fb66",
+    "textureUuid": "6e0191e9-f28b-4e0a-8cb6-5a0f564118cd@6c48a"
+  }
+}
