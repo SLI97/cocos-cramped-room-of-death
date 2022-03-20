@@ -1,33 +1,38 @@
-import { Color, Component, game, Graphics, RenderRoot2D, view } from 'cc'
+import { game, RenderRoot2D } from 'cc'
 import Singleton from '../Base/Singleton'
-import { createUINode } from 'db://assets/Utils'
-import { DrawManager } from 'db://assets/Scripts/UI/DrawManager'
+import { DEFAULT_FADE_DURATION, DrawManager } from '../Scripts/UI/DrawManager'
+import { createUINode } from '../Utils'
 
 export default class FaderManager extends Singleton {
-  private fader: DrawManager
-  private constructor() {
-    super()
+  static get Instance() {
+    return super.GetInstance<FaderManager>()
+  }
+
+  private _fader: DrawManager = null
+
+  get fader(): DrawManager {
+    if (this._fader !== null) {
+      return this._fader
+    }
 
     const root = createUINode()
     root.addComponent(RenderRoot2D)
 
     const node = createUINode()
     node.setParent(root)
-    this.fader = node.addComponent(DrawManager)
-    this.fader.init()
+    this._fader = node.addComponent(DrawManager)
+    this._fader.init()
     game.addPersistRootNode(root)
+
+    return this._fader
   }
 
-  static get Instance() {
-    return super.GetInstance<FaderManager>()
+  async fadeIn(duration: number = DEFAULT_FADE_DURATION) {
+    await this.fader.fadeIn(duration)
   }
 
-  async fadeIn() {
-    await this.fader.fadeIn()
-  }
-
-  async fadeOut() {
-    await this.fader.fadeOut()
+  async fadeOut(duration: number = DEFAULT_FADE_DURATION) {
+    await this.fader.fadeOut(duration)
   }
 
   async mask() {

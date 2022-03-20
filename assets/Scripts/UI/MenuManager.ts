@@ -1,7 +1,7 @@
-import { _decorator, Component, Node } from 'cc'
+import { _decorator, Component, Node, director } from 'cc'
 import EventManager from '../../Runtime/EventManager'
 import { EVENT_ENUM } from '../../Enum'
-const { ccclass, property } = _decorator
+const { ccclass } = _decorator
 
 @ccclass('MenuManager')
 export class MenuManager extends Component {
@@ -13,5 +13,7 @@ export class MenuManager extends Component {
     EventManager.Instance.emit(EVENT_ENUM.RESTART_LEVEL)
   }
 
-  handleOut() {}
+  handleOut() {
+    EventManager.Instance.emit(EVENT_ENUM.QUIT_BATTLE)
+  }
 }

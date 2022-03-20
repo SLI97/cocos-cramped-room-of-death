@@ -3,7 +3,7 @@ import StateMachine, { getInitParamsNumber, getInitParamsTrigger } from '../../B
 import { PARAMS_NAME_ENUM } from '../../Enum'
 import DeathSubStateMachine from './DeathSubStateMachine'
 import IdleSubStateMachine from './IdleSubStateMachine'
-const { ccclass, property } = _decorator
+const { ccclass } = _decorator
 
 @ccclass('DoorStateMachine')
 export class DoorStateMachine extends StateMachine {

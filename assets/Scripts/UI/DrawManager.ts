@@ -1,4 +1,4 @@
-import { Color, Component, game, Graphics, view, _decorator } from 'cc'
+import { BlockInputEvents, Color, Component, game, Graphics, UITransform, view, _decorator } from 'cc'
 const { ccclass } = _decorator
 const SCREEN_WIDTH = view.getVisibleSize().width
 const SCREEN_HEIGHT = view.getVisibleSize().height
@@ -19,9 +19,14 @@ export class DrawManager extends Component {
   fadeResolve: (value: PromiseLike<null>) => void
   faderNode: Node
   ctx: Graphics
+  block: BlockInputEvents
 
   init() {
+    this.block = this.addComponent(BlockInputEvents)
     this.ctx = this.addComponent(Graphics)
+    const transform = this.getComponent(UITransform)
+    transform.setAnchorPoint(0.5, 0.5)
+    transform.setContentSize(SCREEN_WIDTH, SCREEN_HEIGHT)
     this.setAlpha(1)
   }
 
@@ -30,6 +35,7 @@ export class DrawManager extends Component {
     this.ctx.rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
     this.ctx.fillColor = new Color(0, 0, 0, 255 * percent)
     this.ctx.fill()
+    this.block.enabled = percent === 1
   }
 
   update() {

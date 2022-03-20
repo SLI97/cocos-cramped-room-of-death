@@ -1,13 +1,12 @@
 import { _decorator, Animation } from 'cc'
-import { EntityManager } from '../../Base/EntityManager'
-import StateMachine, { getInitParamsNumber, getInitParamsTrigger } from '../../Base/StateMachine'
-import { ENTITY_STATE_ENUM, ENTITY_TYPE_ENUM, PARAMS_NAME_ENUM, SPIKES_TYPE_MAP_TOTAL_COUNT_ENUM } from '../../Enum'
+import StateMachine, { getInitParamsNumber } from '../../Base/StateMachine'
+import { ENTITY_TYPE_ENUM, PARAMS_NAME_ENUM, SPIKES_TYPE_MAP_TOTAL_COUNT_ENUM } from '../../Enum'
 import SpikesFourSubStateMachine from './SpikesFourSubStateMachine'
+import SpikesManager from './SpikesManager'
 import SpikesOneSubStateMachine from './SpikesOneSubStateMachine'
 import SpikesThreeSubStateMachine from './SpikesThreeSubStateMachine'
 import SpikesTwoSubStateMachine from './SpikesTwoSubStateMachine'
-import SpikesManager from 'db://assets/Scripts/Spikes/SpikesManager'
-const { ccclass, property } = _decorator
+const { ccclass } = _decorator
 
 @ccclass('SpikesStateMachine')
 export class SpikesStateMachine extends StateMachine {

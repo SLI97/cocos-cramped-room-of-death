@@ -1,9 +1,9 @@
 import { _decorator, Animation } from 'cc'
+import { EntityManager } from '../../Base/EntityManager'
 import StateMachine, { getInitParamsNumber, getInitParamsTrigger } from '../../Base/StateMachine'
 import { ENTITY_STATE_ENUM, PARAMS_NAME_ENUM } from '../../Enum'
 import DeathSubStateMachine from './DeathSubStateMachine'
 import IdleSubStateMachine from './IdleSubStateMachine'
-import { EntityManager } from 'db://assets/Base/EntityManager'
 const { ccclass } = _decorator
 
 @ccclass('SmokeStateMachine')

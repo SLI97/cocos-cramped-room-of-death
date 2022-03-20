@@ -1,6 +1,6 @@
-import { __private, _decorator, Asset, Component, Node, resources, SpriteFrame } from 'cc'
+import { _decorator, resources, SpriteFrame } from 'cc'
 import Singleton from '../Base/Singleton'
-const { ccclass, property } = _decorator
+const { ccclass } = _decorator
 
 @ccclass('ResourceManager')
 export class ResourceManager extends Singleton {

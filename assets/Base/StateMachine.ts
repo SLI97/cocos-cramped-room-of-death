@@ -1,6 +1,6 @@
 import { _decorator, Animation, Component, SpriteFrame } from 'cc'
 import { FSM_PARAM_TYPE_ENUM } from '../Enum'
-const { ccclass, property } = _decorator
+const { ccclass } = _decorator
 import State from './State'
 import SubStateMachine from './SubStateMachine'
 

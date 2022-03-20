@@ -1,10 +1,6 @@
 import { Component, game, _decorator } from 'cc'
-import { IEntity } from '../../Levels'
-import { EnemyManager } from '../../Base/EnemyManager'
-import { SmokeStateMachine } from 'db://assets/Scripts/Smoke/SmokeStateMachine'
 import { EVENT_ENUM, SHAKE_TYPE_ENUM } from '../../Enum'
-import DataManager from '../../Runtime/DataManager'
-import EventManager from 'db://assets/Runtime/EventManager'
+import EventManager from '../../Runtime/EventManager'
 const { ccclass } = _decorator
 
 @ccclass('ShakeManager')
@@ -18,7 +14,7 @@ export class ShakeManager extends Component {
     EventManager.Instance.on(EVENT_ENUM.SCREEN_SHAKE, this.onShake, this)
   }
 
-  onDestory() {
+  onDestroy() {
     EventManager.Instance.off(EVENT_ENUM.SCREEN_SHAKE, this.onShake)
   }
 

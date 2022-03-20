@@ -5,7 +5,7 @@ import { ENTITY_STATE_ENUM, PARAMS_NAME_ENUM } from '../../Enum'
 import AttackSubStateMachine from './AttackSubStateMachine'
 import DeathSubStateMachine from './DeathSubStateMachine'
 import IdleSubStateMachine from './IdleSubStateMachine'
-const { ccclass, property } = _decorator
+const { ccclass } = _decorator
 
 @ccclass('WoodenSkeletonStateMachine')
 export class WoodenSkeletonStateMachine extends StateMachine {

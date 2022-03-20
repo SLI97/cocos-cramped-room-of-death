@@ -8,6 +8,12 @@ import TurnRightSubStateMachine from './TurnRightSubStateMachine'
 import TurnLeftSubStateMachine from './TurnLeftSubStateMachine'
 import DeathSubStateMachine from './DeathSubStateMachine'
 import AirDeathSubStateMachine from './AirDeathSubStateMachine'
+import BlockFrontSubStateMachine from './BlockFrontSubStateMachine'
+import BlockRightSubStateMachine from './BlockRightSubStateMachine'
+import BlockTurnLeftSubStateMachine from './BlockTurnLeftSubStateMachine'
+import BlockBackSubStateMachine from './BlockBackSubStateMachine'
+import BlockTurnRightSubStateMachine from './BlockTurnRightSubStateMachine'
+import BlockLeftSubStateMachine from './BlockLeftSubStateMachine'
 const { ccclass, property } = _decorator
 
 @ccclass('PlayerStateMachine')
@@ -30,28 +36,6 @@ export class PlayerStateMachine extends StateMachine {
         this.node.getComponent(EntityManager).state = ENTITY_STATE_ENUM.IDLE
       }
     })
-    //
-    //  this.animationComponent.on('frameChange', () => {
-    //   //攻击动画第五帧的时候震动屏幕
-    //   if ( this.animationComponent.resource.startsWith('player_attack') &&  this.animationComponent.currentFrame === 4) {
-    //     switch ( this.animationComponent.resource) {
-    //       case 'player_attack_top':
-    //         EventManager.Instance.emit(EVENT_ENUM.SCREEN_SHAKE, SHAKE_TYPE_ENUM.TOP)
-    //         break
-    //       case 'player_attack_bottom':
-    //         EventManager.Instance.emit(EVENT_ENUM.SCREEN_SHAKE, SHAKE_TYPE_ENUM.BOTTOM)
-    //         break
-    //       case 'player_attack_left':
-    //         EventManager.Instance.emit(EVENT_ENUM.SCREEN_SHAKE, SHAKE_TYPE_ENUM.LEFT)
-    //         break
-    //       case 'player_attack_right':
-    //         EventManager.Instance.emit(EVENT_ENUM.SCREEN_SHAKE, SHAKE_TYPE_ENUM.RIGHT)
-    //         break
-    //       default:
-    //         break
-    //     }
-    //   }
-    // })
   }
 
   initParams() {
@@ -74,12 +58,12 @@ export class PlayerStateMachine extends StateMachine {
     this.stateMachines.set(PARAMS_NAME_ENUM.IDLE, new IdleSubStateMachine(this))
     this.stateMachines.set(PARAMS_NAME_ENUM.TURNLEFT, new TurnLeftSubStateMachine(this))
     this.stateMachines.set(PARAMS_NAME_ENUM.TURNRIGHT, new TurnRightSubStateMachine(this))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKFRONT, new BlockFrontSubStateMachine(this))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKBACK, new BlockBackSubStateMachine(this))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKLEFT, new BlockLeftSubStateMachine(this))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKRIGHT, new BlockRightSubStateMachine(this))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNLEFT, new BlockTurnLeftSubStateMachine(this))
-    // this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNRIGHT, new BlockTurnRightSubStateMachine(this))
+    this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKFRONT, new BlockFrontSubStateMachine(this))
+    this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKBACK, new BlockBackSubStateMachine(this))
+    this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKLEFT, new BlockLeftSubStateMachine(this))
+    this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKRIGHT, new BlockRightSubStateMachine(this))
+    this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNLEFT, new BlockTurnLeftSubStateMachine(this))
+    this.stateMachines.set(PARAMS_NAME_ENUM.BLOCKTURNRIGHT, new BlockTurnRightSubStateMachine(this))
     this.stateMachines.set(PARAMS_NAME_ENUM.ATTACK, new AttackSubStateMachine(this))
     this.stateMachines.set(PARAMS_NAME_ENUM.DEATH, new DeathSubStateMachine(this))
     this.stateMachines.set(PARAMS_NAME_ENUM.AIRDEATH, new AirDeathSubStateMachine(this))

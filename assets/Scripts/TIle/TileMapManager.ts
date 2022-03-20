@@ -1,9 +1,9 @@
-import { _decorator, Component, Prefab, instantiate } from 'cc'
+import { _decorator, Component } from 'cc'
 import DataManager from '../../Runtime/DataManager'
+import { ResourceManager } from '../../Runtime/ResourceManager'
 import { createUINode, randomByRange } from '../../Utils'
 import { TileManager } from './TileManager'
-import { ResourceManager } from 'db://assets/Runtime/ResourceManager'
-const { ccclass, property } = _decorator
+const { ccclass } = _decorator
 
 @ccclass('TileMapManager')
 export class TileMapManager extends Component {

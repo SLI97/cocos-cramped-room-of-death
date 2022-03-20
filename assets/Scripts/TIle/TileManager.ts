@@ -1,10 +1,9 @@
-import { _decorator, Component, Sprite, UITransform, Vec2, SpriteFrame } from 'cc'
+import { _decorator, Component, Sprite, UITransform, SpriteFrame } from 'cc'
 import { TILE_TYPE_ENUM } from '../../Enum'
-import { ResourceManager } from '../../Runtime/ResourceManager'
-const { ccclass, property } = _decorator
+const { ccclass } = _decorator
 
-export const TILE_WIDTH = 50
-export const TILE_HEIGHT = 50
+export const TILE_WIDTH = 55
+export const TILE_HEIGHT = 55
 
 @ccclass('TileManager')
 export class TileManager extends Component {

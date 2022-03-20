@@ -93,6 +93,7 @@ export enum EVENT_ENUM {
   DOOR_OPEN = 'DOOR_OPEN',
   SHOW_SMOKE = 'SHOW_SMOKE',
   PLAYER_BORN = 'PLAYER_BORN',
+  QUIT_BATTLE = 'QUIT_BATTLE',
 }
 
 /***
@@ -170,4 +171,10 @@ export enum SHAKE_TYPE_ENUM {
   BOTTOM = 'BOTTOM',
   LEFT = 'LEFT',
   RIGHT = 'RIGHT',
+}
+
+export enum SCENE_ENUM {
+  Loading = 'Loading',
+  Start = 'Start',
+  Battle = 'Battle',
 }

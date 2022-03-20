@@ -222,7 +222,7 @@ export class PlayerManager extends EntityManager {
     const enemies: EnemyManager[] = DataManager.Instance.enemies.filter(
       (enemy: EnemyManager) => enemy.state !== ENTITY_STATE_ENUM.DEATH,
     )
-    const { x: doorX, y: doorY, state: doorState } = DataManager.Instance.door
+    const { x: doorX, y: doorY, state: doorState } = DataManager.Instance.door || {}
     const bursts: BurstManager[] = DataManager.Instance.bursts.filter(
       (burst: BurstManager) => burst.state !== ENTITY_STATE_ENUM.DEATH,
     )

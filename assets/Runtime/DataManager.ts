@@ -31,7 +31,7 @@ export default class DataManager extends Singleton {
   tileInfo: Array<Array<TileManager>> = [] //实例化出来的tileManager实例
   records: IRecord[] //撤回数据za
 
-  constructor() {
+  private constructor() {
     super()
     this.reset()
   }
@@ -42,13 +42,12 @@ export default class DataManager extends Singleton {
     this.tileInfo = []
     this.mapRowCount = 0
     this.mapColumnCount = 0
-    //
+
     // //活动元素信息
     this.player = null
     this.enemies = []
     this.spikes = []
     this.bursts = []
-    //
     this.door = null
     this.smokes = []
 

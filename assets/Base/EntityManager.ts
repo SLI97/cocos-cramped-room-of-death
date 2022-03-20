@@ -1,11 +1,10 @@
-import { _decorator, animation, Component, Node, UITransform, Sprite } from 'cc'
+import { _decorator, Component, UITransform, Sprite } from 'cc'
 import { DIRECTION_ENUM, DIRECTION_ORDER_ENUM, ENTITY_STATE_ENUM, ENTITY_TYPE_ENUM, PARAMS_NAME_ENUM } from '../Enum'
 import { IEntity } from '../Levels'
 import { TILE_HEIGHT, TILE_WIDTH } from '../Scripts/TIle/TileManager'
 import { randomByLength } from '../Utils'
 import StateMachine from './StateMachine'
-import { PlayerStateMachine } from '../Scripts/Player/PlayerStateMachine'
-const { ccclass, property } = _decorator
+const { ccclass } = _decorator
 
 @ccclass('EntityManager')
 export class EntityManager extends Component {

@@ -1,7 +1,7 @@
-import { _decorator, Component, Node, game } from 'cc'
+import { _decorator, Component, Node, director } from 'cc'
 import DataManager, { IRecord } from '../../Runtime/DataManager'
 import Levels, { ILevel } from '../../Levels'
-import { DIRECTION_ENUM, ENTITY_STATE_ENUM, ENTITY_TYPE_ENUM, EVENT_ENUM, SHAKE_TYPE_ENUM } from '../../Enum'
+import { DIRECTION_ENUM, ENTITY_STATE_ENUM, ENTITY_TYPE_ENUM, EVENT_ENUM, SCENE_ENUM } from '../../Enum'
 import { WoodenSkeletonManager } from '../WoodenSkeleton/WoodenSkeletonManager'
 import { createUINode } from '../../Utils'
 import { TILE_HEIGHT, TILE_WIDTH } from '../TIle/TileManager'
@@ -12,17 +12,14 @@ import EventManager from '../../Runtime/EventManager'
 import { BurstManager } from '../Burst/BurstManager'
 import SpikesManager from '../Spikes/SpikesManager'
 import { IronSkeletonManager } from '../IronSkeleton/IronSkeletonManager'
-import { SmokeManager } from 'db://assets/Scripts/Smoke/SmokeManager'
-import FaderManager from 'db://assets/Runtime/FaderManager'
-import { ShakeManager } from 'db://assets/Scripts/Shake/ShakeManager'
+import FaderManager from '../../Runtime/FaderManager'
+import { SmokeManager } from '../Smoke/SmokeManager'
+import { ShakeManager } from '../Shake/ShakeManager'
 
 const { ccclass } = _decorator
 
 // @ts-ignore
-if (window.vConsole) {
-  // @ts-ignore
-  window.vConsole.$dom.style.display = 'none'
-}
+window?.vConsole && (window.vConsole.$dom.style.display = 'none')
 
 @ccclass('BattleManager')
 export class BattleManager extends Component {
@@ -32,6 +29,7 @@ export class BattleManager extends Component {
   private hasInited = false //第一次从菜单进来的时候，入场fade效果不一样，特殊处理一下
 
   onLoad() {
+    director.preloadScene(SCENE_ENUM.Start)
     DataManager.Instance.levelIndex = 1
 
     EventManager.Instance.on(EVENT_ENUM.RESTART_LEVEL, this.initLevel, this)
@@ -40,20 +38,24 @@ export class BattleManager extends Component {
     EventManager.Instance.on(EVENT_ENUM.SHOW_SMOKE, this.generateSmoke, this)
     EventManager.Instance.on(EVENT_ENUM.RECORD_STEP, this.record, this)
     EventManager.Instance.on(EVENT_ENUM.REVOKE_STEP, this.revoke, this)
+    EventManager.Instance.on(EVENT_ENUM.QUIT_BATTLE, this.quitBattle, this)
   }
 
-  onDestory() {
+  onDestroy() {
     EventManager.Instance.off(EVENT_ENUM.RESTART_LEVEL, this.initLevel)
     EventManager.Instance.off(EVENT_ENUM.NEXT_LEVEL, this.nextLevel)
     EventManager.Instance.off(EVENT_ENUM.PLAYER_MOVE_END, this.checkArrived)
     EventManager.Instance.off(EVENT_ENUM.SHOW_SMOKE, this.generateSmoke)
+    EventManager.Instance.off(EVENT_ENUM.RECORD_STEP, this.record)
+    EventManager.Instance.off(EVENT_ENUM.REVOKE_STEP, this.revoke)
+    EventManager.Instance.off(EVENT_ENUM.QUIT_BATTLE, this.quitBattle)
+
+    EventManager.Instance.clear()
   }
 
   start() {
     this.generateStage()
-    // resources.loadDir('texture/', SpriteFrame, (a, b) => {
     this.initLevel()
-    // })
   }
 
   async initLevel() {
@@ -74,29 +76,34 @@ export class BattleManager extends Component {
       DataManager.Instance.mapColumnCount = this.level.mapInfo[0]?.length || 0
       await Promise.all([
         this.generateTileMap(),
-        // this.generateBursts()
-        // this.generateSpikes()
+        this.generateBursts(),
+        this.generateSpikes(),
         this.generateSmokeLayer(),
-        this.generateEnemies(),
-        this.generatePlayer(),
         this.generateDoor(),
+        this.generateEnemies(),
       ])
+      await this.generatePlayer()
       await FaderManager.Instance.fadeOut()
       this.hasInited = true
     } else {
-      //back
+      this.quitBattle()
     }
   }
 
-  update() {}
+  quitBattle() {
+    this.node.destroy()
+    director.loadScene(SCENE_ENUM.Start)
+  }
 
   clearLevel() {
     this.stage.destroyAllChildren()
+    DataManager.Instance.reset()
   }
 
   generateStage() {
     this.stage = createUINode()
     this.stage.setParent(this.node)
+    this.stage.setSiblingIndex(2)
     this.stage.addComponent(ShakeManager)
   }
 
@@ -111,7 +118,7 @@ export class BattleManager extends Component {
   adaptMapPos() {
     const { mapRowCount, mapColumnCount } = DataManager.Instance
     const disX = (TILE_WIDTH * mapRowCount) / 2
-    const disY = (TILE_HEIGHT * mapColumnCount) / 2 + 75
+    const disY = (TILE_HEIGHT * mapColumnCount) / 2 + 80
     this.stage.getComponent(ShakeManager).stop()
     this.stage.setPosition(-disX, disY)
   }
@@ -133,15 +140,10 @@ export class BattleManager extends Component {
       const enemy = this.level.enemies[i]
       const node = createUINode()
       node.setParent(this.stage)
-      if (enemy.type === ENTITY_TYPE_ENUM.SKELETON_WOODEN) {
-        const woodenSkeletonManager = node.addComponent(WoodenSkeletonManager)
-        promises.push(woodenSkeletonManager.init(enemy))
-        DataManager.Instance.enemies.push(woodenSkeletonManager)
-      } else if (enemy.type === ENTITY_TYPE_ENUM.SKELETON_IRON) {
-        const ironSkeletonManager = node.addComponent(IronSkeletonManager)
-        promises.push(ironSkeletonManager.init(enemy))
-        DataManager.Instance.enemies.push(ironSkeletonManager)
-      }
+      const Manager = enemy.type === ENTITY_TYPE_ENUM.SKELETON_WOODEN ? WoodenSkeletonManager : IronSkeletonManager
+      const manager = node.addComponent(Manager)
+      promises.push(manager.init(enemy))
+      DataManager.Instance.enemies.push(manager)
     }
 
     await Promise.all(promises)
@@ -186,6 +188,7 @@ export class BattleManager extends Component {
     if (item) {
       item.x = x
       item.y = y
+      item.node.setPosition(item.x * TILE_WIDTH - TILE_WIDTH * 1.5, -item.y * TILE_HEIGHT + TILE_HEIGHT * 1.5)
       item.direction = direction
       item.state = ENTITY_STATE_ENUM.IDLE
     } else {

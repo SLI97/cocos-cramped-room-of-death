@@ -2,7 +2,7 @@ import { _decorator, Animation } from 'cc'
 import State from '../../Base/State'
 import StateMachine, { getInitParamsNumber, getInitParamsTrigger } from '../../Base/StateMachine'
 import { PARAMS_NAME_ENUM } from '../../Enum'
-const { ccclass, property } = _decorator
+const { ccclass } = _decorator
 
 const BASE_URL = 'texture/burst'
 
