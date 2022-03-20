@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>blockside (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{320,320}</string>
+                <key>spriteSourceSize</key>
+                <string>{320,320}</string>
+                <key>textureRect</key>
+                <string>{{0,0},{320,320}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>blockside (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{320,320}</string>
+                <key>spriteSourceSize</key>
+                <string>{320,320}</string>
+                <key>textureRect</key>
+                <string>{{320,0},{320,320}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>blockside (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{320,320}</string>
+                <key>spriteSourceSize</key>
+                <string>{320,320}</string>
+                <key>textureRect</key>
+                <string>{{640,0},{320,320}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>blockside (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{320,320}</string>
+                <key>spriteSourceSize</key>
+                <string>{320,320}</string>
+                <key>textureRect</key>
+                <string>{{960,0},{320,320}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>blockleft.png</string>
+            <key>size</key>
+            <string>{1280,320}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:c06e0f8bcfa71c4a7aa0bef8d4eb80e9:0d7ac6aa8ec55d731661c99384c5005a:e4fd96edec29d692f8d3080e0a631f38$</string>
+            <key>textureFileName</key>
+            <string>blockleft.png</string>
+        </dict>
+    </dict>
+</plist>
